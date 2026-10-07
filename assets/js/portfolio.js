@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Portfolio Data Engine: Zahid Ullah
  * Includes:
  * 1. CyberGun Spotlight Screenshots & Thesis Link
@@ -350,185 +350,245 @@ const LAB_DATA = [
 
 // COMPREHENSIVE CERTIFICATIONS & CREDENTIALS DATASET
 const CERTIFICATES_DATA = [
-  // 1. (ISC)² CC
   {
     id: "cert-01",
     title: "Certified in Cybersecurity (CC)",
-    issuer: "(ISC)²",
+    issuer: "(ISC)2",
     badgeType: "Industry Certification",
-    image: "assets/img/certificates/Certified in Cybersecurity Specialization.png",
-    pdf: "assets/img/certificates/Certified in Cybersecurity.pdf",
+    category: "industry",
+    image: "assets/img/certificates/ISC2-Certified-in-Cybersecurity-CC.png",
+    pdf: "assets/img/certificates/ISC2-Certified-in-Cybersecurity-CC.pdf",
     description: "Globally recognized baseline credential verifying competence in Security Principles, Incident Response, Access Controls, and Network Security."
   },
-  // 2. CEH (Certified Ethical Hacker)
   {
     id: "cert-02",
-    title: "Certified Ethical Hacker (CEH)",
-    issuer: "CISCO / NAVTTC Pakistan",
-    badgeType: "Professional Certification",
-    image: "assets/img/certificates/Google Cybersecurity Specialization.png", // fallback preview
-    pdf: "assets/img/certificates/CEH final Cisco.pdf",
-    description: "Hands-on penetration testing, ethical hacking, vulnerability scanning, network reconnaissance, and defense countermeasures."
+    title: "(ISC)2 Certified in Cybersecurity Specialization",
+    issuer: "(ISC)2",
+    badgeType: "Professional Specialization",
+    category: "industry",
+    image: "assets/img/certificates/ISC2-Certified-in-Cybersecurity-Specialization.png",
+    pdf: "assets/img/certificates/ISC2-Certified-in-Cybersecurity-Specialization.pdf",
+    description: "5-course specialization covering Security Principles, Incident Response, Access Controls, Network Security, and Security Operations."
   },
-  // 3. Google Cybersecurity Professional
   {
     id: "cert-03",
-    title: "Google Cybersecurity Professional Specialization",
-    issuer: "Google / Coursera",
-    badgeType: "Professional Specialization",
-    image: "assets/img/certificates/Google Cybersecurity Specialization.png",
-    pdf: "assets/img/certificates/Google Cybersecurity Professional.pdf",
-    description: "Comprehensive hands-on specialization covering Linux CLI, SQL, Python security automation, SIEM triage, and threat mitigation."
+    title: "Ethical Hacker",
+    issuer: "Cisco Networking Academy",
+    badgeType: "Professional Certification",
+    category: "offensive",
+    image: "assets/img/certificates/Cisco-Ethical-Hacker.png",
+    pdf: "assets/img/certificates/Cisco-Ethical-Hacker.pdf",
+    description: "Hands-on penetration testing, ethical hacking, vulnerability scanning, network reconnaissance, and defense countermeasures - issued by Cisco."
   },
-  // 4. IBM Cybersecurity Analyst
   {
     id: "cert-04",
-    title: "IBM Cybersecurity Analyst Professional Specialization",
-    issuer: "IBM / Coursera",
-    badgeType: "Professional Specialization",
-    image: "assets/img/certificates/IBM Cybersecurity Analyst.png",
-    pdf: "assets/img/certificates/IBM Cybersecurity Analyst Specialization.pdf",
-    description: "Deep dive into SOC workflows, threat intelligence, endpoint behavior, IBM QRadar SIEM, and digital forensics incident response capstone."
+    title: "Introduction to Cybersecurity Knowledge Check",
+    issuer: "Cisco Networking Academy",
+    badgeType: "Foundation Certificate",
+    category: "engineering",
+    image: "assets/img/certificates/Cisco-Introduction-to-Cybersecurity-Knowledge-Check.png",
+    pdf: "assets/img/certificates/Cisco-Introduction-to-Cybersecurity-Knowledge-Check.pdf",
+    description: "Verified foundational knowledge of cybersecurity concepts, threats, vulnerabilities, and defensive measures through Cisco knowledge check."
   },
-  // 5. Fortinet Network Security Expert
   {
     id: "cert-05",
-    title: "Fortinet Network Security Expert Specialization",
-    issuer: "Fortinet, Inc.",
-    badgeType: "Vendor Credential",
-    image: "assets/img/certificates/Fortinet Network Security Specialization.png",
-    pdf: "assets/img/certificates/Fortinet Network Security Specialization.pdf",
-    description: "Perimeter threat analysis, Next-Generation Firewall (NGFW) architectures, network segmentation, and secure fabric operations."
+    title: "Google Cybersecurity Professional Certificate",
+    issuer: "Google / Coursera",
+    badgeType: "Professional Certificate",
+    category: "soc",
+    image: "assets/img/certificates/Google-Cybersecurity-Professional-Certificate.png",
+    pdf: "assets/img/certificates/Google-Cybersecurity-Professional-Certificate.pdf",
+    description: "9-course comprehensive program covering Linux CLI, SQL, Python security automation, SIEM triage, and threat mitigation via the Google Cybersecurity curriculum."
   },
-  // 6. IBM & (ISC)² Cybersecurity Specialist
   {
     id: "cert-06",
-    title: "IBM & (ISC)² Cybersecurity Specialist Specialization",
-    issuer: "IBM & (ISC)²",
-    badgeType: "Joint Specialization",
-    image: "assets/img/certificates/IBM and ISC2 Cybersecurity Specialist Specialization.png",
-    pdf: "assets/img/certificates/IBM and ISC2 Cybersecurity Specialist Specialization.pdf",
-    description: "Joint specialization bridging enterprise risk management, access governance, threat hunting, and regulatory security policies."
-  },
-  // 7. Google Cloud Cybersecurity
-  {
-    id: "cert-07",
-    title: "Google Cloud Cybersecurity Specialization",
+    title: "Google Cloud Cybersecurity Professional Certificate",
     issuer: "Google Cloud / Coursera",
     badgeType: "Cloud Security",
-    image: "assets/img/certificates/Google Cloud Cybersecurity.png",
-    pdf: "assets/img/certificates/Google Cloud Cybersecurity.pdf",
-    description: "Securing cloud workloads, IAM least privilege, Cloud Audit Logging, VPC Service Controls, and security posture management."
+    category: "cloud",
+    image: "assets/img/certificates/Google-Cloud-Cybersecurity-Professional-Certificate.png",
+    pdf: "assets/img/certificates/Google-Cloud-Cybersecurity-Professional-Certificate.pdf",
+    description: "5-course program securing cloud workloads, IAM least privilege, Cloud Audit Logging, VPC Service Controls, and security posture management on GCP."
   },
-  // 8. Networking in Google Cloud
   {
-    id: "cert-08",
+    id: "cert-07",
     title: "Networking in Google Cloud Specialization",
     issuer: "Google Cloud / Coursera",
     badgeType: "Cloud Architecture",
-    image: "assets/img/certificates/Networking in Google Cloud Specialization.png",
-    pdf: "assets/img/certificates/Networking in Google Cloud Specialization.pdf",
-    description: "Advanced VPC routing, Cloud Interconnect, subnets, firewall rules, Cloud NAT, and network performance diagnostics."
+    category: "cloud",
+    image: "assets/img/certificates/Google-Cloud-Networking-Specialization.png",
+    pdf: "assets/img/certificates/Google-Cloud-Networking-Specialization.pdf",
+    description: "6-course specialization: advanced VPC routing, Cloud Interconnect, subnets, firewall rules, Cloud NAT, and network performance diagnostics."
   },
-  // 9. Johns Hopkins Advanced Cybersecurity
+  {
+    id: "cert-08",
+    title: "IBM Cybersecurity Analyst Professional Certificate",
+    issuer: "IBM / Coursera",
+    badgeType: "Professional Certificate",
+    category: "soc",
+    image: "assets/img/certificates/IBM-Cybersecurity-Analyst-Professional-Certificate.png",
+    pdf: "assets/img/certificates/IBM-Cybersecurity-Analyst-Professional-Certificate.pdf",
+    description: "14-course deep dive into SOC workflows, threat intelligence, endpoint behavior, IBM QRadar SIEM, and digital forensics incident response capstone."
+  },
   {
     id: "cert-09",
+    title: "IBM and ISC2 Cybersecurity Specialist",
+    issuer: "IBM and (ISC)2",
+    badgeType: "Joint Specialization",
+    category: "industry",
+    image: "assets/img/certificates/IBM-and-ISC2-Cybersecurity-Specialist.png",
+    pdf: "assets/img/certificates/IBM-and-ISC2-Cybersecurity-Specialist.pdf",
+    description: "12-course joint specialization bridging enterprise risk management, access governance, threat hunting, and regulatory security policies."
+  },
+  {
+    id: "cert-10",
+    title: "Fortinet Network Security Specialization",
+    issuer: "Fortinet, Inc.",
+    badgeType: "Vendor Credential",
+    category: "cloud",
+    image: "assets/img/certificates/Fortinet-Network-Security-Specialization.png",
+    pdf: "assets/img/certificates/Fortinet-Network-Security-Specialization.pdf",
+    description: "5-course specialization: perimeter threat analysis, Next-Generation Firewall (NGFW) architectures, network segmentation, and secure fabric operations."
+  },
+  {
+    id: "cert-11",
     title: "Advanced Cybersecurity Techniques",
     issuer: "Johns Hopkins University",
     badgeType: "University Certificate",
-    image: "assets/img/certificates/IBM and ISC2 Cybersecurity Specialist Specialization.png",
-    pdf: "assets/img/certificates/Advanced CyberSecurity techniques John Hopkins.pdf",
-    description: "Advanced cryptographic mechanisms, cyber defense models, secure architecture paradigms, and vulnerability mitigation."
+    category: "industry",
+    image: "assets/img/certificates/Johns-Hopkins-Advanced-Cybersecurity-Techniques.png",
+    pdf: "assets/img/certificates/Johns-Hopkins-Advanced-Cybersecurity-Techniques.pdf",
+    description: "Advanced cryptographic mechanisms, cyber defense models, secure architecture paradigms, and vulnerability mitigation from Johns Hopkins University."
   },
-  // 10. Supervised Machine Learning (DeepLearning.AI)
-  {
-    id: "cert-10",
-    title: "Supervised Machine Learning: Regression and Classification",
-    issuer: "DeepLearning.AI / Stanford",
-    badgeType: "AI & Data Science",
-    image: "assets/img/certificates/Supervised Machine Learning.png",
-    pdf: "assets/img/certificates/Supervised Machine Learning.pdf",
-    description: "Foundational machine learning algorithms, gradient descent, feature engineering, and classification models used in CyberGun."
-  },
-  // 11. Object-Oriented Programming in C++ (Univ of London)
-  {
-    id: "cert-11",
-    title: "Object-Oriented Programming in C++ Specialization",
-    issuer: "University of London / Coursera",
-    badgeType: "Software Engineering",
-    image: "assets/img/certificates/Object-Oriented Programming in C++.png",
-    pdf: "assets/img/certificates/Object Oriented Programming Specialization.pdf",
-    description: "Mastery in OOP design patterns, encapsulation, inheritance, polymorphism, and memory management for high-performance software."
-  },
-  // 12. Fortinet Network Support Engineer
   {
     id: "cert-12",
-    title: "Fortinet Network Support Engineer",
-    issuer: "Fortinet, Inc.",
-    badgeType: "Technical Specialist",
-    image: "assets/img/certificates/Fortinet Network Security Specialization.png",
-    pdf: "assets/img/certificates/Fortinet Network Support Engineer.pdf",
-    description: "Operational diagnostics, troubleshooting stateful firewall tables, routing protocols, and enterprise VPN tunnels."
+    title: "Supervised Machine Learning: Regression and Classification",
+    issuer: "DeepLearning.AI / Stanford",
+    badgeType: "AI and Machine Learning",
+    category: "engineering",
+    image: "assets/img/certificates/DeepLearningAI-Stanford-Supervised-Machine-Learning.png",
+    pdf: "assets/img/certificates/DeepLearningAI-Stanford-Supervised-Machine-Learning.pdf",
+    description: "Foundational ML algorithms, gradient descent, feature engineering, and classification models - techniques directly applied in the CyberGun threat detection engine."
   },
-  // 13. Web Hacking & Penetration Testing
   {
     id: "cert-13",
-    title: "Web Hacking and Penetration Testing",
-    issuer: "Cyber Security Academy",
-    badgeType: "Offensive Security",
-    image: "assets/img/certificates/Google Cybersecurity Specialization.png",
-    pdf: "assets/img/certificates/WebHacking AndPenetrationTesting.pdf",
-    description: "Web application penetration testing, OWASP Top 10 exploits (SQLi, XSS, CSRF, SSRF), and vulnerability exploitation."
+    title: "Object Oriented Programming in C++ Specialization",
+    issuer: "University of London / Coursera",
+    badgeType: "Software Engineering",
+    category: "engineering",
+    image: "assets/img/certificates/University-of-London-OOP-in-Cpp-Specialization.png",
+    pdf: "assets/img/certificates/University-of-London-OOP-in-Cpp-Specialization.pdf",
+    description: "5-course mastery in OOP design patterns, encapsulation, inheritance, polymorphism, and memory management - applied in the C++ Crypto Trading capstone project."
   },
-  // 14. Network Security & Database Vulnerabilities
   {
     id: "cert-14",
-    title: "Network Security & Database Vulnerabilities",
-    issuer: "Coursera / IBM",
-    badgeType: "Security Operations",
-    image: "assets/img/certificates/IBM Cybersecurity Analyst.png",
-    pdf: "assets/img/certificates/Network Security & Database Vulnerabilities.pdf",
-    description: "Assessing enterprise database weaknesses, SQL injection vectors, and securing relational data stores against unauthorized exfiltration."
+    title: "Penetration Testing Web Hacking",
+    issuer: "KPITB / KP Information Technology Board",
+    badgeType: "Offensive Security",
+    category: "offensive",
+    image: "assets/img/certificates/KPITB-Penetration-Testing-Web-Hacking.png",
+    pdf: "assets/img/certificates/KPITB-Penetration-Testing-Web-Hacking.pdf",
+    description: "Web application penetration testing, OWASP Top 10 exploits (SQLi, XSS, CSRF, SSRF), and vulnerability exploitation - certified by KP IT Board Pakistan."
   },
-  // 15. Kali Linux Security Certification
   {
     id: "cert-15",
-    title: "Kali Linux Advanced Security Specialist",
-    issuer: "Professional Security Training",
-    badgeType: "Offensive Tooling",
-    image: "assets/img/certificates/Certified in Cybersecurity Specialization.png",
-    pdf: "assets/img/certificates/Zahid Ullah Kali Linux.pdf",
-    description: "Mastery in weaponizing the Kali Linux offensive distribution, custom scripting, payload delivery, and reconnaissance tools."
-  },
-  // 16. Dark Web & Threat Intelligence
-  {
-    id: "cert-16",
-    title: "Dark Web Investigation & Threat Intelligence",
-    issuer: "Intelligence Operations",
-    badgeType: "Threat Intelligence",
-    image: "assets/img/certificates/IBM Cybersecurity Analyst.png",
-    pdf: "assets/img/certificates/Zahid Ullah Dark Web.pdf",
-    description: "Techniques for monitoring darknet forums, tracing compromised credentials, evaluating underground threat vectors, and OPSEC."
-  },
-  // 17. CyberPashto Ethical Hacking L1
-  {
-    id: "cert-17",
-    title: "Ethical Hacking Level 1 (EH L1)",
-    issuer: "CyberPashto Academy",
-    badgeType: "Ethical Hacking",
-    image: "assets/img/certificates/Certified in Cybersecurity Specialization.png",
-    pdf: "assets/img/certificates/Zahid Ullah CyberPashto EH L1.pdf",
-    description: "Foundations of ethical hacking, scanning techniques, reconnaissance protocols, and defensive security baselines."
-  },
-  // 18. CyberPashto Cybersecurity Level 2 & 3
-  {
-    id: "cert-18",
-    title: "Cybersecurity Practitioner Level 2 & 3",
+    title: "Cybersecurity Level 3 - Palo Alto Firewall",
     issuer: "CyberPashto Academy",
     badgeType: "Advanced Defense",
-    image: "assets/img/certificates/Certified in Cybersecurity Specialization.png",
-    pdf: "assets/img/certificates/Zahid Ullah  Cyberpashto C.Sec L3.pdf",
-    description: "Advanced defensive cyber tactics, threat detection, incident triage, security automation, and infrastructure defense."
+    category: "cloud",
+    image: "assets/img/certificates/CyberPashto-Cybersecurity-Level-3-Palo-Alto.png",
+    pdf: "assets/img/certificates/CyberPashto-Cybersecurity-Level-3-Palo-Alto.pdf",
+    description: "Advanced Palo Alto firewall configuration, NGFW policy management, threat prevention profiles, and enterprise security architecture."
+  },
+  {
+    id: "cert-16",
+    title: "Cybersecurity Level 2 - Hacking within Lab",
+    issuer: "CyberPashto Academy",
+    badgeType: "Ethical Hacking",
+    category: "offensive",
+    image: "assets/img/certificates/CyberPashto-Cybersecurity-Level-2-Lab-Hacking.png",
+    pdf: "assets/img/certificates/CyberPashto-Cybersecurity-Level-2-Lab-Hacking.pdf",
+    description: "Controlled lab hacking exercises covering network scanning, exploitation, privilege escalation, and post-exploitation within an isolated environment."
+  },
+  {
+    id: "cert-17",
+    title: "Full Ethical Hacking Course Volume 1",
+    issuer: "CyberPashto Academy",
+    badgeType: "Ethical Hacking",
+    category: "offensive",
+    image: "assets/img/certificates/CyberPashto-Full-Ethical-Hacking-Course-Vol-1.png",
+    pdf: "assets/img/certificates/CyberPashto-Full-Ethical-Hacking-Course-Vol-1.pdf",
+    description: "Comprehensive ethical hacking curriculum: footprinting, scanning, enumeration, exploitation, and social engineering - Volume 1 of a multi-part series."
+  },
+  {
+    id: "cert-18",
+    title: "Dark Web Level 1",
+    issuer: "CyberPashto Academy",
+    badgeType: "Threat Intelligence",
+    category: "offensive",
+    image: "assets/img/certificates/CyberPashto-Dark-Web-Level-1.png",
+    pdf: "assets/img/certificates/CyberPashto-Dark-Web-Level-1.pdf",
+    description: "Techniques for monitoring darknet forums, tracing compromised credentials, evaluating underground threat vectors, and maintaining OPSEC."
+  },
+  {
+    id: "cert-19",
+    title: "Kali Linux For Beginners",
+    issuer: "CyberPashto Academy",
+    badgeType: "Offensive Tooling",
+    category: "offensive",
+    image: "assets/img/certificates/CyberPashto-Kali-Linux-For-Beginners.png",
+    pdf: "assets/img/certificates/CyberPashto-Kali-Linux-For-Beginners.pdf",
+    description: "Mastery in the Kali Linux offensive distribution: custom scripting, payload delivery, Nmap reconnaissance, and penetration testing tools."
+  },
+  {
+    id: "cert-20",
+    title: "Different Types of Cloud Computing",
+    issuer: "CyberPashto Academy",
+    badgeType: "Cloud Fundamentals",
+    category: "cloud",
+    image: "assets/img/certificates/CyberPashto-Different-Types-of-Cloud-Computing.png",
+    pdf: "assets/img/certificates/CyberPashto-Different-Types-of-Cloud-Computing.pdf",
+    description: "IaaS, PaaS, SaaS cloud service models, public vs private vs hybrid cloud architectures, and security considerations for cloud deployments."
+  },
+  {
+    id: "cert-21",
+    title: "Introduction to Cybersecurity Careers",
+    issuer: "IBM / Coursera",
+    badgeType: "Foundation Certificate",
+    category: "soc",
+    image: "assets/img/certificates/IBM-Introduction-to-Cybersecurity-Careers.png",
+    pdf: "assets/img/certificates/IBM-Introduction-to-Cybersecurity-Careers.pdf",
+    description: "Overview of cybersecurity career pathways, roles, SOC analyst responsibilities, and industry certifications mapped to job families."
+  },
+  {
+    id: "cert-22",
+    title: "Introduction to Cybersecurity Tools and Cyberattacks",
+    issuer: "IBM / Coursera",
+    badgeType: "Security Operations",
+    category: "soc",
+    image: "assets/img/certificates/IBM-Introduction-to-Cybersecurity-Tools-and-Cyberattacks.png",
+    pdf: "assets/img/certificates/IBM-Introduction-to-Cybersecurity-Tools-and-Cyberattacks.pdf",
+    description: "Core SIEM tools, cyberattack taxonomy, phishing, malware types, denial-of-service, and defensive countermeasures - IBM V3 curriculum."
+  },
+  {
+    id: "cert-23",
+    title: "Network Security and Database Vulnerabilities",
+    issuer: "IBM / Coursera",
+    badgeType: "Security Operations",
+    category: "soc",
+    image: "assets/img/certificates/IBM-Network-Security-and-Database-Vulnerabilities.png",
+    pdf: "assets/img/certificates/IBM-Network-Security-and-Database-Vulnerabilities.pdf",
+    description: "Assessing enterprise database weaknesses, SQL injection vectors, network protocol analysis, and securing relational data stores against exfiltration."
+  },
+  {
+    id: "cert-24",
+    title: "All Certificates Compendium",
+    issuer: "Multiple Institutions",
+    badgeType: "Compendium",
+    category: "compendium",
+    image: "assets/img/certificates/All-Certificates-Compendium.png",
+    pdf: "assets/img/certificates/All-Certificates-Compendium.pdf",
+    description: "Complete collection of all earned certificates: Google Cybersecurity, Google Cloud, IBM Analyst, IBM+ISC2 Specialist, Fortinet, ISC2 CC, and ISC2 Specialization."
   }
 ];
 
