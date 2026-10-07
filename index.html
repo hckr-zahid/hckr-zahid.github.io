@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zahid Ullah | Cybersecurity Analyst, Threat Hunter & Systems Portfolio</title>
+  <meta name="description" content="Professional portfolio of Zahid Ullah: Cybersecurity Analyst, SOC & Threat Detection, DFIR & Threat Hunting, CEH, CHFI, (ISC)² CC. Showcasing CyberGun malware detection framework, enterprise Active Directory lab, and industry certifications.">
+  <meta name="author" content="Zahid Ullah">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zahid Ullah - Cybersecurity Analyst & Systems Portfolio">
+  <meta property="og:description" content="Cybersecurity Analyst, SOC & Threat Detection, DFIR & Threat Hunting, (ISC)² CC. CyberGun Framework, Windows Server & Active Directory Lab, and Verified Credentials.">
+  <meta property="og:image" content="assets/img/profile/zahid-ullah.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-badge">HCKR</span>
+        <span>Zahid Ullah</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">About</a></li>
+        <li><a href="#cybergun" class="nav-link">CyberGun Suite</a></li>
+        <li><a href="#projects" class="nav-link">Core Projects</a></li>
+        <li><a href="#adlab" class="nav-link">Active Directory Lab</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#skills" class="nav-link">Skills &amp; Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <span id="themeIcon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+        <button class="nav-toggle" id="navToggleBtn" aria-label="Toggle Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO SECTION (PROFILE & ABOUT)
+       ========================================================================= -->
+  <header class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-tag">
+            <span class="pulse-dot"></span>
+            SOC &bull; Threat Hunting &bull; DFIR &bull; Remote-Ready
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Zahid Ullah</span>
+          </h1>
+          <div class="hero-roles">
+            <span>Cybersecurity Analyst</span> &bull; 
+            <span>SOC &amp; Threat Detection</span> &bull; 
+            <span>DFIR Specialist</span> &bull; 
+            <span>(ISC)&sup2; CC &amp; CEH</span>
+          </div>
+          <p class="hero-desc">
+            Certified and results-driven cybersecurity professional with a strong foundation in threat detection, incident response, digital forensics, and systems engineering. Proven ability to translate complex security concepts into actionable defense strategies through the development of <strong>CyberGun</strong> (a modular static/dynamic malware detection system) and enterprise-grade <strong>Active Directory &amp; VMware</strong> networking labs.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#cybergun" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Explore CyberGun Suite
+            </a>
+            <a href="#adlab" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              AD &amp; VMware Lab (29 Evidence)
+            </a>
+            <a href="#certifications" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              Verified Certifications
+            </a>
+          </div>
+
+          <div class="hero-specs-strip">
+            <div class="spec-item">
+              <span class="spec-label">Flagship System</span>
+              <span class="spec-val">CyberGun Threat Suite</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Education</span>
+              <span class="spec-val">BS Computer Science (2025)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Primary Credentials</span>
+              <span class="spec-val">(ISC)&sup2; CC &bull; Google &bull; IBM</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Programming</span>
+              <span class="spec-val">Python &bull; C++ &bull; PowerShell &bull; Bash</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Author Card -->
+        <div class="hero-profile-card">
+          <div class="profile-avatar-wrap">
+            <img src="assets/img/profile/zahid-ullah.jpg" alt="Zahid Ullah" class="profile-avatar">
+          </div>
+          <h2 class="profile-name">Zahid Ullah</h2>
+          <div class="profile-role">Cybersecurity Analyst &amp; Researcher</div>
+          
+          <div class="profile-meta">
+            <div class="profile-meta-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>hckr.badguy@gmail.com</span>
+            </div>
+            <div class="profile-meta-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+92 308 4888192</span>
+            </div>
+            <div class="profile-meta-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Peshawar, Pakistan (Remote-Ready)</span>
+            </div>
+          </div>
+
+          <div class="profile-links">
+            <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub (@hckr-zahid)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn (@hckr-zahid)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:hckr.badguy@gmail.com" class="social-icon-btn" title="Send Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       CYBERGUN SPOTLIGHT SECTION
+       ========================================================================= -->
+  <section class="section section-alt" id="cybergun">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Flagship Security Engineering Project</span>
+        <h2 class="section-title">CyberGun: Dynamic &amp; Static Threat Detection System</h2>
+        <p class="section-subtitle">
+          An end-to-end endpoint detection and response (EDR) platform combining multi-layer static signature analysis with supervised machine learning behavioral detection to classify and neutralize malicious software in real time.
+        </p>
+      </div>
+
+      <div class="spotlight-card">
+        <div class="spotlight-header">
+          <div class="spotlight-title-wrap">
+            <h3>CyberGun Threat Mitigation Suite</h3>
+            <div class="spotlight-tagline">Modular Static Engine &bull; LightGBM Behavioral Classifier &bull; PyQt5 SignalBus UI</div>
+          </div>
+          <div class="spotlight-pills">
+            <span class="spotlight-pill">Python 3.10+</span>
+            <span class="spotlight-pill">PyQt5 GUI</span>
+            <span class="spotlight-pill">YARA &amp; Regex</span>
+            <span class="spotlight-pill">SQLite (3.1M Hashes)</span>
+            <span class="spotlight-pill">LightGBM ML</span>
+            <span class="spotlight-pill">EMBER &amp; CIC Datasets</span>
+          </div>
+        </div>
+
+        <div class="spotlight-grid">
+          <div class="spotlight-block">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              Modular Architecture &amp; Engines
+            </h4>
+            <p>
+              Architected a multi-threaded detection pipeline orchestrated through a central <code>DynamicEngine</code>. Modular sensors continuously analyze host metrics: <strong>Behavioral Engine</strong> for process execution trees, <strong>System Activity Engine</strong> for disk I/O and process CPU spikes, <strong>USB Monitor</strong> for peripheral insertion events, and <strong>Sandbox Engine</strong> for dynamic execution simulation.
+            </p>
+          </div>
+
+          <div class="spotlight-block">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              Machine Learning &amp; Detection Layer
+            </h4>
+            <p>
+              Integrated trained supervised learning models on <strong>EMBER</strong> and <strong>CIC</strong> benchmark datasets, classifying malicious PDF and PE structural anomalies using LightGBM (<code>pdf_model.lgbm</code>). Combined with an indexed SQLite repository of 3,160,113 threat hashes, custom YARA heuristics, and regex pattern matching.
+            </p>
+          </div>
+
+          <div class="spotlight-block">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+              PyQt5 Real-Time Interface &amp; SignalBus
+            </h4>
+            <p>
+              Designed an asynchronous, dark-themed SOC interface with tabbed views for Dashboard, System Status, Threat Logs, Behavior Feed, Network Feed, and Quarantine Zone. Implemented a custom <code>SignalBus</code> pattern ensuring non-blocking background scanning while maintaining responsive UI updates and desktop notifications.
+            </p>
+          </div>
+
+          <div class="spotlight-block">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              Automated Incident Remediation &amp; Quarantine
+            </h4>
+            <p>
+              Upon threat detection, CyberGun immediately isolates offending binaries into an encrypted Quarantine Zone with original path metadata, timestamping, and secure hash signatures. Provides SOC operators with safe file inspection, selective restoration, and permanent cryptographic destruction.
+            </p>
+          </div>
+        </div>
+
+        <h4 style="margin-top:1.5rem; margin-bottom:0.75rem; font-size:1.05rem;">
+          Actual Operational Screenshots (Click to Inspect High-Resolution):
+        </h4>
+        <div class="spotlight-gallery">
+          <div class="spotlight-thumb-wrap" onclick="openLightbox(0)">
+            <img src="assets/img/projects/cybergun-dashboard.png" alt="CyberGun Dashboard">
+            <div class="spotlight-thumb-caption">01. Live Dashboard &amp; Telemetry</div>
+          </div>
+          <div class="spotlight-thumb-wrap" onclick="openLightbox(1)">
+            <img src="assets/img/projects/cybergun-system-status.png" alt="CyberGun System Status">
+            <div class="spotlight-thumb-caption">02. Process Audit (299 Procs)</div>
+          </div>
+          <div class="spotlight-thumb-wrap" onclick="openLightbox(2)">
+            <img src="assets/img/projects/cybergun-threat-logs.png" alt="CyberGun Threat Logs">
+            <div class="spotlight-thumb-caption">03. 3.1M Hash &amp; ML Scan</div>
+          </div>
+          <div class="spotlight-thumb-wrap" onclick="openLightbox(3)">
+            <img src="assets/img/projects/cybergun-quarantine.png" alt="CyberGun Quarantine Zone">
+            <div class="spotlight-thumb-caption">04. Encrypted Quarantine Zone</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CORE CYBERSECURITY PROJECTS
+       ========================================================================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Practical Security Engineering</span>
+        <h2 class="section-title">Core Cybersecurity &amp; Systems Projects</h2>
+        <p class="section-subtitle">
+          Real-world implementations spanning intrusion detection, memory forensics, incident response, vulnerability assessment, automation scripting, and software architecture.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-badge">SOC &bull; NIDS</span>
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">PROJECT #02</span>
+          </div>
+          <h3 class="project-title">Network Intrusion Detection &amp; Monitoring (NIDS)</h3>
+          <p class="project-desc">
+            Deployed and tuned a distributed Network Intrusion Detection System in a virtualized security environment to detect port scans, brute-force attacks, and data exfiltration in real time.
+          </p>
+          <ul class="project-specs-list">
+            <li><strong>Deployment:</strong> Configured Suricata and Zeek sensor nodes capturing raw promiscuous network traffic.</li>
+            <li><strong>Rule Tuning:</strong> Authored custom detection rules to identify malicious patterns while cutting false positives.</li>
+            <li><strong>Analytics:</strong> Ingested and parsed event telemetry into Elasticsearch and visualized alerts in Kibana dashboards.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag-badge">Suricata</span>
+            <span class="tag-badge">Zeek</span>
+            <span class="tag-badge">Kibana</span>
+            <span class="tag-badge">Threat Hunting</span>
+            <span class="tag-badge">PCAP Analysis</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-badge">DFIR &bull; CAPSTONE</span>
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">PROJECT #03</span>
+          </div>
+          <h3 class="project-title">Incident Response &amp; Digital Forensics (IBM Capstone)</h3>
+          <p class="project-desc">
+            Conducted an end-to-end investigation of a simulated ransomware breach following the NIST SP 800-61 Incident Handling Framework.
+          </p>
+          <ul class="project-specs-list">
+            <li><strong>Memory Forensics:</strong> Analyzed volatile RAM dumps with Volatility to isolate rogue injected DLLs and malicious processes.</li>
+            <li><strong>Disk Artifacts:</strong> Recovered file system artifacts, Master File Table (MFT) records, and event logs using Autopsy.</li>
+            <li><strong>Reporting:</strong> Produced a comprehensive post-incident report detailing attack vectors, IOCs, and hardening mitigations.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag-badge">Volatility</span>
+            <span class="tag-badge">Autopsy</span>
+            <span class="tag-badge">NIST Framework</span>
+            <span class="tag-badge">Memory Forensics</span>
+            <span class="tag-badge">IOC Extraction</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-badge">AUTOMATION &bull; PYTHON</span>
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">PROJECT #04</span>
+          </div>
+          <h3 class="project-title">Python Security Automation Toolkit (Google Project)</h3>
+          <p class="project-desc">
+            Developed a modular suite of Python command-line utilities designed to automate SOC analyst triage, log analysis, and threat intelligence enrichment.
+          </p>
+          <ul class="project-specs-list">
+            <li><strong>Parsing:</strong> Automated extraction of IP addresses, domain names, and file hashes from raw syslog and auth logs using Regex.</li>
+            <li><strong>OSINT Enrichment:</strong> Queried VirusTotal and AbuseIPDB REST APIs asynchronously to score reputation metrics.</li>
+            <li><strong>Packaging:</strong> Packaged as modular CLI tools with argparse flags for rapid deployment in analyst workflows.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag-badge">Python 3</span>
+            <span class="tag-badge">Regex</span>
+            <span class="tag-badge">VirusTotal API</span>
+            <span class="tag-badge">AbuseIPDB</span>
+            <span class="tag-badge">SOC Triage</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-badge">VULN SCAN &bull; HARDENING</span>
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">PROJECT #05</span>
+          </div>
+          <h3 class="project-title">Vulnerability Assessment &amp; System Hardening</h3>
+          <p class="project-desc">
+            Conducted systematic vulnerability auditing on Linux and Windows endpoints, evaluating risk severity using CVSS metrics and applying defensive baselines.
+          </p>
+          <ul class="project-specs-list">
+            <li><strong>Assessment:</strong> Executed authenticated and unauthenticated network scans using Nmap NSE scripts and OpenVAS.</li>
+            <li><strong>Risk Scoring:</strong> Prioritized vulnerabilities based on CVSS v3 vectors, exploitability, and patch availability.</li>
+            <li><strong>Remediation:</strong> Enforced SSH key-only policies, IPTables firewall rules, and CIS benchmark server hardening.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag-badge">Nmap</span>
+            <span class="tag-badge">OpenVAS</span>
+            <span class="tag-badge">CIS Benchmarks</span>
+            <span class="tag-badge">CVSS Scoring</span>
+            <span class="tag-badge">Linux Hardening</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-badge">C++ &bull; OOP DESIGN</span>
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">PROJECT #06</span>
+          </div>
+          <h3 class="project-title">Object-Oriented Crypto Trading Platform</h3>
+          <p class="project-desc">
+            High-performance simulation platform developed for the University of London OOP Specialization, demonstrating mastery in software design principles.
+          </p>
+          <ul class="project-specs-list">
+            <li><strong>Design Principles:</strong> Strict adherence to Encapsulation, Polymorphism, Abstract classes, and Inheritance.</li>
+            <li><strong>Engine Architecture:</strong> Class hierarchy managing OrderBooks, Wallets, Matching Engines, and CSV trade histories.</li>
+            <li><strong>Performance:</strong> Efficient file stream I/O, custom memory allocators, and clean separation of business logic.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag-badge">C++</span>
+            <span class="tag-badge">Object-Oriented Design</span>
+            <span class="tag-badge">Data Structures</span>
+            <span class="tag-badge">Memory Management</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-badge">DIRECTORY SERVICES &bull; NETWORKING</span>
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">PROJECT #07</span>
+          </div>
+          <h3 class="project-title">Enterprise Active Directory &amp; VMware Networking Lab</h3>
+          <p class="project-desc">
+            Full enterprise forest deployment (<code>zroots.local</code>) on VMware Workstation featuring DC01, multi-tier RBAC security groups, NTFS hardening, and Windows 10 domain workstations.
+          </p>
+          <ul class="project-specs-list">
+            <li><strong>Directory Services:</strong> Domain controller promotion, root DNS delegation, Global Catalog, and DSRM security.</li>
+            <li><strong>Access Control:</strong> Granular NTFS ACLs on departmental shares with explicit inheritance severance.</li>
+            <li><strong>Client Integration:</strong> Workstation domain join, DC locator verification, and Kerberos token validation.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag-badge">Windows Server 2019</span>
+            <span class="tag-badge">Active Directory</span>
+            <span class="tag-badge">VMware Workstation</span>
+            <span class="tag-badge">Kerberos</span>
+            <span class="tag-badge">NTFS Hardening</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ACTIVE DIRECTORY LAB & TECHNICAL EVIDENCE (29 SCREENSHOTS)
+       ========================================================================= -->
+  <section class="section section-alt" id="adlab">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">29 Curated Technical Screenshots</span>
+        <h2 class="section-title">Active Directory &amp; VMware Lab Evidence</h2>
+        <p class="section-subtitle">
+          Full step-by-step engineering sequence from VMware virtual switch configuration to Active Directory promotion, duplicate IP resolution, NTFS access hardening, and client Kerberos token validation. Click any image to view in full resolution.
+        </p>
+      </div>
+
+      <!-- Logical Architecture Diagram -->
+      <div class="arch-grid" style="margin-bottom: 2.5rem;">
+        <div class="arch-card">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            Logical Network Diagram
+          </h3>
+          <div class="arch-diagram-wrapper">
+========================================================================
+     VMware Workstation Virtual Switch: VMnet10 (MyLabNet)
+     Subnet: 10.1.1.0 / 255.255.255.0  (Isolated Host-Only)
+========================================================================
+                          |
+      +-------------------+-------------------+-------------------+
+      |                   |                   |                   |
+[ Windows Server 2019 ] [ Windows 10 Client ] [ Security Nodes ] [ Admin Host ]
+   DC01 (or WWW)            WIN10-01             Kali Linux         VMnet10 Adapter
+   10.1.1.10/24             10.1.1.x / DHCP      BlackArch          10.1.1.1 (GW)
+   Forest: zroots.local     Domain Joined        Metasploitable2
+   Roles:                   Account:             Android x86
+   - AD DS (Kerberos/KDC)   - ali.khan           Auditing &amp;
+   - DNS Server (127.0.0.1) - staff.one          Penetration Testing
+   - File Server (SMB/NTFS)
+          </div>
+        </div>
+
+        <div class="arch-card">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            Node Specification Matrix
+          </h3>
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>Hostname / VM</th>
+                <th>Role / Function</th>
+                <th>IP Address</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>DC01</strong> (WWW)</td>
+                <td>Domain Controller, DNS, File Server</td>
+                <td><code>10.1.1.10</code></td>
+                <td><span class="status-badge status-online">Authoritative</span></td>
+              </tr>
+              <tr>
+                <td><strong>WIN10-01</strong></td>
+                <td>Domain Member Client Workstation</td>
+                <td><code>10.1.1.x (DHCP)</code></td>
+                <td><span class="status-badge status-online">Joined</span></td>
+              </tr>
+              <tr>
+                <td><strong>Host Adapter</strong></td>
+                <td>VMware VMnet10 Virtual Gateway</td>
+                <td><code>10.1.1.1</code></td>
+                <td><span class="status-badge status-sub">Connected</span></td>
+              </tr>
+              <tr>
+                <td><strong>Kali / BlackArch</strong></td>
+                <td>Security Testing &amp; Auditing</td>
+                <td><code>10.1.1.x</code></td>
+                <td><span class="status-badge status-sub">Provisioned</span></td>
+              </tr>
+              <tr>
+                <td><strong>Namespace</strong></td>
+                <td>Active Directory Forest Root</td>
+                <td><code>zroots.local</code></td>
+                <td><span class="status-badge status-online">Functional 2016</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Evidence (29)</button>
+        <button class="filter-btn" data-filter="vmware">VMware Infrastructure (5)</button>
+        <button class="filter-btn" data-filter="server">Windows Server 2019 (5)</button>
+        <button class="filter-btn" data-filter="ad">Active Directory / DC (3)</button>
+        <button class="filter-btn" data-filter="users">Users &amp; Groups (5)</button>
+        <button class="filter-btn" data-filter="fileshare">File Sharing &amp; Permissions (7)</button>
+        <button class="filter-btn" data-filter="client">Domain Client Integration (4)</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Rendered by portfolio.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VERIFIED INDUSTRY CERTIFICATIONS
+       ========================================================================= -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Credentials &amp; Continuing Education</span>
+        <h2 class="section-title">Verified Industry Certifications</h2>
+        <p class="section-subtitle">
+          Credentials issued by (ISC)&sup2;, Google, IBM, Fortinet, and University of London validating proficiency in cybersecurity principles, threat detection, network defense, cloud infrastructure, and software engineering.
+        </p>
+      </div>
+
+      <!-- Cert Cards Grid with PDF and High-Res View -->
+      <div class="cert-gallery-grid" id="certGalleryGrid">
+        <!-- Rendered by portfolio.js -->
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="assets/img/certificates/All Certificates.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Download Consolidated Certificate Dossier (All Certificates.pdf)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       TECHNICAL SKILLS TAXONOMY & EDUCATION
+       ========================================================================= -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Technical Competencies</span>
+        <h2 class="section-title">Skills Taxonomy &amp; Academic Background</h2>
+        <p class="section-subtitle">
+          An organized overview of security platforms, domains, programming languages, and formal academic training.
+        </p>
+      </div>
+
+      <div class="skills-taxonomy-grid">
+        <div class="taxonomy-card">
+          <div class="taxonomy-header">
+            <div class="taxonomy-icon">🛡️</div>
+            <h3>Security Tools &amp; Platforms</h3>
+          </div>
+          <div class="taxonomy-tags">
+            <span class="taxonomy-tag">Wireshark</span>
+            <span class="taxonomy-tag">Suricata</span>
+            <span class="taxonomy-tag">Zeek</span>
+            <span class="taxonomy-tag">Nmap</span>
+            <span class="taxonomy-tag">OpenVAS</span>
+            <span class="taxonomy-tag">Nessus</span>
+            <span class="taxonomy-tag">Fortinet NGFW</span>
+            <span class="taxonomy-tag">Volatility</span>
+            <span class="taxonomy-tag">Autopsy</span>
+            <span class="taxonomy-tag">Splunk</span>
+            <span class="taxonomy-tag">IBM QRadar</span>
+            <span class="taxonomy-tag">Google Chronicle</span>
+            <span class="taxonomy-tag">Kibana</span>
+            <span class="taxonomy-tag">YARA</span>
+            <span class="taxonomy-tag">Wazuh</span>
+            <span class="taxonomy-tag">Snort</span>
+          </div>
+        </div>
+
+        <div class="taxonomy-card">
+          <div class="taxonomy-header">
+            <div class="taxonomy-icon">🌐</div>
+            <h3>Cybersecurity Domains</h3>
+          </div>
+          <div class="taxonomy-tags">
+            <span class="taxonomy-tag">Threat Intelligence</span>
+            <span class="taxonomy-tag">Static Malware Analysis</span>
+            <span class="taxonomy-tag">Dynamic Malware Analysis</span>
+            <span class="taxonomy-tag">Incident Response (NIST)</span>
+            <span class="taxonomy-tag">Network Defense &amp; Firewalls</span>
+            <span class="taxonomy-tag">Digital Forensics (DFIR)</span>
+            <span class="taxonomy-tag">Vulnerability Assessment</span>
+            <span class="taxonomy-tag">CIS Hardening</span>
+            <span class="taxonomy-tag">Cloud Security (GCP / AWS)</span>
+            <span class="taxonomy-tag">Active Directory &amp; RBAC</span>
+          </div>
+        </div>
+
+        <div class="taxonomy-card">
+          <div class="taxonomy-header">
+            <div class="taxonomy-icon">💻</div>
+            <h3>Programming &amp; Scripting</h3>
+          </div>
+          <div class="taxonomy-tags">
+            <span class="taxonomy-tag">Python (PyQt5, Pandas, Scikit-Learn)</span>
+            <span class="taxonomy-tag">Bash Shell Scripting</span>
+            <span class="taxonomy-tag">PowerShell Automation</span>
+            <span class="taxonomy-tag">C++ (Object-Oriented)</span>
+            <span class="taxonomy-tag">SQL &amp; SQLite</span>
+            <span class="taxonomy-tag">Regular Expressions (Regex)</span>
+            <span class="taxonomy-tag">JSON / REST APIs</span>
+          </div>
+        </div>
+
+        <div class="taxonomy-card">
+          <div class="taxonomy-header">
+            <div class="taxonomy-icon">🖥️</div>
+            <h3>Systems &amp; Environments</h3>
+          </div>
+          <div class="taxonomy-tags">
+            <span class="taxonomy-tag">Windows Server 2019 / 2022</span>
+            <span class="taxonomy-tag">Windows 10 / 11 Enterprise</span>
+            <span class="taxonomy-tag">Kali Linux</span>
+            <span class="taxonomy-tag">Ubuntu Server / Debian</span>
+            <span class="taxonomy-tag">Arch / BlackArch Linux</span>
+            <span class="taxonomy-tag">RedHat Enterprise Linux</span>
+            <span class="taxonomy-tag">Parrot Security OS</span>
+            <span class="taxonomy-tag">VMware Workstation Pro</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education & Strengths Row -->
+      <div style="margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+        <div class="taxonomy-card">
+          <div class="taxonomy-header">
+            <div class="taxonomy-icon">🎓</div>
+            <h3>Education</h3>
+          </div>
+          <h4 style="font-size:1.15rem; color:var(--text-main); margin-bottom:0.25rem;">Bachelor of Science in Computer Science (BS CS)</h4>
+          <div style="color:var(--accent-cyan); font-weight:600; font-size:0.9rem; margin-bottom:0.75rem;">University of Peshawar, Pakistan &bull; Class of 2025</div>
+          <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6;">
+            Comprehensive academic coursework in Operating Systems, Computer Networks, Data Communications, Database Systems, Computer Architecture, Cryptography, and Software Engineering.
+          </p>
+        </div>
+
+        <div class="taxonomy-card">
+          <div class="taxonomy-header">
+            <div class="taxonomy-icon">⚡</div>
+            <h3>Key Strengths</h3>
+          </div>
+          <ul style="list-style:none;">
+            <li style="margin-bottom:0.6rem; color:var(--text-muted); font-size:0.88rem;">
+              <strong style="color:var(--text-main);">Analytical Problem Solving:</strong> Skilled in identifying attack vectors and executing containment through data-driven forensic telemetry.
+            </li>
+            <li style="margin-bottom:0.6rem; color:var(--text-muted); font-size:0.88rem;">
+              <strong style="color:var(--text-main);">Technical Documentation:</strong> Proven ability to draft comprehensive incident response, threat intelligence, and root-cause analysis reports.
+            </li>
+            <li style="color:var(--text-muted); font-size:0.88rem;">
+              <strong style="color:var(--text-main);">Remote Collaboration:</strong> Self-starter experienced with agile methodologies, asynchronous communication, Git version control, and remote-first collaboration.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTACT SECTION
+       ========================================================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">
+          Open to roles in Security Operations (SOC), Threat Detection, Threat Hunting, Incident Response, and Systems Engineering.
+        </p>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 2rem;">
+        <a href="mailto:hckr.badguy@gmail.com" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Email: hckr.badguy@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn: linkedin.com/in/hckr-zahid
+        </a>
+        <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub: github.com/hckr-zahid
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>
+            <span class="brand-badge">HCKR</span>
+            Zahid Ullah
+          </h3>
+          <p>
+            Cybersecurity Analyst &bull; SOC &amp; Threat Detection &bull; DFIR &bull; CEH &bull; CHFI &bull; (ISC)&sup2; CC &bull; Python Automation. Building and defending resilient enterprise infrastructures.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Portfolio Sections</h4>
+          <ul>
+            <li><a href="#cybergun">CyberGun Threat Suite</a></li>
+            <li><a href="#projects">Core Projects</a></li>
+            <li><a href="#adlab">Active Directory &amp; VMware Lab</a></li>
+            <li><a href="#certifications">Verified Certifications</a></li>
+            <li><a href="#skills">Skills Taxonomy &amp; Education</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/hckr-zahid" target="_blank" rel="noopener">GitHub (@hckr-zahid)</a></li>
+            <li><a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener">LinkedIn (@hckr-zahid)</a></li>
+            <li><a href="mailto:hckr.badguy@gmail.com">hckr.badguy@gmail.com</a></li>
+            <li><a href="tel:+923084888192">+92 308 4888192</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Zahid Ullah (<code>hckr-zahid</code>). All Rights Reserved.</div>
+        <div>Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> | Pure Static HTML, CSS &amp; JavaScript</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       LIGHTBOX MODAL (HIGH-RES INSPECTOR)
+       ========================================================================= -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <div class="lightbox-title-wrap">
+          <span class="lightbox-badge" id="lightboxBadge">Category</span>
+          <h3 class="lightbox-title" id="lightboxTitle">Screenshot Title</h3>
+        </div>
+        <div class="lightbox-actions">
+          <a id="lightboxRawLink" href="#" target="_blank" rel="noopener" class="lightbox-btn" title="Open Original File">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span>Raw File</span>
+          </a>
+          <button class="lightbox-btn lightbox-close-btn" onclick="closeLightbox()" title="Close (Esc)">
+            &times;
+          </button>
+        </div>
+      </div>
+
+      <div class="lightbox-body">
+        <button class="lightbox-nav-btn lightbox-nav-prev" onclick="prevLightbox()" aria-label="Previous (Left Arrow)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <img id="lightboxImage" src="" alt="Full Preview" class="lightbox-image">
+        <button class="lightbox-nav-btn lightbox-nav-next" onclick="nextLightbox()" aria-label="Next (Right Arrow)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+
+      <div class="lightbox-caption-bar">
+        <p class="lightbox-desc" id="lightboxDesc">Technical description.</p>
+        <div class="lightbox-meta">
+          <div id="lightboxTags">Tags</div>
+          <div id="lightboxStep">Asset 1 of 42</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/portfolio.js"></script>
+</body>
+</html>
