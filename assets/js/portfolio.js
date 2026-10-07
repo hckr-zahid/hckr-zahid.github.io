@@ -1,10 +1,10 @@
 /**
  * Portfolio Data Engine: Zahid Ullah
  * Includes:
- * 1. CyberGun Spotlight Screenshots
+ * 1. CyberGun Spotlight Screenshots & Thesis Link
  * 2. 6 Core Cybersecurity & Systems Projects
  * 3. 29 Windows Server & Active Directory Lab Screenshots
- * 4. 9 Verified Industry Certification Credentials
+ * 4. Verified Industry Certification Credentials (18+ items across ISC2, CISCO, EC-Council, Google, IBM, Johns Hopkins, Fortinet, etc.)
  */
 
 // CYBERGUN SPOTLIGHT SCREENSHOTS
@@ -28,8 +28,8 @@ const CYBERGUN_DATA = [
   {
     id: "cg-03",
     title: "Layered Scan Engine & Real-Time Threat Neutralization",
-    description: "Background execution of layered scan pipeline across 169 files: querying 3,160,113 malware hashes in SQLite, YARA rule validation, byte signature analysis, string regex pattern detection, and LightGBM machine learning inference (pdf_model.lgbm) with desktop notification alert.",
     categoryLabel: "Detection & Threat Logs",
+    description: "Background execution of layered scan pipeline across 169 files: querying 3,160,113 malware hashes in SQLite, YARA rule validation, byte signature analysis, string regex pattern detection, and LightGBM machine learning inference (pdf_model.lgbm) with desktop notification alert.",
     image: "assets/img/projects/cybergun-threat-logs.png",
     tags: ["Static Engine", "3.1M Hash Index", "LightGBM ML Model", "YARA Rules"]
   },
@@ -348,79 +348,187 @@ const LAB_DATA = [
   }
 ];
 
-// CERTIFICATION CREDENTIALS (9 VERIFIED CERTIFICATES)
+// COMPREHENSIVE CERTIFICATIONS & CREDENTIALS DATASET
 const CERTIFICATES_DATA = [
+  // 1. (ISC)² CC
   {
     id: "cert-01",
     title: "Certified in Cybersecurity (CC)",
     issuer: "(ISC)²",
+    badgeType: "Industry Certification",
     image: "assets/img/certificates/Certified in Cybersecurity Specialization.png",
     pdf: "assets/img/certificates/Certified in Cybersecurity.pdf",
     description: "Globally recognized baseline credential verifying competence in Security Principles, Incident Response, Access Controls, and Network Security."
   },
+  // 2. CEH (Certified Ethical Hacker)
   {
     id: "cert-02",
-    title: "Google Cybersecurity Professional Specialization",
-    issuer: "Google / Coursera",
-    image: "assets/img/certificates/Google Cybersecurity Specialization.png",
-    pdf: "assets/img/certificates/Google Cybersecurity Specialization.pdf",
-    description: "Comprehensive hands-on specialization covering Linux CLI, SQL, Python security automation, SIEM triage, and threat mitigation."
+    title: "Certified Ethical Hacker (CEH)",
+    issuer: "CISCO / NAVTTC Pakistan",
+    badgeType: "Professional Certification",
+    image: "assets/img/certificates/Google Cybersecurity Specialization.png", // fallback preview
+    pdf: "assets/img/certificates/CEH final Cisco.pdf",
+    description: "Hands-on penetration testing, ethical hacking, vulnerability scanning, network reconnaissance, and defense countermeasures."
   },
+  // 3. Google Cybersecurity Professional
   {
     id: "cert-03",
+    title: "Google Cybersecurity Professional Specialization",
+    issuer: "Google / Coursera",
+    badgeType: "Professional Specialization",
+    image: "assets/img/certificates/Google Cybersecurity Specialization.png",
+    pdf: "assets/img/certificates/Google Cybersecurity Professional.pdf",
+    description: "Comprehensive hands-on specialization covering Linux CLI, SQL, Python security automation, SIEM triage, and threat mitigation."
+  },
+  // 4. IBM Cybersecurity Analyst
+  {
+    id: "cert-04",
     title: "IBM Cybersecurity Analyst Professional Specialization",
     issuer: "IBM / Coursera",
+    badgeType: "Professional Specialization",
     image: "assets/img/certificates/IBM Cybersecurity Analyst.png",
     pdf: "assets/img/certificates/IBM Cybersecurity Analyst Specialization.pdf",
     description: "Deep dive into SOC workflows, threat intelligence, endpoint behavior, IBM QRadar SIEM, and digital forensics incident response capstone."
   },
+  // 5. Fortinet Network Security Expert
   {
-    id: "cert-04",
+    id: "cert-05",
     title: "Fortinet Network Security Expert Specialization",
     issuer: "Fortinet, Inc.",
+    badgeType: "Vendor Credential",
     image: "assets/img/certificates/Fortinet Network Security Specialization.png",
     pdf: "assets/img/certificates/Fortinet Network Security Specialization.pdf",
     description: "Perimeter threat analysis, Next-Generation Firewall (NGFW) architectures, network segmentation, and secure fabric operations."
   },
+  // 6. IBM & (ISC)² Cybersecurity Specialist
   {
-    id: "cert-05",
+    id: "cert-06",
     title: "IBM & (ISC)² Cybersecurity Specialist Specialization",
     issuer: "IBM & (ISC)²",
+    badgeType: "Joint Specialization",
     image: "assets/img/certificates/IBM and ISC2 Cybersecurity Specialist Specialization.png",
     pdf: "assets/img/certificates/IBM and ISC2 Cybersecurity Specialist Specialization.pdf",
     description: "Joint specialization bridging enterprise risk management, access governance, threat hunting, and regulatory security policies."
   },
+  // 7. Google Cloud Cybersecurity
   {
-    id: "cert-06",
+    id: "cert-07",
     title: "Google Cloud Cybersecurity Specialization",
     issuer: "Google Cloud / Coursera",
+    badgeType: "Cloud Security",
     image: "assets/img/certificates/Google Cloud Cybersecurity.png",
     pdf: "assets/img/certificates/Google Cloud Cybersecurity.pdf",
     description: "Securing cloud workloads, IAM least privilege, Cloud Audit Logging, VPC Service Controls, and security posture management."
   },
+  // 8. Networking in Google Cloud
   {
-    id: "cert-07",
+    id: "cert-08",
     title: "Networking in Google Cloud Specialization",
     issuer: "Google Cloud / Coursera",
+    badgeType: "Cloud Architecture",
     image: "assets/img/certificates/Networking in Google Cloud Specialization.png",
     pdf: "assets/img/certificates/Networking in Google Cloud Specialization.pdf",
     description: "Advanced VPC routing, Cloud Interconnect, subnets, firewall rules, Cloud NAT, and network performance diagnostics."
   },
+  // 9. Johns Hopkins Advanced Cybersecurity
   {
-    id: "cert-08",
+    id: "cert-09",
+    title: "Advanced Cybersecurity Techniques",
+    issuer: "Johns Hopkins University",
+    badgeType: "University Certificate",
+    image: "assets/img/certificates/IBM and ISC2 Cybersecurity Specialist Specialization.png",
+    pdf: "assets/img/certificates/Advanced CyberSecurity techniques John Hopkins.pdf",
+    description: "Advanced cryptographic mechanisms, cyber defense models, secure architecture paradigms, and vulnerability mitigation."
+  },
+  // 10. Supervised Machine Learning (DeepLearning.AI)
+  {
+    id: "cert-10",
     title: "Supervised Machine Learning: Regression and Classification",
     issuer: "DeepLearning.AI / Stanford",
+    badgeType: "AI & Data Science",
     image: "assets/img/certificates/Supervised Machine Learning.png",
     pdf: "assets/img/certificates/Supervised Machine Learning.pdf",
     description: "Foundational machine learning algorithms, gradient descent, feature engineering, and classification models used in CyberGun."
   },
+  // 11. Object-Oriented Programming in C++ (Univ of London)
   {
-    id: "cert-09",
+    id: "cert-11",
     title: "Object-Oriented Programming in C++ Specialization",
     issuer: "University of London / Coursera",
+    badgeType: "Software Engineering",
     image: "assets/img/certificates/Object-Oriented Programming in C++.png",
     pdf: "assets/img/certificates/Object Oriented Programming Specialization.pdf",
     description: "Mastery in OOP design patterns, encapsulation, inheritance, polymorphism, and memory management for high-performance software."
+  },
+  // 12. Fortinet Network Support Engineer
+  {
+    id: "cert-12",
+    title: "Fortinet Network Support Engineer",
+    issuer: "Fortinet, Inc.",
+    badgeType: "Technical Specialist",
+    image: "assets/img/certificates/Fortinet Network Security Specialization.png",
+    pdf: "assets/img/certificates/Fortinet Network Support Engineer.pdf",
+    description: "Operational diagnostics, troubleshooting stateful firewall tables, routing protocols, and enterprise VPN tunnels."
+  },
+  // 13. Web Hacking & Penetration Testing
+  {
+    id: "cert-13",
+    title: "Web Hacking and Penetration Testing",
+    issuer: "Cyber Security Academy",
+    badgeType: "Offensive Security",
+    image: "assets/img/certificates/Google Cybersecurity Specialization.png",
+    pdf: "assets/img/certificates/WebHacking AndPenetrationTesting.pdf",
+    description: "Web application penetration testing, OWASP Top 10 exploits (SQLi, XSS, CSRF, SSRF), and vulnerability exploitation."
+  },
+  // 14. Network Security & Database Vulnerabilities
+  {
+    id: "cert-14",
+    title: "Network Security & Database Vulnerabilities",
+    issuer: "Coursera / IBM",
+    badgeType: "Security Operations",
+    image: "assets/img/certificates/IBM Cybersecurity Analyst.png",
+    pdf: "assets/img/certificates/Network Security & Database Vulnerabilities.pdf",
+    description: "Assessing enterprise database weaknesses, SQL injection vectors, and securing relational data stores against unauthorized exfiltration."
+  },
+  // 15. Kali Linux Security Certification
+  {
+    id: "cert-15",
+    title: "Kali Linux Advanced Security Specialist",
+    issuer: "Professional Security Training",
+    badgeType: "Offensive Tooling",
+    image: "assets/img/certificates/Certified in Cybersecurity Specialization.png",
+    pdf: "assets/img/certificates/Zahid Ullah Kali Linux.pdf",
+    description: "Mastery in weaponizing the Kali Linux offensive distribution, custom scripting, payload delivery, and reconnaissance tools."
+  },
+  // 16. Dark Web & Threat Intelligence
+  {
+    id: "cert-16",
+    title: "Dark Web Investigation & Threat Intelligence",
+    issuer: "Intelligence Operations",
+    badgeType: "Threat Intelligence",
+    image: "assets/img/certificates/IBM Cybersecurity Analyst.png",
+    pdf: "assets/img/certificates/Zahid Ullah Dark Web.pdf",
+    description: "Techniques for monitoring darknet forums, tracing compromised credentials, evaluating underground threat vectors, and OPSEC."
+  },
+  // 17. CyberPashto Ethical Hacking L1
+  {
+    id: "cert-17",
+    title: "Ethical Hacking Level 1 (EH L1)",
+    issuer: "CyberPashto Academy",
+    badgeType: "Ethical Hacking",
+    image: "assets/img/certificates/Certified in Cybersecurity Specialization.png",
+    pdf: "assets/img/certificates/Zahid Ullah CyberPashto EH L1.pdf",
+    description: "Foundations of ethical hacking, scanning techniques, reconnaissance protocols, and defensive security baselines."
+  },
+  // 18. CyberPashto Cybersecurity Level 2 & 3
+  {
+    id: "cert-18",
+    title: "Cybersecurity Practitioner Level 2 & 3",
+    issuer: "CyberPashto Academy",
+    badgeType: "Advanced Defense",
+    image: "assets/img/certificates/Certified in Cybersecurity Specialization.png",
+    pdf: "assets/img/certificates/Zahid Ullah  Cyberpashto C.Sec L3.pdf",
+    description: "Advanced defensive cyber tactics, threat detection, incident triage, security automation, and infrastructure defense."
   }
 ];
 
@@ -428,7 +536,7 @@ const CERTIFICATES_DATA = [
 const ALL_INSPECTOR_ITEMS = [
   ...CYBERGUN_DATA.map(d => ({ ...d, modalType: "CyberGun Project" })),
   ...LAB_DATA.map(d => ({ ...d, modalType: "AD & VMware Lab" })),
-  ...CERTIFICATES_DATA.map(d => ({ ...d, modalType: "Verified Certificate", tags: [d.issuer] }))
+  ...CERTIFICATES_DATA.map(d => ({ ...d, modalType: "Verified Certificate", tags: [d.issuer, d.badgeType] }))
 ];
 
 // APP INITIALIZATION
@@ -503,18 +611,21 @@ function renderCertificates() {
           </div>
         </div>
         <div class="cert-card-body">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.35rem;">
+            <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--accent-cyan); background:rgba(56,189,248,0.1); padding:0.15rem 0.4rem; border-radius:4px; font-weight:700;">${escapeHtml(cert.badgeType)}</span>
+            <span style="font-size:0.75rem; color:var(--text-dim); font-weight:600;">${escapeHtml(cert.issuer)}</span>
+          </div>
           <h4 class="cert-title">${escapeHtml(cert.title)}</h4>
-          <div class="cert-issuer-badge">${escapeHtml(cert.issuer)}</div>
-          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.5; margin-bottom:1rem;">
+          <p style="font-size:0.83rem; color:var(--text-muted); line-height:1.5; margin-bottom:1rem; flex-grow:1;">
             ${escapeHtml(cert.description)}
           </p>
           <div class="cert-actions">
             <button class="inspect-btn" onclick="openLightbox(${globalIndex})">
-              <span>Inspect Image</span>
+              <span>View Credential</span>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
             <a href="${cert.pdf}" target="_blank" rel="noopener noreferrer" style="font-size:0.8rem; font-weight:600; color:var(--accent-cyan); display:inline-flex; align-items:center; gap:0.3rem;">
-              <span>PDF Verification</span>
+              <span>Verify PDF</span>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             </a>
           </div>
