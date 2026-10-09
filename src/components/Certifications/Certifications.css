@@ -25,9 +25,18 @@
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
+[data-theme="light"] .certificate-card {
+  background: var(--bg-card);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
 .certificate-card:hover {
   border-color: var(--border-strong);
   transform: translateY(-2px);
+}
+
+[data-theme="light"] .certificate-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .certificate-number {

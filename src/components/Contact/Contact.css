@@ -17,6 +17,17 @@
     rgba(9, 15, 23, 0.8);
 }
 
+[data-theme="light"] .contact-card {
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(2, 132, 199, 0.06),
+      transparent 35%
+    ),
+    rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+}
+
 .contact-main h2 {
   margin-top: 10px;
 

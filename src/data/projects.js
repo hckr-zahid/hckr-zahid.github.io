@@ -17,6 +17,8 @@ const projects = [
     status: "Completed",
     featured: true,
     image: "/images/projects/cybergun.jpg",
+    link: "https://github.com/hckr-zahid/CyberGun",
+    thesisUrl: "/thesis/CyberGun Final Thesis.pdf",
   },
 
   {

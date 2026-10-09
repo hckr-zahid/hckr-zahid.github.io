@@ -14,22 +14,22 @@ const profile = {
   location: "Peshawar, Pakistan",
   availability: "Remote-Ready",
 
-  email: "xahidullah@yahoo.com",
+  email: "hckr.badguy@gmail.com",
   phone: "+92 308 4888192",
 
-  linkedin: "https://linkedin.com/in/badguy101",
-  github: "https://github.com/BadGuy101",
+  linkedin: "https://linkedin.com/in/hckr-zahid",
+  github: "https://github.com/hckr-zahid",
   website: "https://hckr-zahid.github.io",
 
   summary:
-    "Cybersecurity professional focused on security operations, threat detection, network security, incident response, digital forensics, vulnerability assessment, and security automation.",
+    "Certified and results-driven cybersecurity professional with a strong foundation in threat detection, incident response, digital forensics, and systems engineering. Proven ability to translate complex security concepts into actionable defense strategies through the development of CyberGun (a modular static/dynamic malware detection system) and enterprise-grade Active Directory & VMware networking labs.",
 
   about: [
-    "I am a cybersecurity professional with a strong hands-on focus across security operations, ethical hacking, network defense, digital forensics, vulnerability assessment, and security automation.",
+    "I investigate security problems, build practical detection tools, and engineer controlled environments to understand how systems behave, fail, and defend themselves.",
 
-    "My approach is centered around building practical environments, analyzing real security scenarios, investigating evidence, automating repetitive security tasks, and continuously improving defensive capabilities.",
+    "My professional focus bridges endpoint detection and response (EDR), static/dynamic malware analysis, threat hunting, and enterprise systems engineering across Windows Server and Linux environments.",
 
-    "My technical work spans Windows and Linux environments, network security, SIEM platforms, intrusion detection, vulnerability assessment, malware and forensic analysis, cloud security, and Python-based security automation.",
+    "I hold 24+ verified industry credentials including (ISC)² Certified in Cybersecurity (CC), Cisco Ethical Hacker, and professional certifications from Google, IBM, Johns Hopkins University, and Fortinet.",
   ],
 
   strengths: [

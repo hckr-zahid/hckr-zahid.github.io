@@ -3,6 +3,7 @@ import { Terminal as TerminalIcon } from "lucide-react";
 
 import profile from "../../data/profile";
 import projects from "../../data/projects";
+import researchProjects from "../../data/research";
 import labs from "../../data/labs";
 import certifications from "../../data/certifications";
 
@@ -16,6 +17,7 @@ function Terminal() {
     help: `Available commands:
 about
 projects
+research
 labs
 skills
 certifications
@@ -30,6 +32,10 @@ clear`,
 
     projects: projects
       .map((project) => `${project.number}  ${project.title}`)
+      .join("\n"),
+
+    research: researchProjects
+      .map((item) => `${item.number}  ${item.title}`)
       .join("\n"),
 
     labs: labs
