@@ -10,7 +10,7 @@
   border: 1px solid var(--border);
   border-radius: 12px;
 
-  background: rgba(10, 17, 26, 0.65);
+  background: var(--bg-card);
 }
 
 .skill-icon {

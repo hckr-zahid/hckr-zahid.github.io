@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   ArrowUpRight,
   Code2,
+  FileText,
   ImageOff,
   Shield,
 } from "lucide-react";
@@ -60,15 +61,31 @@ function ProjectCard({ project }) {
           ))}
         </div>
 
-        <a
-          href="https://github.com/BadGuy101"
-          target="_blank"
-          rel="noreferrer"
-          className="project-link"
-        >
-          View Project
-          <ArrowUpRight size={16} />
-        </a>
+        <div className="project-actions">
+          <a
+            href={project.link || "https://github.com/BadGuy101"}
+            target="_blank"
+            rel="noreferrer"
+            className="project-link"
+            aria-label={`View ${project.title} project on GitHub`}
+          >
+            View Project
+            <ArrowUpRight size={16} />
+          </a>
+
+          {project.thesisUrl && (
+            <a
+              href={project.thesisUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-thesis-link"
+              aria-label={`Read ${project.title} Thesis PDF`}
+            >
+              <FileText size={15} />
+              Thesis (PDF)
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );

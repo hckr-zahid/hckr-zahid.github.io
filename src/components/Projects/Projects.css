@@ -72,10 +72,23 @@
     box-shadow 0.25s ease;
 }
 
+[data-theme="light"] .project-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(241, 245, 249, 0.95)
+  );
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
 .project-card:hover {
   transform: translateY(-5px);
   border-color: var(--border-strong);
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] .project-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .project-card-top {
@@ -192,6 +205,44 @@
   color: var(--cyan);
   font-family: var(--font-mono);
   font-size: 0.7rem;
+}
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.project-actions .project-link {
+  margin-top: 0;
+}
+
+.project-thesis-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(34, 211, 238, 0.06);
+  border: 1px solid var(--border);
+  color: var(--cyan-light);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+[data-theme="light"] .project-thesis-link {
+  background: rgba(2, 132, 199, 0.06);
+  color: var(--cyan);
+}
+
+.project-thesis-link:hover {
+  border-color: var(--cyan);
+  background: rgba(34, 211, 238, 0.12);
+  color: var(--cyan);
 }
 
 .projects-footer {

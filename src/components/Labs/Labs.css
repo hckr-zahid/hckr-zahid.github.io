@@ -58,10 +58,18 @@
   transition: 0.25s ease;
 }
 
+[data-theme="light"] .lab-card {
+  background: var(--bg-card);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
 
 .lab-card:hover {
   border-color: var(--border-strong);
   transform: translateY(-4px);
+}
+
+[data-theme="light"] .lab-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .lab-header {

@@ -34,3 +34,27 @@
 
   --font-mono: "JetBrains Mono", "Cascadia Code", Consolas, monospace;
 }
+
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.95);
+
+  --border: rgba(100, 116, 139, 0.22);
+  --border-strong: rgba(2, 132, 199, 0.45);
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+
+  --cyan: #0284c7;
+  --cyan-light: #0369a1;
+  --cyan-dark: #075985;
+
+  --green: #16a34a;
+  --yellow: #b45309;
+  --red: #dc2626;
+
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}

@@ -9,7 +9,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
 
-  background: rgba(10, 17, 26, 0.7);
+  background: var(--bg-card);
 }
 
 .education-icon {
