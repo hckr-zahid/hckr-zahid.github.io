@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahid Ullah • Cybersecurity Analyst & Systems Engineer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            dark: '#070a13',
+                            card: '#0f172a',
+                            border: '#1e293b',
+                            cyan: '#06b6d4',
+                            purple: '#8b5cf6',
+                            emerald: '#10b981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #070a13;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .cyber-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(30, 41, 59, 0.8);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.35);
+        }
+        .glow-purple {
+            box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.35);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070a13;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
+    </style>
+</head>
+<body class="cyber-grid min-h-screen relative selection:bg-cyan-500 selection:text-black">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-cyber-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center glow-cyan group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-shield-halved text-black text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-mono font-bold text-lg tracking-wider text-white">HCKR<span class="text-cyan-400">.Zahid</span></span>
+                    <span class="block text-[10px] text-cyan-400 font-mono tracking-widest uppercase">CyberSecurity Analyst</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-8 font-medium text-sm text-slate-300">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#research" class="hover:text-cyan-400 transition-colors">Research & Labs</a>
+                <a href="#certs" class="hover:text-cyan-400 transition-colors">Certifications</a>
+                <a href="#education" class="hover:text-cyan-400 transition-colors">Education</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center space-x-4">
+                <!-- Command Palette Trigger Button -->
+                <button onclick="toggleCommandPalette()" class="hidden sm:flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-400 hover:text-cyan-400 hover:border-cyan-500 transition-all text-xs font-mono">
+                    <i class="fa-solid fa-terminal text-cyan-400"></i>
+                    <span>Search / Cmd+K</span>
+                </button>
+
+                <!-- Theme Toggle -->
+                <button onclick="toggleTheme()" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-500 transition-all">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-cyan-400">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden glass-card border-b border-cyber-border px-6 py-6 space-y-4">
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-cyan-400 font-medium">About</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-cyan-400 font-medium">Projects</a>
+            <a href="#research" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-cyan-400 font-medium">Research & Labs</a>
+            <a href="#certs" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-cyan-400 font-medium">Certifications</a>
+            <a href="#education" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-cyan-400 font-medium">Education</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-cyan-400 font-medium">Contact</a>
+            <button onclick="toggleCommandPalette(); toggleMobileMenu();" class="w-full py-2.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs flex items-center justify-center space-x-2">
+                <i class="fa-solid fa-terminal"></i>
+                <span>Open Command Palette</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="about" class="pt-32 pb-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>Cybersecurity Engineering • Threat Detection • DFIR • Remote-Ready</span>
+                    </div>
+
+                    <!-- Headline -->
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                        Cybersecurity Research. <span class="text-gradient">Security Engineering.</span> Systems.
+                    </h1>
+
+                    <!-- Bio -->
+                    <p class="text-slate-300 text-lg leading-relaxed">
+                        I am <strong class="text-white">Zahid Ullah</strong>, a dedicated Cybersecurity Analyst, Threat Hunter, and Systems Engineer holding a B.Sc. in Computer Science from Peshawar. I specialize in malware detection pipelines, Active Directory security lab hardening, incident response, and end-to-end security architecture.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#contact" class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-semibold hover:opacity-95 transition-opacity glow-cyan flex items-center space-x-2">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <span>Download CV (PDF)</span>
+                        </a>
+                        <a href="#projects" class="px-6 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 font-semibold hover:border-cyan-500 hover:text-cyan-400 transition-all flex items-center space-x-2">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Explore Projects</span>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="px-6 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 font-semibold hover:border-purple-500 hover:text-purple-400 transition-all flex items-center space-x-2">
+                            <i class="fa-brands fa-github"></i>
+                            <span>CyberGun Repo</span>
+                        </a>
+                    </div>
+
+                    <!-- Telemetry Strip -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-800">
+                        <div class="p-3 rounded-xl glass-card border border-slate-800">
+                            <div class="text-cyan-400 font-mono font-bold text-sm">Flagship EDR</div>
+                            <div class="text-slate-400 text-xs mt-0.5">CyberGun Suite</div>
+                        </div>
+                        <div class="p-3 rounded-xl glass-card border border-slate-800">
+                            <div class="text-purple-400 font-mono font-bold text-sm">Research</div>
+                            <div class="text-slate-400 text-xs mt-0.5">PowerShell Analysis</div>
+                        </div>
+                        <div class="p-3 rounded-xl glass-card border border-slate-800">
+                            <div class="text-emerald-400 font-mono font-bold text-sm">Infra Lab</div>
+                            <div class="text-slate-400 text-xs mt-0.5">AD & VMware zroots</div>
+                        </div>
+                        <div class="p-3 rounded-xl glass-card border border-slate-800">
+                            <div class="text-blue-400 font-mono font-bold text-sm">24+ Verified</div>
+                            <div class="text-slate-400 text-xs mt-0.5">Credentials & Badges</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Profile Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-3xl p-6 border border-slate-800 shadow-2xl relative glow-purple">
+                        <div class="absolute -top-3 -right-3 px-3 py-1 rounded-full bg-cyan-500 text-black text-xs font-mono font-bold">
+                            ONLINE
+                        </div>
+                        <!-- High-res Profile Image placeholder / avatar -->
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-gradient-to-b from-slate-800 to-slate-900 flex items-center justify-center border border-slate-700">
+                            <div class="absolute inset-0 bg-cover bg-center opacity-70" style="background-image: url('https://placehold.co/600x750/0f172a/06b6d4?text=Zahid+Ullah');"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-center">
+                                <h3 class="text-2xl font-bold text-white">Zahid Ullah</h3>
+                                <p class="text-cyan-400 text-sm font-mono mt-1">Cybersecurity Analyst & Engineer</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Details & Location -->
+                        <div class="mt-6 space-y-3 font-mono text-xs text-slate-300">
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                                <span class="text-slate-400"><i class="fa-solid fa-envelope text-cyan-400 mr-2"></i>Email</span>
+                                <span class="text-white select-all">hckr.zahid@proton.me</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                                <span class="text-slate-400"><i class="fa-solid fa-phone text-emerald-400 mr-2"></i>Phone</span>
+                                <span class="text-white select-all">+92 308 4888192</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                                <span class="text-slate-400"><i class="fa-solid fa-location-dot text-purple-400 mr-2"></i>Location</span>
+                                <span class="text-white">Peshawar, Pakistan</span>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="flex justify-center space-x-4 mt-6 pt-6 border-t border-slate-800">
+                            <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-500 transition-all">
+                                <i class="fa-brands fa-linkedin-in text-lg"></i>
+                            </a>
+                            <a href="https://github.com" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-purple-400 hover:border-purple-500 transition-all">
+                                <i class="fa-brands fa-github text-lg"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-blue-400 hover:border-blue-500 transition-all">
+                                <i class="fa-brands fa-twitter text-lg"></i>
+                            </a>
+                            <a href="mailto:zahid.sec@proton.me" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-emerald-400 hover:border-emerald-500 transition-all">
+                                <i class="fa-solid fa-envelope text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest">Core Competencies</span>
+                    <h2 class="text-3xl font-bold mt-2">Four Pillars of Technical Expertise</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Pillar 1 -->
+                    <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-radar"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Threat Detection</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Designing signature and heuristic-based detection mechanisms, LightGBM machine learning models, and real-time telemetry pipelines.</p>
+                    </div>
+                    <!-- Pillar 2 -->
+                    <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-purple-500 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Security Research</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Deep analysis of PowerShell obfuscation, static binary inspection, vulnerability assessment, and custom payload heuristics.</p>
+                    </div>
+                    <!-- Pillar 3 -->
+                    <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-emerald-500 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Systems Engineering</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Building secure enterprise infrastructure, Active Directory domain controllers, VMware VMnet10 isolation, and high-availability servers.</p>
+                    </div>
+                    <!-- Pillar 4 -->
+                    <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-blue-500 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">DFIR</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Digital forensics and incident response workflows, memory dumps, log analysis, threat actor attribution, and containment strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-950/50 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest">Engineering & Tools</span>
+                <h2 class="text-3xl font-extrabold mt-2">Projects & Core Systems</h2>
+                <p class="text-slate-400 text-sm mt-2">Flagship threat mitigation suites, security tools, and production-ready enterprise software.</p>
+            </div>
+
+            <!-- Flagship Project: CyberGun Threat Mitigation Suite -->
+            <div class="glass-card rounded-3xl p-8 border border-slate-800 mb-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs">FLAGSHIP EDR</span>
+                            <span class="text-slate-400 font-mono text-xs">Python • LightGBM • PyQt5</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white">CyberGun Threat Mitigation Suite</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            An advanced Endpoint Detection and Response (EDR) platform engineered to monitor real-time process telemetry, detect anomalous process injection behaviors, and execute swift quarantine protocols.
+                        </p>
+                        <!-- Architecture Blocks -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                                <i class="fa-solid fa-cogs text-cyan-400 mb-1"></i>
+                                <div class="font-mono text-xs text-white">Modular Engines</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                                <i class="fa-solid fa-brain text-purple-400 mb-1"></i>
+                                <div class="font-mono text-xs text-white">LightGBM ML</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                                <i class="fa-solid fa-desktop text-emerald-400 mb-1"></i>
+                                <div class="font-mono text-xs text-white">PyQt5 GUI</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                                <i class="fa-solid fa-shield text-blue-400 mb-1"></i>
+                                <div class="font-mono text-xs text-white">Quarantine Hook</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <a href="https://github.com" target="_blank" class="px-5 py-2.5 rounded-xl bg-cyan-500 text-black font-semibold text-sm hover:opacity-90 transition-opacity flex items-center space-x-2">
+                                <i class="fa-brands fa-github"></i>
+                               <span>View Repository</span>
+                            </a>
+                            <button onclick="openLightbox('https://placehold.co/1200x800/0f172a/06b6d4?text=CyberGun+EDR+Dashboard', 'CyberGun Threat Mitigation Suite')" class="px-5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 font-semibold text-sm hover:border-cyan-500 transition-all flex items-center space-x-2">
+                                <i class="fa-solid fa-expand"></i>
+                                <span>Inspect Screenshot</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Screenshot Gallery Preview -->
+                    <div class="lg:col-span-5">
+                        <div class="rounded-2xl overflow-hidden border border-slate-700 cursor-pointer group relative shadow-xl" onclick="openLightbox('https://placehold.co/1200x800/0f172a/06b6d4?text=CyberGun+EDR+Dashboard', 'CyberGun Threat Mitigation Suite')">
+                            <img src="https://placehold.co/600x400/0f172a/06b6d4?text=CyberGun+EDR+Dashboard" alt="CyberGun EDR" class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="px-4 py-2 rounded-xl bg-black/80 text-cyan-400 font-mono text-xs border border-cyan-500/50 flex items-center space-x-2">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                    <span>Click to Expand</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Systems Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 2 -->
+                <div class="glass-card rounded-3xl p-6 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 font-mono text-xs">ENTERPRISE POS</span>
+                            <span class="text-slate-400 font-mono text-xs">Electron • React • Node</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">ExFaCe Enterprise POS & Management</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            A robust desktop-based Point of Sale and enterprise management software built for retail and supply chain tracking, featuring secure offline database encryption and role-based access control.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-slate-800 text-xs font-mono">
+                        <span class="text-slate-400">Production Deployed</span>
+                        <a href="https://github.com" target="_blank" class="text-cyan-400 hover:underline flex items-center space-x-1">
+                            <span>Source Code</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card rounded-3xl p-6 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs">SECURITY RESEARCH</span>
+                            <span class="text-slate-400 font-mono text-xs">PowerShell • Regex • AST</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">PowerShell Static Analysis & Heuristics</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Advanced automated script analyzer designed to detect obfuscated PowerShell commands, encoded payloads, and suspicious API invocations before script execution in enterprise environments.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-slate-800 text-xs font-mono">
+                        <span class="text-slate-400">Open Source Tool</span>
+                        <a href="https://github.com" target="_blank" class="text-cyan-400 hover:underline flex items-center space-x-1">
+                            <span>Source Code</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest">Lab Environments</span>
+                <h2 class="text-3xl font-extrabold mt-2">Security Research & Active Directory Labs</h2>
+                <p class="text-slate-400 text-sm mt-2">Private lab architecture, isolated testbeds, and interactive CLI threat simulator.</p>
+            </div>
+
+            <!-- Private Cyber Lab Handbook overview -->
+            <div class="glass-card rounded-3xl p-8 border border-slate-800 mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Private Cyber Lab (`zroots.local`)</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            A dedicated home lab architecture simulating enterprise environments. Built using Windows Server 2019 Domain Controllers and isolated via VMware VMnet10 virtual switches to safely test exploit vectors, Kerberoasting, and detection rule efficacy.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Active Directory Hardening</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Continuous auditing of Group Policy Objects (GPOs), ACL misconfigurations, privileged account hygiene, and tier-based administration models to prevent lateral movement.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl">
+                            <i class="fa-solid fa-bug-slash"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Malware Analysis Pipeline</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Sandboxed execution environments for unpacking malicious binaries, extracting IOCs (Indicators of Compromise), and generating Yara rules for SIEM integration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive CLI Threat Terminal Simulator -->
+            <div class="glass-card rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+                <!-- Terminal Header -->
+                <div class="bg-slate-900 px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                        <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                        <span class="ml-4 font-mono text-xs text-slate-400">zahid@cyber-terminal: ~</span>
+                    </div>
+                    <div class="text-xs font-mono text-cyan-400">
+                        <i class="fa-solid fa-terminal mr-1"></i> Interactive CLI
+                    </div>
+                </div>
+                <!-- Terminal Body -->
+                <div class="p-6 font-mono text-sm bg-slate-950/90 text-slate-200 h-80 overflow-y-auto space-y-3" id="terminal-output">
+                    <div class="text-cyan-400">Welcome to Zahid Ullah's Security CLI v2.4.1</div>
+                    <div class="text-slate-400">Type <span class="text-white font-bold bg-slate-900 px-1.5 py-0.5 rounded">help</span> to view available commands.</div>
+                    <div class="text-slate-300">$ system_check --status</div>
+                    <div class="text-emerald-400">[✓] Active Directory Lab (zroots.local): SECURE</div>
+                    <div class="text-emerald-400">[✓] CyberGun EDR Telemetry Engine: ACTIVE</div>
+                </div>
+                <!-- Terminal Input Form -->
+                <div class="bg-slate-900 px-6 py-3 border-t border-slate-800 flex items-center space-x-3">
+                    <span class="text-cyan-400 font-mono">$</span>
+                    <input type="text" id="terminal-input" placeholder="Type a command (e.g. help, scan, ad_audit)..." class="bg-transparent border-none outline-none font-mono text-sm text-white w-full" onkeydown="handleTerminalCommand(event)">
+                    <button onclick="executeTerminalInput()" class="px-4 py-1.5 rounded-lg bg-cyan-500 text-black font-mono text-xs font-bold hover:opacity-90 transition-opacity">
+                        Run
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certs" class="py-20 bg-slate-950/50 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest">Credentials & Badges</span>
+                <h2 class="text-3xl font-extrabold mt-2">Professional Certifications (24+ Verified)</h2>
+                <p class="text-slate-400 text-sm mt-2">Industry recognized credentials across cybersecurity, networking, and cloud security.</p>
+            </div>
+
+            <!-- Certification Grid (8+ main ones) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cert 1 -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="font-bold text-white mb-1">(ISC)² Certified in Cybersecurity</h3>
+                        <p class="text-slate-400 text-xs font-mono">CC • Professional Credential</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-emerald-400">
+                        <span>Verified</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-purple-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-4">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="font-bold text-white mb-1">Google Cybersecurity Professional</h3>
+                        <p class="text-slate-400 text-xs font-mono">Google Career Certificates</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-emerald-400">
+                        <span>Verified</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-emerald-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="font-bold text-white mb-1">Cisco Networking Basics & Security</h3>
+                        <p class="text-slate-400 text-xs font-mono">Cisco Networking Academy</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-emerald-400">
+                        <span>Verified</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-blue-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-4">
+                            <i class="fa-solid fa-building-shield"></i>
+                        </div>
+                        <h3 class="font-bold text-white mb-1">IBM Cybersecurity Fundamentals</h3>
+                        <p class="text-slate-400 text-xs font-mono">IBM Security Badge</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-emerald-400">
+                        <span>Verified</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-yellow-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 mb-4">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="font-bold text-white mb-1">Certified Ethical Hacker (CEH) Prep</h3>
+                        <p class="text-slate-400 text-xs font-mono">Advanced Penetration Testing</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-emerald-400">
+                        <span>Verified</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-red-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 mb-4">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                        </div>
+                        <h3 class="font-bold text-white mb-1">Fortinet Associate Cybersecurity</h3>
+                        <p class="text-slate-400 text-xs font-mono">Fortinet Training Institute</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-emerald-400">
+                        <span>Verified</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 7 -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-indigo-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-4">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-bold text-white mb-1">NAVTTC National IT Security</h3>
+                        <p class="text-slate-400 text-xs font-mono">Government Certified Program</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-emerald-400">
+                        <span>Verified</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 8 -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-teal-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 mb-4">
+                            <i class="fa-solid fa-cloud-shield"></i>
+                        </div>
+                        <h3 class="font-bold text-white mb-1">Cloud Security & Endpoint Defense</h3>
+                        <p class="text-slate-400 text-xs font-mono">Specialized Track</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-emerald-400">
+                        <span>Verified</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest">Background</span>
+                <h2 class="text-3xl font-extrabold mt-2">Education & Professional Timeline</h2>
+                <p class="text-slate-400 text-sm mt-2">Academic foundation from Peshawar and ongoing professional experience.</p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Timeline Item 1 -->
+                <div class="glass-card rounded-3xl p-8 border border-slate-800 relative pl-12 sm:pl-16">
+                    <div class="absolute left-6 sm:left-8 top-8 w-4 h-4 rounded-full bg-cyan-400 glow-cyan"></div>
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                        <h3 class="text-xl font-bold text-white">B.Sc. in Computer Science</h3>
+                        <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs">Peshawar, Pakistan</span>
+                    </div>
+                    <p class="text-slate-400 text-xs font-mono mb-4">Foundation in Algorithms, Operating Systems, Networking & Software Architecture</p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Completed rigorous coursework in computer science principles, database management, and network security protocols, laying the groundwork for advanced cybersecurity engineering and threat research.
+                    </p>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="glass-card rounded-3xl p-8 border border-slate-800 relative pl-12 sm:pl-16">
+                    <div class="absolute left-6 sm:left-8 top-8 w-4 h-4 rounded-full bg-purple-400 glow-purple"></div>
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                        <h3 class="text-xl font-bold text-white">Cybersecurity Analyst & Threat Hunter</h3>
+                        <span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 font-mono text-xs">Independent & Enterprise Labs</span>
+                    </div>
+                    <p class="text-slate-400 text-xs font-mono mb-4">Continuous Security Research & Development</p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Developing proprietary EDR tooling (CyberGun), executing static and dynamic malware analysis, setting up isolated Active Directory domain environments for threat simulation, and earning 24+ professional certifications.
+                    </p>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="glass-card rounded-3xl p-8 border border-slate-800 relative pl-12 sm:pl-16">
+                    <div class="absolute left-6 sm:left-8 top-8 w-4 h-4 rounded-full bg-emerald-400"></div>
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                        <h3 class="text-xl font-bold text-white">Systems Engineer & Software Architect</h3>
+                        <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs">Production Systems</span>
+                    </div>
+                    <p class="text-slate-400 text-xs font-mono mb-4">Enterprise Applications & Infrastructure</p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Architecting desktop-grade enterprise solutions like ExFaCe POS & Management systems with resilient data storage, secure client-server communication, and optimized performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-950/50 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest">Get In Touch</span>
+                <h2 class="text-3xl font-extrabold mt-2">Secure Contact & Direct Communications</h2>
+                <p class="text-slate-400 text-sm mt-2">Available for cybersecurity engineering, threat research, and remote analyst roles.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Info Cards -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-card rounded-2xl p-6 border border-slate-800 flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-mono text-slate-400">Secure Email</div>
+                            <div class="text-white font-mono text-sm select-all mt-0.5">zahid.sec@proton.me</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 border border-slate-800 flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-mono text-slate-400">Direct Phone</div>
+                            <div class="text-white font-mono text-sm select-all mt-0.5">+92 308 4888192</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 border border-slate-800 flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-mono text-slate-400">Location</div>
+                            <div class="text-white font-mono text-sm mt-0.5">Peshawar, KP, Pakistan</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <form onsubmit="handleContactSubmit(event)" class="glass-card rounded-3xl p-8 border border-slate-800 space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-mono text-slate-300 mb-2">YOUR NAME</label>
+                                <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-cyan-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-slate-300 mb-2">YOUR EMAIL</label>
+                                <input type="email" required placeholder="john@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-cyan-500 transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-mono text-slate-300 mb-2">SUBJECT / INQUIRY</label>
+                            <input type="text" required placeholder="Security Engineering Consultation" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-cyan-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-mono text-slate-300 mb-2">MESSAGE</label>
+                            <textarea rows="4" required placeholder="Enter details of your project or security inquiry..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-cyan-500 transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-bold text-sm hover:opacity-95 transition-opacity glow-cyan flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Transmit Secure Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-900 text-center text-slate-500 text-xs font-mono">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <div class="flex items-center justify-center space-x-2 text-white font-bold">
+                <i class="fa-solid fa-shield-halved text-cyan-400"></i>
+                <span>ZAHID ULLAH • CYBERSECURITY PORTFOLIO</span>
+            </div>
+            <p>© 2026 Zahid Ullah. All rights reserved. Built with high security standards & precision.</p>
+        </div>
+    </footer>
+
+    <div id="command-palette" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-start justify-center pt-20 px-4">
+        <div class="glass-card rounded-2xl w-full max-w-2xl border border-slate-700 shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
+            <div class="p-4 border-b border-slate-800 flex items-center space-x-3">
+                <i class="fa-solid fa-terminal text-cyan-400"></i>
+                <input type="text" id="cmd-search" oninput="filterCommands(this.value)" placeholder="Type a command or search sections (e.g. projects, certs, terminal)..." class="bg-transparent border-none outline-none font-mono text-sm text-white w-full">
+                <button onclick="toggleCommandPalette()" class="text-slate-400 hover:text-white px-2 py-1 rounded bg-slate-800 text-xs font-mono">ESC</button>
+            </div>
+            <div class="p-2 space-y-1 max-h-96 overflow-y-auto font-mono text-xs" id="cmd-list">
+                <a href="#about" onclick="toggleCommandPalette()" class="flex items-center justify-between p-3 rounded-xl hover:bg-cyan-500/10 hover:text-cyan-400 text-slate-300 transition-colors">
+                    <span class="flex items-center space-x-3"><i class="fa-solid fa-user text-cyan-400"></i><span>About & Hero Section</span></span>
+                    <span class="text-slate-500">Navigation</span>
+                </a>
+                <a href="#projects" onclick="toggleCommandPalette()" class="flex items-center justify-between p-3 rounded-xl hover:bg-cyan-500/10 hover:text-cyan-400 text-slate-300 transition-colors">
+                    <span class="flex items-center space-x-3"><i class="fa-solid fa-code text-purple-400"></i><span>Projects (CyberGun EDR & POS)</span></span>
+                    <span class="text-slate-500">Navigation</span>
+                </a>
+                <a href="#research" onclick="toggleCommandPalette()" class="flex items-center justify-between p-3 rounded-xl hover:bg-cyan-500/10 hover:text-cyan-400 text-slate-300 transition-colors">
+                    <span class="flex items-center space-x-3"><i class="fa-solid fa-radar text-emerald-400"></i><span>Security Research & CLI Terminal</span></span>
+                    <span class="text-slate-500">Navigation</span>
+                </a>
+                <a href="#certs" onclick="toggleCommandPalette()" class="flex items-center justify-between p-3 rounded-xl hover:bg-cyan-500/10 hover:text-cyan-400 text-slate-300 transition-colors">
+                    <span class="flex items-center space-x-3"><i class="fa-solid fa-award text-yellow-400"></i><span>Certifications (24+ Verified)</span></span>
+                    <span class="text-slate-500">Navigation</span>
+                </a>
+                <a href="#education" onclick="toggleCommandPalette()" class="flex items-center justify-between p-3 rounded-xl hover:bg-cyan-500/10 hover:text-cyan-400 text-slate-300 transition-colors">
+                    <span class="flex items-center space-x-3"><i class="fa-solid fa-graduation-cap text-blue-400"></i><span>Education & Timeline (B.Sc Peshawar)</span></span>
+                    <span class="text-slate-500">Navigation</span>
+                </a>
+                <a href="#contact" onclick="toggleCommandPalette()" class="flex items-center justify-between p-3 rounded-xl hover:bg-cyan-500/10 hover:text-cyan-400 text-slate-300 transition-colors">
+                    <span class="flex items-center space-x-3"><i class="fa-solid fa-envelope text-red-400"></i><span>Contact & Secure Form</span></span>
+                    <span class="text-slate-500">Navigation</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-lg hidden items-center justify-center p-4">
+        <div class="relative max-w-5xl w-full glass-card rounded-3xl p-4 border border-slate-700">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
+                <span id="lightbox-title" class="font-mono text-sm text-cyan-400 font-bold">Screenshot Inspection</span>
+                <button onclick="closeLightbox()" class="w-8 h-8 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-white">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center">
+                <img id="lightbox-img" src="" alt="Inspection" class="max-h-[75vh] object-contain">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Toggle Command Palette (Ctrl+K or button)
+        function toggleCommandPalette() {
+            const palette = document.getElementById('command-palette');
+            palette.classList.toggle('hidden');
+            palette.classList.toggle('flex');
+            if (!palette.classList.contains('hidden')) {
+                document.getElementById('cmd-search').focus();
+            }
+        }
+
+        // Keyboard shortcut Ctrl+K
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                toggleCommandPalette();
+            }
+            if (e.key === 'Escape') {
+                document.getElementById('command-palette').classList.add('hidden');
+                document.getElementById('command-palette').classList.remove('flex');
+                closeLightbox();
+            }
+        });
+
+        // Lightbox Functions
+        function openLightbox(url, title) {
+            document.getElementById('lightbox-img').src = url;
+            document.getElementById('lightbox-title').innerText = title;
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Terminal Simulator Logic
+        function handleTerminalCommand(e) {
+            if (e.key === 'Enter') {
+                executeTerminalInput();
+            }
+        }
+
+        function executeTerminalInput() {
+            const inputEl = document.getElementById('terminal-input');
+            const outputEl = document.getElementById('terminal-output');
+            const cmd = inputEl.value.trim().toLowerCase();
+            if (!cmd) return;
+
+            // Append user command
+            const userDiv = document.createElement('div');
+            userDiv.className = 'text-slate-300';
+            userDiv.innerHTML = `$ ${inputEl.value}`;
+            outputEl.appendChild(userDiv);
+
+            // Process command
+            const respDiv = document.createElement('div');
+            if (cmd === 'help') {
+                respDiv.className = 'text-cyan-400 space-y-1';
+                respDiv.innerHTML = `
+                    <div>Available Commands:</div>
+                    <div>&nbsp;&nbsp;<b>help</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show available commands</div>
+                    <div>&nbsp;&nbsp;<b>scan</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Run simulated EDR process scan</div>
+                    <div>&nbsp;&nbsp;<b>ad_audit</b> &nbsp;- Audit Active Directory lab (zroots.local)</div>
+                    <div>&nbsp;&nbsp;<b>cybergun</b> &nbsp;- View CyberGun EDR metrics</div>
+                    <div>&nbsp;&nbsp;<b>certs</b> &nbsp;&nbsp;&nbsp;&nbsp;- List professional certifications</div>
+                    <div>&nbsp;&nbsp;<b>contact</b> &nbsp;&nbsp;- Show secure contact details</div>
+                    <div>&nbsp;&nbsp;<b>clear</b> &nbsp;&nbsp;&nbsp;&nbsp;- Clear terminal screen</div>
+                `;
+            } else if (cmd === 'scan') {
+                respDiv.className = 'text-emerald-400 space-y-1';
+                respDiv.innerHTML = `
+                    <div>[+] Initiating LightGBM process anomaly scan...</div>
+                    <div>[+] Checking 142 running processes...</div>
+                    <div>[✓] No malicious DLL injections or hook anomalies detected. System secure.</div>
+                `;
+            } else if (cmd === 'ad_audit') {
+                respDiv.className = 'text-purple-400 space-y-1';
+                respDiv.innerHTML = `
+                    <div>[+] Auditing Active Directory domain: zroots.local</div>
+                    <div>[+] GPO consistency check: PASSED</div>
+                    <div>[+] Privileged group memberships: 3 admins verified. No shadow admins found.</div>
+                `;
+            } else if (cmd === 'cybergun') {
+                respDiv.className = 'text-cyan-400 space-y-1';
+                respDiv.innerHTML = `
+                    <div>CyberGun Threat Mitigation Suite v1.0</div>
+                    <div>- Engine: Python / PyQt5 / LightGBM</div>
+                    <div>- Status: Fully Operational & Quarantining Test Payloads</div>
+                `;
+            } else if (cmd === 'certs') {
+                respDiv.className = 'text-yellow-400';
+                respDiv.innerHTML = `[+] 24+ Verified Certifications including (ISC)² CC, Google Cybersecurity, Cisco, IBM, CEH & Fortinet.`;
+            } else if (cmd === 'contact') {
+                respDiv.className = 'text-emerald-400';
+                respDiv.innerHTML = `[+] Email: zahid.sec@proton.me | Phone: +92 308 4888192 | Location: Peshawar, Pakistan`;
+            } else if (cmd === 'clear') {
+                outputEl.innerHTML = '';
+                inputEl.value = '';
+                return;
+            } else {
+                respDiv.className = 'text-red-400';
+                respDiv.innerHTML = `Command not recognized: '${cmd}'. Type <b>help</b> for options.`;
+            }
+
+            outputEl.appendChild(respDiv);
+            inputEl.value = '';
+            outputEl.scrollTop = outputEl.scrollHeight;
+        }
+
+        // Contact Form Submit Handler
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            // Custom non-alert notification
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-6 right-6 z-50 glass-card px-6 py-4 rounded-2xl border border-emerald-500/50 text-emerald-400 font-mono text-xs flex items-center space-x-3 shadow-2xl animate-bounce';
+            notification.innerHTML = `<i class="fa-solid fa-circle-check text-base"></i><span>Secure message transmitted successfully! Zahid will respond shortly.</span>`;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 4000);
+            e.target.reset();
+        }
+
+        // Theme Toggle (defaults to dark, can toggle to light if needed)
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.className = 'fa-solid fa-sun';
+            } else {
+                html.classList.add('dark');
+                icon.className = 'fa-solid fa-moon';
+            }
+        }
+    </script>
+</body>
+</html>
