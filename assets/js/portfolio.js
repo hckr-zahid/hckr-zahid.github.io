@@ -723,13 +723,13 @@ function updateLightboxContent() {
   const item = ALL_INSPECTOR_ITEMS[currentLightboxIndex];
   if (!item) return;
 
-  const imgEl = document.getElementById('lightboxImage');
-  const titleEl = document.getElementById('lightboxTitle');
-  const descEl = document.getElementById('lightboxDesc');
-  const badgeEl = document.getElementById('lightboxBadge');
-  const stepEl = document.getElementById('lightboxStep');
-  const tagsEl = document.getElementById('lightboxTags');
-  const viewRawLink = document.getElementById('lightboxRawLink');
+  const imgEl = document.getElementById('lbImage') || document.getElementById('lightboxImage');
+  const titleEl = document.getElementById('lbTitle') || document.getElementById('lightboxTitle');
+  const descEl = document.getElementById('lbDesc') || document.getElementById('lightboxDesc');
+  const badgeEl = document.getElementById('lbBadge') || document.getElementById('lightboxBadge');
+  const stepEl = document.getElementById('lbCounter') || document.getElementById('lightboxStep');
+  const tagsEl = document.getElementById('lbTags') || document.getElementById('lightboxTags');
+  const viewRawLink = document.getElementById('lbRawLink') || document.getElementById('lightboxRawLink');
 
   if (imgEl) {
     imgEl.src = item.image;
@@ -767,7 +767,7 @@ function initLightbox() {
 
 // THEME TOGGLE
 function initThemeToggle() {
-  const themeBtn = document.getElementById('themeToggleBtn');
+  const themeBtn = document.getElementById('themeToggle') || document.getElementById('themeToggleBtn');
   const savedTheme = localStorage.getItem('zahid_portfolio_theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
@@ -795,7 +795,7 @@ function updateThemeIcon(theme) {
 
 // MOBILE NAV & ACTIVE SECTION TRACKING
 function initMobileNav() {
-  const toggleBtn = document.getElementById('navToggleBtn');
+  const toggleBtn = document.getElementById('navToggle') || document.getElementById('navToggleBtn');
   const navLinks = document.querySelector('.nav-links');
   
   if (toggleBtn && navLinks) {
@@ -927,3 +927,10 @@ function renderLabGallery(filterCategory = 'all') {
     `;
   }).join('');
 }
+
+
+// Global Lightbox bindings
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
+window.prevLightbox = prevLightbox;
+window.nextLightbox = nextLightbox;

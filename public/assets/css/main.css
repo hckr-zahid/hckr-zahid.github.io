@@ -1,71 +1,79 @@
 /* ==========================================================================
    PORTFOLIO STYLESHEET - Zahid Ullah
-   Cybersecurity Analyst | SOC & Threat Detection | DFIR & Threat Hunting | CEH
+   BS Computer Science | Systems Administration | Infrastructure Labs | Cybersecurity
    High-contrast, professional, responsive, GitHub Pages static compatible
    ========================================================================== */
 
 :root {
-  --bg-primary: #060913;
-  --bg-secondary: #0a101f;
-  --bg-card: #0d1527;
-  --bg-card-hover: #131f3a;
-  --bg-surface: #15223c;
-  --bg-code: #050811;
+  /* Restrained Academic Light Palette (Default) */
+  --bg-primary: #fcfbf9;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-surface: #f1f5f9;
+  --bg-surface-subtle: #f8fafc;
+  --bg-code: #0f172a;
 
-  --border-color: #1e2f50;
-  --border-light: #2a416e;
-  --border-accent: rgba(0, 229, 255, 0.45);
+  --border-color: #e2e8f0;
+  --border-light: #edf2f7;
+  --border-accent: #0284c7;
 
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --text-dim: #64748b;
+  --text-main: #0f172a;       /* Charcoal / deep navy */
+  --text-muted: #334155;      /* Slate */
+  --text-dim: #64748b;        /* Muted slate */
 
-  --accent-cyan: #00e5ff;
-  --accent-blue: #38bdf8;
-  --accent-emerald: #10b981;
-  --accent-amber: #f59e0b;
-  --accent-rose: #f43f5e;
-  --accent-purple: #a855f7;
+  --accent-cyan: #0284c7;     /* Restrained ocean blue */
+  --accent-blue: #1d4ed8;     /* Academic deep blue */
+  --accent-teal: #0f766e;     /* Deep slate teal */
+  --accent-emerald: #059669;  /* Muted forest green */
+  --accent-amber: #b45309;    /* Warm amber */
+  --accent-rose: #be123c;     /* Subdued crimson */
+  --accent-purple: #6d28d9;
 
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-heading: 'Space Grotesk', var(--font-sans);
   --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
 
-  --container-max: 1280px;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
-  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.7);
+  --container-max: 1240px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 12px 28px rgba(15, 23, 42, 0.12);
   --transition-fast: 0.15s ease;
   --transition-normal: 0.25s ease;
 }
 
-[data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f1f5f9;
-  --bg-surface: #e2e8f0;
-  --bg-code: #0f172a;
+[data-theme="dark"] {
+  /* Understated Academic Dark Theme */
+  --bg-primary: #0b0f19;
+  --bg-secondary: #111827;
+  --bg-card: #151e2e;
+  --bg-card-hover: #1c273c;
+  --bg-surface: #1e293b;
+  --bg-surface-subtle: #162032;
+  --bg-code: #070b12;
 
-  --border-color: #cbd5e1;
-  --border-light: #e2e8f0;
-  --border-accent: rgba(2, 132, 199, 0.35);
+  --border-color: #243247;
+  --border-light: #1b2637;
+  --border-accent: #38bdf8;
 
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --text-dim: #64748b;
+  --text-main: #f1f5f9;
+  --text-muted: #cbd5e1;
+  --text-dim: #94a3b8;
 
-  --accent-cyan: #0284c7;
-  --accent-blue: #2563eb;
-  --accent-emerald: #059669;
-  --accent-amber: #d97706;
+  --accent-cyan: #38bdf8;
+  --accent-blue: #60a5fa;
+  --accent-teal: #2dd4bf;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-rose: #f43f5e;
+  --accent-purple: #c084fc;
 
-  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.65);
 }
 
 *, *::before, *::after {
@@ -87,12 +95,6 @@ header[id] {
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
-  background-image: 
-    radial-gradient(circle at 50% 0%, rgba(0, 229, 255, 0.07) 0%, transparent 60%),
-    linear-gradient(rgba(30, 47, 80, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(30, 47, 80, 0.15) 1px, transparent 1px);
-  background-size: 100% 100%, 48px 48px, 48px 48px;
-  background-attachment: fixed;
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -100,11 +102,8 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
-[data-theme="light"] body {
-  background-image: 
-    radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.06) 0%, transparent 60%),
-    linear-gradient(rgba(203, 213, 225, 0.35) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(203, 213, 225, 0.35) 1px, transparent 1px);
+[data-theme="dark"] body {
+  background-color: var(--bg-primary);
 }
 
 a {
@@ -248,8 +247,8 @@ h1, h2, h3, h4, .hero-title, .section-title, .brand-badge {
   position: relative;
   padding: 4.5rem 0 3.5rem;
   overflow: hidden;
-  background: radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.08) 0%, transparent 60%),
-              radial-gradient(circle at 10% 80%, rgba(59, 130, 246, 0.06) 0%, transparent 60%);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .hero-grid {
@@ -263,39 +262,37 @@ h1, h2, h3, h4, .hero-title, .section-title, .brand-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--bg-surface);
   color: var(--accent-cyan);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  border: 1px solid var(--border-color);
   padding: 0.35rem 0.85rem;
-  border-radius: 9999px;
-  font-size: 0.82rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 1.25rem;
+  font-family: var(--font-mono);
 }
 
 .hero-badge-tag .pulse-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   background-color: var(--accent-emerald);
   border-radius: 50%;
-  box-shadow: 0 0 8px var(--accent-emerald);
 }
 
 .hero-title {
-  font-size: 2.85rem;
+  font-size: 2.75rem;
   font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.75rem;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.85rem;
   color: var(--text-main);
 }
 
 .hero-title .gradient-text {
-  background: linear-gradient(135deg, #38bdf8, #818cf8, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent-cyan);
 }
 
 .hero-roles {
@@ -342,15 +339,15 @@ h1, h2, h3, h4, .hero-title, .section-title, .brand-badge {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  background: var(--accent-cyan);
   color: #fff;
-  border: none;
-  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
+  border: 1px solid var(--accent-cyan);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-  filter: brightness(1.1);
-  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
   text-decoration: none;
 }
 
@@ -358,6 +355,7 @@ h1, h2, h3, h4, .hero-title, .section-title, .brand-badge {
   background: var(--bg-card);
   color: var(--text-main);
   border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
@@ -368,12 +366,14 @@ h1, h2, h3, h4, .hero-title, .section-title, .brand-badge {
 
 .btn-outline {
   background: transparent;
-  color: var(--accent-emerald);
-  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
 }
 
 .btn-outline:hover {
-  background: rgba(16, 185, 129, 0.1);
+  background: var(--bg-surface);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
   text-decoration: none;
 }
 
@@ -420,8 +420,9 @@ h1, h2, h3, h4, .hero-title, .section-title, .brand-badge {
   height: 140px;
   margin: 0 auto 1.25rem;
   border-radius: 50%;
-  padding: 4px;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  padding: 3px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
 }
 
 .profile-avatar {

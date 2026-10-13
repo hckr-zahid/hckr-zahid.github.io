@@ -1,1230 +1,832 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zahid Ullah | Academic & Technical Portfolio — Systems Administration, CS & Cybersecurity</title>
-  <meta name="description" content="Academic and technical portfolio of Zahid Ullah (BS Computer Science, University of Peshawar). Documenting practical systems administration, Active Directory labs (zroots.local), CyberGun malware analysis suite, PowerShell security research, and verified certifications.">
+  <title>Zahid Ullah — Cybersecurity Analyst | SOC & Threat Intelligence</title>
+  <meta name="description" content="Portfolio of Zahid Ullah — Cybersecurity Analyst, Ethical Hacker, SOC & Threat Intelligence. B.Sc. Computer Science (University of Peshawar, 2025). Projects: CyberGun, NIDS, IR Forensics, Python Automation, Active Directory Lab.">
   <meta name="author" content="Zahid Ullah">
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Zahid Ullah | Academic & Technical Portfolio — Systems Administration & Cybersecurity">
-  <meta property="og:description" content="Hands-on infrastructure labs, configuration exercises, threat detection tools, and verified academic credentials.">
-  <meta property="og:image" content="assets/img/profile/zahid-ullah.jpg">
-
-  <!-- Google Fonts -->
+  <meta property="og:title" content="Zahid Ullah — Cybersecurity Analyst | SOC & Threat Intelligence">
+  <meta property="og:description" content="Cybersecurity analyst with a B.Sc. in Computer Science. Builder of CyberGun, documented SOC projects, and an enterprise Active Directory lab.">
+  <meta property="og:url" content="https://hckr-zahid.github.io">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 <body>
 
-  <!-- =========================================================================
-       NAVIGATION BAR
-       ========================================================================= -->
+  <!-- ═══════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════ -->
   <nav class="navbar" id="navbar">
-    <div class="container nav-container">
+    <div class="nav-inner">
       <a href="#about" class="nav-brand">
-        <span>Zahid Ullah</span>
-        <span style="font-size:0.8rem; font-weight:500; color:var(--text-dim); margin-left:0.25rem;">| Portfolio</span>
+        <span class="brand-name">Zahid Ullah</span>
+        <span class="brand-sep">|</span>
+        <span class="brand-role">Cybersecurity</span>
       </a>
-
-      <ul class="nav-links">
-        <li><a href="#about" class="nav-link active">About</a></li>
-        <li><a href="#adlab" class="nav-link">Infrastructure Labs</a></li>
-        <li><a href="#projects" class="nav-link">Technical Projects</a></li>
-        <li><a href="#research" class="nav-link">Research &amp; Documentation</a></li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"          class="nav-link">About</a></li>
+        <li><a href="#projects"       class="nav-link">Projects</a></li>
+        <li><a href="#research"       class="nav-link">Research</a></li>
+        <li><a href="#labs"           class="nav-link">Infrastructure Labs</a></li>
         <li><a href="#certifications" class="nav-link">Certifications</a></li>
-        <li><a href="#skills" class="nav-link">Education &amp; Skills</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#education"      class="nav-link">Education & Skills</a></li>
+        <li><a href="#contact"        class="nav-link">Contact</a></li>
       </ul>
-
       <div class="nav-actions">
-        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme" title="Toggle light/dark">
           <span id="themeIcon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           </span>
         </button>
-        <button class="nav-toggle" id="navToggleBtn" aria-label="Toggle Menu">
-          ☰
+        <button id="navToggle" class="icon-btn nav-burger" aria-label="Toggle menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
   </nav>
 
-  <!-- =========================================================================
-       HERO & ABOUT SECTION (PROFESSIONAL IDENTITY & PILLARS)
-       ========================================================================= -->
+  <!-- ═══════════════════════════════════════════════════
+       HERO / ABOUT
+       ═══════════════════════════════════════════════════ -->
   <header class="hero" id="about">
-    <div id="hero"></div>
     <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge-tag">
-            BS Computer Science &bull; Systems Administration &bull; Cybersecurity &bull; Peshawar, PK
-          </div>
-          <h1 class="hero-title">
-            Systems Administration, <span class="gradient-text">Practical Security</span> &amp; Technical Labs
-          </h1>
-          <div class="hero-roles">
-            <span>Zahid Ullah</span> &bull; 
-            <span>BS Computer Science (Class of 2025)</span> &bull; 
-            <span>Systems &amp; Network Labs</span> &bull; 
-            <span>(ISC)&sup2; CC Certified</span>
-          </div>
-          <p class="hero-desc" style="font-size: 1.12rem; font-weight: 500; color: var(--text-main); margin-bottom: 0.85rem; line-height: 1.6;">
-            I am developing my technical skills through hands-on infrastructure labs, configuration exercises, and documented technical projects. My portfolio records the systems I build, the configurations I test, and the evidence I collect while learning.
-          </p>
-          <p class="hero-desc">
-            Computer science student at the University of Peshawar with a focus on Windows Server administration, Active Directory domain engineering, endpoint malware analysis, and network defense. Featured work includes a 29-step documented <strong>Active Directory &amp; VMware enterprise lab</strong> (<code>zroots.local</code>), the <strong>CyberGun</strong> threat detection suite developed as an academic thesis, and static security research into Windows activation scripts.
-          </p>
-          <div class="hero-cta-group">
-            <a href="assets/docs/Zahid-Ullah-Cybersecurity-CV.pdf" download="Zahid-Ullah-Cybersecurity-CV.pdf" class="btn btn-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              Download CV (PDF)
-            </a>
-            <a href="#adlab" class="btn btn-secondary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-              Explore Infrastructure Labs
-            </a>
-            <a href="#projects" class="btn btn-secondary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              Technical Projects
-            </a>
-            <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              GitHub (@hckr-zahid)
-            </a>
-          </div>
+      <div class="hero-layout">
 
-          <!-- Hero Telemetry Strip -->
-          <div class="hero-telemetry-strip">
-            <div class="telemetry-item">
-              <div class="telemetry-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-              </div>
-              <div class="telemetry-text">
-                <span class="telemetry-label">Hands-On Labs</span>
-                <span class="telemetry-val">Active Directory &amp; VMware (29 Steps)</span>
-              </div>
-            </div>
-            <div class="telemetry-item">
-              <div class="telemetry-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-              </div>
-              <div class="telemetry-text">
-                <span class="telemetry-label">Academic Project</span>
-                <span class="telemetry-val">CyberGun Detection Suite (Thesis)</span>
-              </div>
-            </div>
-            <div class="telemetry-item">
-              <div class="telemetry-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-              </div>
-              <div class="telemetry-text">
-                <span class="telemetry-label">Security Research</span>
-                <span class="telemetry-val">PowerShell Static Code Analysis</span>
-              </div>
-            </div>
-            <div class="telemetry-item">
-              <div class="telemetry-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-              </div>
-              <div class="telemetry-text">
-                <span class="telemetry-label">Verified Certifications</span>
-                <span class="telemetry-val">24 Credentials ((ISC)&sup2;, Cisco, IBM)</span>
-              </div>
-            </div>
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <p class="hero-eyebrow">B.Sc. Computer Science · University of Peshawar · Class of 2025</p>
+          <h1 class="hero-headline">
+            Cybersecurity Analyst<br>
+            <span class="accent">Ethical Hacker</span> &amp; SOC<br>
+            Threat Intelligence
+          </h1>
+          <p class="hero-bio">
+            Cybersecurity analyst with a practical focus on threat detection, incident response, digital forensics,
+            and network defense. Built <strong>CyberGun</strong>, a modular malware-detection platform combining
+            static signature analysis with machine-learning behavioral detection. Familiar with SOC workflows,
+            SIEM monitoring, detection engineering, memory and disk forensics, NIST-aligned reporting, and
+            Python automation for faster triage.
+          </p>
+          <div class="hero-badges">
+            <span class="badge">(ISC)² CC Certified</span>
+            <span class="badge">Cisco CEH</span>
+            <span class="badge">Google Cybersecurity</span>
+            <span class="badge">IBM Cybersecurity Analyst</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="Zahid Ullah Cybersecurity.pdf" download class="btn btn-outline">Download CV</a>
+            <a href="#contact" class="btn btn-outline">Contact</a>
           </div>
         </div>
 
-        <!-- Author Card -->
-        <div class="hero-profile-card">
-          <div class="profile-avatar-wrap">
-            <img src="assets/img/profile/zahid-ullah.jpg" alt="Zahid Ullah" class="profile-avatar">
+        <!-- Right: Card -->
+        <div class="hero-card">
+          <div class="profile-photo-wrap">
+            <img src="assets/img/profile/zahid-ullah.jpg" alt="Zahid Ullah" class="profile-photo">
           </div>
-          <h2 class="profile-name">Zahid Ullah</h2>
-          <div class="profile-role">Systems Administration &amp; Cybersecurity</div>
-          
-          <div class="profile-meta">
-            <div class="profile-meta-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span>hckr.badguy@gmail.com</span>
+          <div class="profile-info">
+            <h2 class="profile-name">Zahid Ullah</h2>
+            <p class="profile-title">Cybersecurity Analyst · Ethical Hacker</p>
+            <div class="profile-meta">
+              <div class="meta-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>+92 308 4888192</span>
+              </div>
+              <div class="meta-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>hckr.badguy@gmail.com</span>
+              </div>
+              <div class="meta-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Peshawar, Pakistan · Remote-Ready</span>
+              </div>
             </div>
-            <div class="profile-meta-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span>+92 308 4888192</span>
+            <div class="profile-links">
+              <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener" class="profile-link-btn" title="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener" class="profile-link-btn" title="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:hckr.badguy@gmail.com" class="profile-link-btn" title="Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
             </div>
-            <div class="profile-meta-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <span>Peshawar, Pakistan (Remote-Ready)</span>
-            </div>
-          </div>
-
-          <div class="profile-links">
-            <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub (@hckr-zahid)">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-            <a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn (@hckr-zahid)">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-            <a href="mailto:hckr.badguy@gmail.com" class="social-icon-btn" title="Send Email">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </a>
           </div>
         </div>
       </div>
 
-            <!-- Technical Focus Areas -->
-      <div style="margin-top: 4.5rem; padding-top: 3.5rem; border-top: 1px solid var(--border-color);">
-        <div style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
-          <span class="section-tag">Technical Focus Areas</span>
-          <h2 style="font-family: var(--font-heading); font-size: 2.1rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.75rem;">
-            Areas of Active Study &amp; Practice
-          </h2>
-          <p style="color: var(--text-muted); font-size: 1.02rem; line-height: 1.65;">
-            The following areas reflect coursework, hands-on labs, and independent projects documented in this portfolio. Claims are bounded by verifiable evidence.
-          </p>
+      <!-- Skills Strip -->
+      <div class="expertise-strip">
+        <div class="expertise-item">
+          <span class="expertise-label">SOC &amp; SIEM</span>
+          <span class="expertise-desc">Splunk · IBM QRadar · Google Chronicle · Wazuh · Kibana</span>
         </div>
-
-        <div class="pillars-grid">
-          <!-- Area 1 -->
-          <div class="pillar-card">
-            <div class="pillar-header">
-              <div class="pillar-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-              </div>
-              <div>
-                <span class="pillar-num">Area 01</span>
-                <h3 class="pillar-title">Enterprise Infrastructure &amp; Active Directory</h3>
-              </div>
-            </div>
-            <p class="pillar-desc">
-              Hands-on lab experience building a Windows Server 2019 domain environment from scratch, including network configuration, AD DS promotion, DNS, RBAC, NTFS hardening, and client domain integration. Documented across 29 verified steps.
-            </p>
-            <ul class="pillar-points">
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>VMware Workstation — Host-Only VMnet10 (10.1.1.0/24)</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>AD DS Forest Root, DNS, DSRM — zroots.local</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>NTFS ACL Hardening, SMB File Shares, Group Policy</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Domain Join &amp; Kerberos Token Verification (nltest, whoami /groups)</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Area 2 -->
-          <div class="pillar-card">
-            <div class="pillar-header">
-              <div class="pillar-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-              </div>
-              <div>
-                <span class="pillar-num">Area 02</span>
-                <h3 class="pillar-title">Security Research &amp; Static Code Analysis</h3>
-              </div>
-            </div>
-            <p class="pillar-desc">
-              Evidence-based research into PowerShell-based automation workflows using static analysis only — no dynamic execution. The research identifies observable code behaviors, potential attack surface, and persistence mechanisms without unverified runtime claims.
-            </p>
-            <ul class="pillar-points">
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>PowerShell script review — irm|iex pattern &amp; MAS_AIO.cmd</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>DLL Replacement, Scheduled Task Persistence, Registry Changes</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Static-only scope — findings reflect code review, not execution</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Documented report: PDF &amp; DOCX via GitHub repository</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Area 3 -->
-          <div class="pillar-card">
-            <div class="pillar-header">
-              <div class="pillar-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              </div>
-              <div>
-                <span class="pillar-num">Area 03</span>
-                <h3 class="pillar-title">Malware Detection &amp; Academic Thesis (CyberGun)</h3>
-              </div>
-            </div>
-            <p class="pillar-desc">
-              Academic thesis project implementing a modular malware detection suite in Python. Features static hash lookups, YARA rules, regex pattern matching, and an LightGBM model trained on EMBER/CIC datasets. Developed as a BS CS capstone project — not a production security product.
-            </p>
-            <ul class="pillar-points">
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Python 3 / PyQt5 GUI — DynamicEngine, SignalBus pattern</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>SQLite threat hash index (3,160,113 entries), YARA rules</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>LightGBM classifier — PDF &amp; PE structural features (EMBER dataset)</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Thesis &amp; full source code available on GitHub</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Area 4 -->
-          <div class="pillar-card">
-            <div class="pillar-header">
-              <div class="pillar-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-              </div>
-              <div>
-                <span class="pillar-num">Area 04</span>
-                <h3 class="pillar-title">Certifications &amp; Coursework</h3>
-              </div>
-            </div>
-            <p class="pillar-desc">
-              Supplementary learning through verified professional certifications and university specializations. These complement practical lab work and academic coursework — they do not substitute for hands-on experience.
-            </p>
-            <ul class="pillar-points">
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>(ISC)&sup2; Certified in Cybersecurity (CC)</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Cisco Ethical Hacker &amp; NAVTTC Cybersecurity</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Google Cybersecurity Professional Certificate</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>IBM, Johns Hopkins, Fortinet, DeepLearning.AI — 24 total</span>
-              </li>
-            </ul>
-          </div>
+        <div class="expertise-item">
+          <span class="expertise-label">Threat Detection</span>
+          <span class="expertise-desc">Suricata · YARA · Snort · Zeek · IOC Extraction</span>
+        </div>
+        <div class="expertise-item">
+          <span class="expertise-label">DFIR</span>
+          <span class="expertise-desc">Volatility · Autopsy · NIST SP 800-61 · MFT Parsing</span>
+        </div>
+        <div class="expertise-item">
+          <span class="expertise-label">Malware Analysis</span>
+          <span class="expertise-desc">Static · Dynamic · LightGBM ML · EMBER Dataset</span>
+        </div>
+        <div class="expertise-item">
+          <span class="expertise-label">Automation</span>
+          <span class="expertise-desc">Python · PyQt5 · Bash · PowerShell · VirusTotal API</span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- =========================================================================
-       ACTIVE DIRECTORY LAB & ENTERPRISE INFRASTRUCTURE
-       ========================================================================= -->
-  <section class="section section-alt" id="adlab">
-    <div id="labs"></div>
+  <!-- ═══════════════════════════════════════════════════
+       PROJECTS
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="projects">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Enterprise Systems &amp; Lab Architecture</span>
-        <h2 class="section-title">Active Directory &amp; VMware Virtualized Lab</h2>
-        <p class="section-subtitle">
-          An isolated enterprise security testbed built on VMware Workstation Pro featuring Windows Server 2019 Datacenter, Active Directory Domain Services (AD DS), authoritative DNS, multi-tiered RBAC, granular NTFS security hardening, and Windows 10 enterprise workstation integration.
-        </p>
+        <span class="section-eyebrow">Selected Projects</span>
+        <h2 class="section-title">Technical Projects &amp; Systems</h2>
+        <p class="section-desc">Academic, capstone, and personal projects. Each project is labeled with its classification — simulated environments are clearly identified.</p>
       </div>
 
-      <!-- Logical Architecture Diagram & Node Matrix -->
-      <div class="arch-grid" style="margin-bottom: 2.5rem;">
-        <div class="arch-card">
-          <h3>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-            Logical Network Diagram
-          </h3>
-          <div class="arch-diagram-wrapper">
-========================================================================
-     VMware Workstation Virtual Switch: VMnet10 (MyLabNet)
-     Subnet: 10.1.1.0 / 255.255.255.0  (Isolated Host-Only)
-========================================================================
-                          |
-      +-------------------+-------------------+-------------------+
-      |                   |                   |                   |
-[ Windows Server 2019 ] [ Windows 10 Client ] [ Security Nodes ] [ Admin Host ]
-   DC01 (or WWW)            WIN10-01             Kali Linux         VMnet10 Adapter
-   10.1.1.10/24             10.1.1.x / DHCP      BlackArch          10.1.1.1 (GW)
-   Forest: zroots.local     Domain Joined        Metasploitable2
-   Roles:                   Account:             Android x86
-   - AD DS (Kerberos/KDC)   - ali.khan           Auditing &amp;
-   - DNS Server (127.0.0.1) - staff.one          Penetration Testing
-   - File Server (SMB/NTFS)
-          </div>
-        </div>
-
-        <div class="arch-card">
-          <h3>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            Node Specification Matrix
-          </h3>
-          <table class="matrix-table">
-            <thead>
-              <tr>
-                <th>Hostname / VM</th>
-                <th>Role / Function</th>
-                <th>IP Address</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>DC01</strong> (WWW)</td>
-                <td>Domain Controller, DNS, File Server</td>
-                <td><code>10.1.1.10</code></td>
-                <td><span class="status-badge status-online">Authoritative</span></td>
-              </tr>
-              <tr>
-                <td><strong>WIN10-01</strong></td>
-                <td>Domain Member Client Workstation</td>
-                <td><code>10.1.1.x (DHCP)</code></td>
-                <td><span class="status-badge status-online">Joined</span></td>
-              </tr>
-              <tr>
-                <td><strong>Host Adapter</strong></td>
-                <td>VMware VMnet10 Virtual Gateway</td>
-                <td><code>10.1.1.1</code></td>
-                <td><span class="status-badge status-sub">Connected</span></td>
-              </tr>
-              <tr>
-                <td><strong>Kali / BlackArch</strong></td>
-                <td>Security Testing &amp; Auditing</td>
-                <td><code>10.1.1.x</code></td>
-                <td><span class="status-badge status-sub">Provisioned</span></td>
-              </tr>
-              <tr>
-                <td><strong>Namespace</strong></td>
-                <td>Active Directory Forest Root</td>
-                <td><code>zroots.local</code></td>
-                <td><span class="status-badge status-online">Functional 2016</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 6-Phase Engineering Architecture Breakdown -->
-      <div style="margin-bottom: 2.5rem;">
-        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.25rem;">
-          Engineering Implementation Breakdown
-        </h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem;">
-          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.4rem;">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
-              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-blue); font-weight:700;">PHASE 01</span>
-              <span style="font-size:0.75rem; color:var(--text-dim);">VMware Infrastructure</span>
-            </div>
-            <h4 style="font-size:1.05rem; color:var(--text-main); margin-bottom:0.5rem; font-weight:700;">Isolated Subnet &amp; Virtual Switching</h4>
-            <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.55;">
-              Configured custom host-only virtual switch (VMnet10 / MyLabNet) scoped to 10.1.1.0/24, isolating the testbed from physical networks while enabling hypervisor inter-VM routing.
-            </p>
-          </div>
-
-          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.4rem;">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
-              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-blue); font-weight:700;">PHASE 02</span>
-              <span style="font-size:0.75rem; color:var(--text-dim);">Windows Server 2019</span>
-            </div>
-            <h4 style="font-size:1.05rem; color:var(--text-main); margin-bottom:0.5rem; font-weight:700;">Static IP &amp; Network Diagnostics</h4>
-            <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.55;">
-              Provisioned DC01, resolved ARP address collision on 10.1.1.1, and statically bound 10.1.1.10/24 with self-referential DNS and 127.0.0.1 loopback resolver.
-            </p>
-          </div>
-
-          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.4rem;">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
-              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-blue); font-weight:700;">PHASE 03</span>
-              <span style="font-size:0.75rem; color:var(--text-dim);">Directory Services</span>
-            </div>
-            <h4 style="font-size:1.05rem; color:var(--text-main); margin-bottom:0.5rem; font-weight:700;">AD DS Forest Root Promotion</h4>
-            <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.55;">
-              Promoted DC01 to forest root domain controller for <code>zroots.local</code> with 2016 functional level, Global Catalog, authoritative DNS, and DSRM recovery protection.
-            </p>
-          </div>
-
-          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.4rem;">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
-              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-blue); font-weight:700;">PHASE 04</span>
-              <span style="font-size:0.75rem; color:var(--text-dim);">IAM &amp; Governance</span>
-            </div>
-            <h4 style="font-size:1.05rem; color:var(--text-main); margin-bottom:0.5rem; font-weight:700;">Organizational Units &amp; Tiered RBAC</h4>
-            <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.55;">
-              Structured OU taxonomy separating identities, servers, and computers. Engineered role-based security groups (IT-HelpDesk, Staff, Students, Management) enforcing least privilege.
-            </p>
-          </div>
-
-          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.4rem;">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
-              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-blue); font-weight:700;">PHASE 05</span>
-              <span style="font-size:0.75rem; color:var(--text-dim);">File Server &amp; Storage</span>
-            </div>
-            <h4 style="font-size:1.05rem; color:var(--text-main); margin-bottom:0.5rem; font-weight:700;">NTFS Hardening &amp; Inheritance Severing</h4>
-            <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.55;">
-              Structured corporate shares (<code>CompanyData</code>), severed inherited ACEs, established explicit permissions, and locked down departmental folders with granular Modify/Read ACLs.
-            </p>
-          </div>
-
-          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.4rem;">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
-              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-blue); font-weight:700;">PHASE 06</span>
-              <span style="font-size:0.75rem; color:var(--text-dim);">Client Integration</span>
-            </div>
-            <h4 style="font-size:1.05rem; color:var(--text-main); margin-bottom:0.5rem; font-weight:700;">Domain Join &amp; Kerberos Validation</h4>
-            <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.55;">
-              Joined Windows 10 workstation (WIN10-01) to <code>zroots.local</code>, verified DC locator discovery via <code>nltest /dsgetdc</code>, and audited effective Kerberos token security attributes.
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ─── Lab 02: Group Policy Management ─── -->
-      <div style="margin-bottom: 2.5rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
-        <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
-          <span style="font-family:var(--font-mono); font-size:0.78rem; font-weight:700; color:var(--accent-blue); background:rgba(29,78,216,0.07); padding:0.2rem 0.55rem; border-radius:4px;">LAB 02</span>
-          <h3 style="font-family:var(--font-heading); font-size:1.25rem; font-weight:800; color:var(--text-main); margin:0;">Group Policy Management &amp; Verification</h3>
-        </div>
-        <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.65; margin-bottom:1.25rem;">
-          Lab 02 extends the base domain by creating and linking Group Policy Objects (GPOs) through the Group Policy Management Console (GPMC). The objective was to configure a domain-level GPO, link it to an appropriate Organizational Unit, and verify policy application on the domain-joined Windows 10 client.
-        </p>
-
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.1rem; margin-bottom:1.25rem;">
-          <div style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-sm); padding:1.1rem;">
-            <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--accent-blue); font-weight:700; margin-bottom:0.4rem;">STEP A — GPO Creation</div>
-            <p style="font-size:0.86rem; color:var(--text-muted); margin:0; line-height:1.55;">A new GPO was created in the GPMC forest tree and named according to the intended policy scope. Creation confirms the GPO object exists in the Group Policy Objects container — it does not yet apply to any OU or machine.</p>
-          </div>
-          <div style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-sm); padding:1.1rem;">
-            <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--accent-blue); font-weight:700; margin-bottom:0.4rem;">STEP B — GPO Linking</div>
-            <p style="font-size:0.86rem; color:var(--text-muted); margin:0; line-height:1.55;">The GPO was linked to the target Organizational Unit. Linking establishes the policy scope but policy settings are only applied when the client refreshes Group Policy (at logon or via <code>gpupdate /force</code>).</p>
-          </div>
-          <div style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-sm); padding:1.1rem;">
-            <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--accent-blue); font-weight:700; margin-bottom:0.4rem;">STEP C — Client Verification</div>
-            <p style="font-size:0.86rem; color:var(--text-muted); margin:0; line-height:1.55;">Policy application was verified on the domain-joined Windows 10 workstation (WIN10-01). <code>gpupdate /force</code> triggers an immediate refresh cycle. <code>gpresult /r</code> shows applied GPOs — elevated privileges may be required to view computer-scope results.</p>
-          </div>
-          <div style="background:var(--bg-surface); border:1px solid var(--border-color); border-left:3px solid var(--accent-amber); border-radius:var(--radius-sm); padding:1.1rem;">
-            <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--accent-amber); font-weight:700; margin-bottom:0.4rem;">TROUBLESHOOTING NOTE</div>
-            <p style="font-size:0.86rem; color:var(--text-muted); margin:0; line-height:1.55;">Running <code>gpresult</code> without elevation may return <em>Access Denied</em> for computer configuration data. Re-running in an elevated Command Prompt resolves this and shows the full applied GPO list. A GPO appearing in <code>gpresult</code> output confirms it was correctly linked and applied.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- ─── 29-Step Evidence Gallery ─── -->
-      <div style="margin-bottom: 2.5rem;">
-        <div style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
-          <div>
-            <h3 style="font-family:var(--font-heading); font-size:1.3rem; font-weight:800; color:var(--text-main); margin:0 0 0.25rem;">29-Step Evidence Gallery</h3>
-            <p style="color:var(--text-dim); font-size:0.88rem; margin:0;">Click any screenshot to inspect at full resolution. Use the filter to view by phase.</p>
-          </div>
-        </div>
-
-        <!-- Lab Filter Bar -->
-        <div class="filter-bar" id="labFilterBar" style="margin-bottom:1.5rem;">
-          <button class="filter-btn active" data-filter="all">All Steps (29)</button>
-          <button class="filter-btn" data-filter="vmware">VMware Infrastructure</button>
-          <button class="filter-btn" data-filter="server">Server &amp; TCP/IP</button>
-          <button class="filter-btn" data-filter="ad">AD DS &amp; DNS</button>
-          <button class="filter-btn" data-filter="users">Users &amp; Groups</button>
-          <button class="filter-btn" data-filter="fileshare">NTFS &amp; File Shares</button>
-          <button class="filter-btn" data-filter="client">Client &amp; Kerberos</button>
-        </div>
-
-        <!-- Gallery Grid — populated by portfolio.js renderLabGallery() -->
-        <div class="gallery-grid" id="galleryGrid"></div>
-      </div>
-
-      <!-- Dedicated Lab Repository Action Card -->
-      <div style="background: var(--bg-surface); border: 1px solid var(--border-accent); border-radius: var(--radius-md); padding: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;">
-        <div>
-          <div style="margin-bottom:0.5rem;">
-            <span style="font-family:var(--font-mono); font-size:0.82rem; font-weight:700; color:var(--accent-blue);">GITHUB REPOSITORY</span>
-          </div>
-          <h3 style="font-size:1.35rem; color:var(--text-main); margin-bottom:0.4rem; font-weight:800;">
-            Comprehensive 29-Step Lab Documentation &amp; Evidence Repository
-          </h3>
-          <p style="color:var(--text-muted); font-size:0.92rem; max-width:720px; line-height:1.6; margin:0;">
-            The complete 29-step sequence with high-resolution screenshot audits, PowerShell automation scripts, GPO templates, and network capture logs are organized in a dedicated GitHub documentation repository.
-          </p>
-        </div>
-        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
-          <a href="https://github.com/hckr-zahid/Active-Directory-VMware-Enterprise-Lab" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:0.75rem 1.4rem;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            <span>View Lab Repository on GitHub</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       PROJECTS SECTION (CYBERGUN FLAGSHIP & CORE SYSTEMS PROJECTS)
-       ========================================================================= -->
-  <section class="section section-alt" id="projects">
-    <div id="cybergun"></div>
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Cybersecurity &amp; Systems Engineering</span>
-        <h2 class="section-title">Core Projects &amp; Threat Detection Systems</h2>
-        <p class="section-subtitle">
-          Projects and academic implementations documented with actual objectives, technologies, and evidence. Priority is given to work that is verifiable and reproducible.
-        </p>
-      </div>
-
-      <!-- Flagship CyberGun Card -->
-      <div class="spotlight-card">
+      <!-- ── Project 1: CyberGun ── -->
+      <article class="project-spotlight" id="cybergun">
         <div class="spotlight-header">
-          <div class="spotlight-title-wrap">
-            <span class="project-badge" style="margin-bottom:0.5rem; display:inline-block;">FLAGSHIP SYSTEM #01</span>
-            <h3>CyberGun Threat Mitigation Suite</h3>
-            <div class="spotlight-tagline">Modular Static Engine &bull; LightGBM Behavioral Classifier &bull; PyQt5 SignalBus UI</div>
+          <div>
+            <div class="project-label">Academic Thesis · Personal Project</div>
+            <h3 class="spotlight-title">CyberGun — Static &amp; Dynamic Threat Detection System</h3>
+            <p class="spotlight-tagline">Modular malware-detection framework combining static signatures with ML-driven behavioral detection</p>
           </div>
-          <div class="spotlight-pills">
-            <span class="spotlight-pill">Python 3.10+</span>
-            <span class="spotlight-pill">PyQt5 GUI</span>
-            <span class="spotlight-pill">YARA &amp; Regex</span>
-            <span class="spotlight-pill">SQLite (3.1M Hashes)</span>
-            <span class="spotlight-pill">LightGBM ML</span>
-            <span class="spotlight-pill">EMBER &amp; CIC Datasets</span>
-          </div>
-        </div>
-
-        <!-- Quick Links Strip for Repository and Thesis -->
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; padding: 1.1rem; background: var(--bg-surface); border-radius: var(--radius-sm); border: 1px solid var(--border-color); align-items: center; justify-content: space-between;">
-          <div style="display:flex; align-items:center; gap:0.75rem;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--accent-cyan);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            <div>
-              <div style="font-weight:700; font-size:0.98rem; color:var(--text-main);">Academic Thesis &amp; Source Code Repository</div>
-              <div style="font-size:0.84rem; color:var(--text-muted);">Read the comprehensive research thesis or inspect the full source repository on GitHub.</div>
-            </div>
-          </div>
-          <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-            <a href="https://github.com/hckr-zahid/CyberGun" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding:0.5rem 1rem; font-size:0.88rem;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              <span>GitHub Repo</span>
-            </a>
-            <a href="assets/docs/thesis/CyberGun Final Thesis.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:0.5rem 1rem; font-size:0.88rem;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-              <span>Download Thesis (PDF)</span>
-            </a>
+          <div class="spotlight-tech">
+            <span class="tech-pill">Python 3</span>
+            <span class="tech-pill">PyQt5</span>
+            <span class="tech-pill">LightGBM</span>
+            <span class="tech-pill">YARA</span>
+            <span class="tech-pill">SQLite</span>
+            <span class="tech-pill">EMBER Dataset</span>
           </div>
         </div>
 
-        <div class="spotlight-grid">
-          <div class="spotlight-block">
-            <h4>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-              Modular Architecture &amp; Engines
-            </h4>
-            <p>
-              Architected a multi-threaded detection pipeline orchestrated through a central <code>DynamicEngine</code>. Modular sensors continuously analyze host metrics: <strong>Behavioral Engine</strong> for process execution trees, <strong>System Activity Engine</strong> for disk I/O and process CPU spikes, <strong>USB Monitor</strong> for peripheral insertion events, and <strong>Sandbox Engine</strong> for dynamic execution simulation.
-            </p>
-          </div>
+        <!-- Quick links -->
+        <div class="project-links-bar">
+          <a href="https://github.com/hckr-zahid/CyberGun" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            Source Code
+          </a>
+          <a href="assets/docs/thesis/CyberGun Final Thesis.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Download Thesis
+          </a>
+        </div>
 
-          <div class="spotlight-block">
-            <h4>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              Machine Learning &amp; Detection Layer
-            </h4>
-            <p>
-              Integrated trained supervised learning models on <strong>EMBER</strong> and <strong>CIC</strong> benchmark datasets, classifying malicious PDF and PE structural anomalies using LightGBM (<code>pdf_model.lgbm</code>). Combined with an indexed SQLite repository of 3,160,113 threat hashes, custom YARA heuristics, and regex pattern matching.
-            </p>
+        <div class="spotlight-body">
+          <div class="spotlight-col">
+            <h4>Architecture &amp; Modules</h4>
+            <p>Designed a multi-engine detection pipeline coordinated by a central <code>DynamicEngine</code>. Four modular sensors run concurrently:</p>
+            <ul>
+              <li><strong>Behavioral Engine</strong> — process execution tree analysis</li>
+              <li><strong>System Activity Engine</strong> — disk I/O and CPU spike monitoring</li>
+              <li><strong>USB Monitor</strong> — peripheral insertion event tracking</li>
+              <li><strong>Sandbox Simulation Engine</strong> — controlled dynamic execution</li>
+            </ul>
           </div>
-
-          <div class="spotlight-block">
-            <h4>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
-              PyQt5 Real-Time Interface &amp; SignalBus
-            </h4>
-            <p>
-              Designed an asynchronous, dark-themed SOC interface with tabbed views for Dashboard, System Status, Threat Logs, Behavior Feed, Network Feed, and Quarantine Zone. Implemented a custom <code>SignalBus</code> pattern ensuring non-blocking background scanning while maintaining responsive UI updates and desktop notifications.
-            </p>
+          <div class="spotlight-col">
+            <h4>Detection Layer</h4>
+            <p>Static detection combines:</p>
+            <ul>
+              <li>3,160,113-entry SQLite threat hash index for rapid file matching</li>
+              <li>Custom YARA heuristics and byte-signature pattern matching</li>
+              <li>LightGBM classifier trained on EMBER and CIC benchmark datasets for PDF and PE structural anomalies (<code>pdf_model.lgbm</code>)</li>
+            </ul>
           </div>
-
-          <div class="spotlight-block">
-            <h4>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-              Automated Incident Remediation &amp; Quarantine
-            </h4>
-            <p>
-              Upon threat detection, CyberGun immediately isolates offending binaries into an encrypted Quarantine Zone with original path metadata, timestamping, and secure hash signatures. Provides SOC operators with safe file inspection, selective restoration, and permanent cryptographic destruction.
-            </p>
+          <div class="spotlight-col">
+            <h4>Interface &amp; Containment</h4>
+            <p>Asynchronous PyQt5 dashboard with a custom <code>SignalBus</code> pattern provides tabbed views: Dashboard, System Status, Threat Logs, Behavior Feed, Network Feed, and Quarantine. Detected threats are moved to an encrypted Quarantine Zone with SHA-256 hashes, original paths, and timestamped audit logs.</p>
           </div>
         </div>
 
-        <h4 style="margin-top:2rem; margin-bottom:1rem; font-size:1.05rem; color:var(--text-main);">
-          Actual Operational Screenshots (Click to Inspect High-Resolution):
-        </h4>
-        <div class="spotlight-gallery">
-          <div class="spotlight-thumb-wrap" onclick="openLightbox(0)">
-            <img src="assets/img/projects/cybergun-dashboard.png" alt="CyberGun Dashboard">
-            <div class="spotlight-thumb-caption">01. Live Dashboard &amp; Telemetry</div>
+        <!-- CyberGun Screenshots -->
+        <div class="screenshot-strip">
+          <div class="screenshot-item" onclick="openLightbox(0)">
+            <img src="assets/img/projects/cybergun-dashboard.png" alt="CyberGun threat dashboard showing live process monitor and telemetry" loading="lazy">
+            <div class="screenshot-caption">01 · Live Dashboard &amp; Telemetry</div>
           </div>
-          <div class="spotlight-thumb-wrap" onclick="openLightbox(1)">
-            <img src="assets/img/projects/cybergun-system-status.png" alt="CyberGun System Status">
-            <div class="spotlight-thumb-caption">02. Process Audit (299 Procs)</div>
+          <div class="screenshot-item" onclick="openLightbox(1)">
+            <img src="assets/img/projects/cybergun-system-status.png" alt="CyberGun system status showing 299 running processes, disk I/O, and network metrics" loading="lazy">
+            <div class="screenshot-caption">02 · System Status (299 Processes)</div>
           </div>
-          <div class="spotlight-thumb-wrap" onclick="openLightbox(2)">
-            <img src="assets/img/projects/cybergun-threat-logs.png" alt="CyberGun Threat Logs">
-            <div class="spotlight-thumb-caption">03. 3.1M Hash &amp; ML Scan</div>
+          <div class="screenshot-item" onclick="openLightbox(2)">
+            <img src="assets/img/projects/cybergun-threat-logs.png" alt="CyberGun scan engine running hash index, YARA, and ML detection across 169 files" loading="lazy">
+            <div class="screenshot-caption">03 · Hash + YARA + ML Scan Engine</div>
           </div>
-          <div class="spotlight-thumb-wrap" onclick="openLightbox(3)">
-            <img src="assets/img/projects/cybergun-quarantine.png" alt="CyberGun Quarantine Zone">
-            <div class="spotlight-thumb-caption">04. Encrypted Quarantine Zone</div>
+          <div class="screenshot-item" onclick="openLightbox(3)">
+            <img src="assets/img/projects/cybergun-quarantine.png" alt="CyberGun quarantine zone showing isolated files with SHA-256 hashes and paths" loading="lazy">
+            <div class="screenshot-caption">04 · Encrypted Quarantine Zone</div>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Additional Core Cybersecurity Projects Heading -->
-      <div style="margin-top: 4rem; margin-bottom: 2rem;">
-        <span class="section-tag">Certification Coursework &amp; Study</span>
-        <h3 style="font-family:var(--font-heading); font-size:1.8rem; font-weight:800; color:var(--text-main);">
-          Coursework &amp; Study Projects
-        </h3>
-      </div>
-
+      <!-- ── Projects Grid ── -->
       <div class="projects-grid">
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-badge">COURSEWORK &bull; NIDS STUDY</span>
-            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">PROJECT #02</span>
-          </div>
-          <h3 class="project-title">Network Intrusion Detection &amp; Monitoring (NIDS)</h3>
-          <p class="project-desc">
-            Study project: configured and explored Suricata and Zeek in a virtualized environment, following certification coursework. Documented as a learning exercise rather than a production deployment.
-          </p>
-          <ul class="project-specs-list">
-            <li><strong>Deployment:</strong> Configured Suricata and Zeek sensor nodes capturing raw promiscuous network traffic.</li>
-            <li><strong>Rule Tuning:</strong> Authored custom detection rules to identify malicious patterns while cutting false positives.</li>
-            <li><strong>Analytics:</strong> Ingested and parsed event telemetry into Elasticsearch and visualized alerts in Kibana dashboards.</li>
-          </ul>
-          <div class="project-tags">
-            <span class="tag-badge">Suricata</span>
-            <span class="tag-badge">Zeek</span>
-            <span class="tag-badge">Kibana</span>
-            <span class="tag-badge">Threat Hunting</span>
-            <span class="tag-badge">PCAP Analysis</span>
-          </div>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-badge">DFIR &bull; CAPSTONE</span>
-            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">PROJECT #03</span>
+        <!-- Project 2: NIDS -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <div class="project-label-sm">Simulated Environment · SOC Lab</div>
+            <h3>Network Intrusion Detection &amp; Monitoring</h3>
           </div>
-          <h3 class="project-title">Incident Response &amp; Digital Forensics (IBM Capstone)</h3>
-          <p class="project-desc">
-            Coursework capstone: followed a guided, simulated incident investigation scenario as part of the IBM Cybersecurity Analyst Professional Certificate. Tools and techniques were explored in a structured learning environment.
-          </p>
-          <ul class="project-specs-list">
-            <li><strong>Memory Forensics:</strong> Analyzed volatile RAM dumps with Volatility to isolate rogue injected DLLs and malicious processes.</li>
-            <li><strong>Disk Artifacts:</strong> Recovered file system artifacts, Master File Table (MFT) records, and event logs using Autopsy.</li>
-            <li><strong>Reporting:</strong> Produced a comprehensive post-incident report detailing attack vectors, IOCs, and hardening mitigations.</li>
-          </ul>
-          <div class="project-tags">
-            <span class="tag-badge">Volatility</span>
-            <span class="tag-badge">Autopsy</span>
-            <span class="tag-badge">NIST Framework</span>
-            <span class="tag-badge">Memory Forensics</span>
-            <span class="tag-badge">IOC Extraction</span>
+          <div class="project-meta-table">
+            <div class="meta-row-2"><span>Tools</span><span>Suricata · Zeek · Kibana · Elasticsearch</span></div>
+            <div class="meta-row-2"><span>Environment</span><span>Isolated virtualized network lab</span></div>
+            <div class="meta-row-2"><span>Objective</span><span>Detect port scans, DoS activity, and data exfiltration attempts</span></div>
           </div>
-        </div>
+          <p>Deployed Suricata and Zeek sensor nodes capturing promiscuous network traffic. Tuned custom detection rules targeting malicious TCP/UDP signatures. Integrated network telemetry into Elasticsearch and built Kibana dashboards for traffic analysis and alert review.</p>
+          <div class="project-limitation">
+            <strong>Scope note:</strong> Conducted in a simulated environment. Rule effectiveness metrics reflect the specific test dataset used.
+          </div>
+          <div class="tech-row">
+            <span class="tech-pill-sm">Suricata</span><span class="tech-pill-sm">Zeek</span>
+            <span class="tech-pill-sm">Kibana</span><span class="tech-pill-sm">Elasticsearch</span>
+            <span class="tech-pill-sm">PCAP Analysis</span>
+          </div>
+        </article>
 
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-badge">AUTOMATION &bull; PYTHON</span>
-            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">PROJECT #04</span>
+        <!-- Project 3: IBM Capstone DFIR -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <div class="project-label-sm">IBM Capstone · Simulated Incident</div>
+            <h3>Ransomware Incident Response &amp; Digital Forensics</h3>
           </div>
-          <h3 class="project-title">Python Security Automation Toolkit (Google Project)</h3>
-          <p class="project-desc">
-            Study project accompanying the Google Cybersecurity Professional Certificate. Practiced Python scripting for log parsing, basic regex extraction, and REST API querying as coursework exercises.
-          </p>
-          <ul class="project-specs-list">
-            <li><strong>Parsing:</strong> Automated extraction of IP addresses, domain names, and file hashes from raw syslog and auth logs using Regex.</li>
-            <li><strong>OSINT Enrichment:</strong> Queried VirusTotal and AbuseIPDB REST APIs asynchronously to score reputation metrics.</li>
-            <li><strong>Packaging:</strong> Packaged as modular CLI tools with argparse flags for rapid deployment in analyst workflows.</li>
-          </ul>
-          <div class="project-tags">
-            <span class="tag-badge">Python 3</span>
-            <span class="tag-badge">Regex</span>
-            <span class="tag-badge">VirusTotal API</span>
-            <span class="tag-badge">AbuseIPDB</span>
-            <span class="tag-badge">SOC Triage</span>
+          <div class="project-meta-table">
+            <div class="meta-row-2"><span>Tools</span><span>Volatility · Autopsy · NIST SP 800-61</span></div>
+            <div class="meta-row-2"><span>Classification</span><span>Academic capstone — simulated ransomware scenario</span></div>
+            <div class="meta-row-2"><span>Framework</span><span>NIST Incident Response lifecycle (Preparation → Recovery)</span></div>
           </div>
-        </div>
+          <p>Investigated a simulated ransomware breach following the NIST SP 800-61 framework. Analyzed volatile RAM dumps in Volatility to identify injected DLLs and rogue process structures. Recovered MFT records, registry persistence keys, and event logs using Autopsy to reconstruct the intrusion timeline and document IOCs and remediation actions.</p>
+          <div class="tech-row">
+            <span class="tech-pill-sm">Volatility</span><span class="tech-pill-sm">Autopsy</span>
+            <span class="tech-pill-sm">NIST IR</span><span class="tech-pill-sm">Memory Forensics</span>
+            <span class="tech-pill-sm">MFT Analysis</span>
+          </div>
+        </article>
 
-        <!-- Project 5 -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-badge">VULN SCAN &bull; HARDENING</span>
-            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">PROJECT #05</span>
+        <!-- Project 4: Python Automation -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <div class="project-label-sm">Google Cybersecurity Project · Personal</div>
+            <h3>Python Security Automation Toolkit</h3>
           </div>
-          <h3 class="project-title">Vulnerability Assessment &amp; System Hardening</h3>
-          <p class="project-desc">
-            Lab exercise: practiced vulnerability scanning and system hardening concepts in a controlled virtual environment using certification coursework guidance.
-          </p>
-          <ul class="project-specs-list">
-            <li><strong>Assessment:</strong> Executed authenticated and unauthenticated network scans using Nmap NSE scripts and OpenVAS.</li>
-            <li><strong>Risk Scoring:</strong> Prioritized vulnerabilities based on CVSS v3 vectors, exploitability, and patch availability.</li>
-            <li><strong>Remediation:</strong> Enforced SSH key-only policies, IPTables firewall rules, and CIS benchmark server hardening.</li>
-          </ul>
-          <div class="project-tags">
-            <span class="tag-badge">Nmap</span>
-            <span class="tag-badge">OpenVAS</span>
-            <span class="tag-badge">CIS Benchmarks</span>
-            <span class="tag-badge">CVSS Scoring</span>
-            <span class="tag-badge">Linux Hardening</span>
+          <div class="project-meta-table">
+            <div class="meta-row-2"><span>Tools</span><span>Python 3 · Regex · VirusTotal API · AbuseIPDB API</span></div>
+            <div class="meta-row-2"><span>Objective</span><span>Automate SOC Tier-1 triage tasks</span></div>
           </div>
-        </div>
+          <p>Automated parsing of syslog and authentication files using optimized regular expressions to extract IP addresses, suspicious domains, and cryptographic hashes. Built asynchronous REST API connectors querying VirusTotal and AbuseIPDB to score reputation metrics. Packaged as modular CLI utilities with argparse flags for repeatable triage.</p>
+          <div class="project-limitation">
+            <strong>Note:</strong> No dedicated public repository currently linked for this project. Source available on request.
+          </div>
+          <div class="tech-row">
+            <span class="tech-pill-sm">Python 3</span><span class="tech-pill-sm">Regex</span>
+            <span class="tech-pill-sm">VirusTotal</span><span class="tech-pill-sm">AbuseIPDB</span>
+            <span class="tech-pill-sm">argparse CLI</span>
+          </div>
+        </article>
 
-        <!-- Project 6 -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-badge">C++ &bull; OOP DESIGN</span>
-            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">PROJECT #06</span>
+        <!-- Project 5: Vuln Assessment -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <div class="project-label-sm">Simulated Environment · Study Project</div>
+            <h3>Vulnerability Assessment &amp; System Hardening</h3>
           </div>
-          <h3 class="project-title">Object-Oriented Crypto Trading Platform</h3>
-          <p class="project-desc">
-            High-performance simulation platform developed for the University of London OOP Specialization, demonstrating mastery in software design principles.
-          </p>
-          <ul class="project-specs-list">
-            <li><strong>Design Principles:</strong> Strict adherence to Encapsulation, Polymorphism, Abstract classes, and Inheritance.</li>
-            <li><strong>Engine Architecture:</strong> Class hierarchy managing OrderBooks, Wallets, Matching Engines, and CSV trade histories.</li>
-            <li><strong>Performance:</strong> Efficient file stream I/O, custom memory allocators, and clean separation of business logic.</li>
-          </ul>
-          <div class="project-tags">
-            <span class="tag-badge">C++</span>
-            <span class="tag-badge">Object-Oriented Design</span>
-            <span class="tag-badge">Data Structures</span>
-            <span class="tag-badge">Memory Management</span>
+          <div class="project-meta-table">
+            <div class="meta-row-2"><span>Tools</span><span>Nmap · OpenVAS · CIS Benchmarks · CVSS v3</span></div>
+            <div class="meta-row-2"><span>Scope</span><span>Simulated Linux servers — authorized test environment</span></div>
           </div>
-        </div>
+          <p>Conducted authenticated and unauthenticated network scans across simulated Linux and Windows servers. Prioritized findings based on CVSS v3 exploitability metrics. Applied hardening: SSH key-only policies, restrictive IPTables rules, deprecated vulnerable services, and CIS Benchmark compliance verification.</p>
+          <div class="tech-row">
+            <span class="tech-pill-sm">Nmap NSE</span><span class="tech-pill-sm">OpenVAS</span>
+            <span class="tech-pill-sm">CVSS v3</span><span class="tech-pill-sm">CIS Benchmarks</span>
+            <span class="tech-pill-sm">IPTables</span>
+          </div>
+        </article>
+
+        <!-- Project 6: C++ -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <div class="project-label-sm">University of London OOP Specialization</div>
+            <h3>C++ Object-Oriented Crypto Trading Simulation</h3>
+          </div>
+          <div class="project-meta-table">
+            <div class="meta-row-2"><span>Language</span><span>C++</span></div>
+            <div class="meta-row-2"><span>Classification</span><span>Academic specialization project</span></div>
+          </div>
+          <p>Console-based algorithmic trading simulation applying encapsulation, polymorphism, and inheritance. Class hierarchy manages OrderBooks, Wallets, Matching Engines, and CSV trade histories. Demonstrates file stream I/O, STL usage, and clean separation of business logic from data structures.</p>
+          <div class="tech-row">
+            <span class="tech-pill-sm">C++</span><span class="tech-pill-sm">OOP</span>
+            <span class="tech-pill-sm">STL</span><span class="tech-pill-sm">File I/O</span>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- =========================================================================
-       DEDICATED RESEARCH & ANALYSIS SECTION
-       ========================================================================= -->
-  <section class="section" id="research">
+  <!-- ═══════════════════════════════════════════════════
+       SECURITY RESEARCH
+       ═══════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="research">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Cybersecurity Research</span>
-        <h2 class="section-title">Research &amp; Analysis</h2>
-        <p class="section-subtitle">
-          Evidence-based security research exploring software behavior, Windows security, system integrity, and defensive analysis.
-        </p>
+        <span class="section-eyebrow">Security Research</span>
+        <h2 class="section-title">PowerShell Static Code Analysis</h2>
       </div>
 
-      <!-- Editorial Research Brief Card -->
-      <article class="research-brief-card">
-        <div class="research-meta-bar">
-          <div class="research-meta-item">
-            <span class="project-badge">RESEARCH #01 &bull; STATIC ANALYSIS</span>
+      <article class="research-card">
+        <div class="research-top">
+          <div>
+            <div class="project-label">Static Analysis Only · No Dynamic Execution</div>
+            <h3>MAS AIO — PowerShell Activation Workflow Static Security Review</h3>
           </div>
-          <div class="research-meta-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            <span>Published 2024</span>
-          </div>
-          <div class="research-meta-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-            <span>Target: irm | iex &amp; MAS_AIO.cmd</span>
-          </div>
-          <div class="research-meta-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <span>Scope: Windows OS Integrity</span>
+          <div class="research-links">
+            <a href="https://github.com/hckr-zahid/Activate-Windows-Free" target="_blank" rel="noopener" class="btn btn-primary btn-sm">GitHub Repo</a>
+            <a href="https://github.com/hckr-zahid/Activate-Windows-Free/blob/main/Research/report/MAS_AIO_CMD_Static_Security_Research_Report.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Read Report (PDF)</a>
           </div>
         </div>
 
-        <h3 class="research-title">
-          Static Security Analysis of a PowerShell-Based Windows Activation Workflow
-        </h3>
-        <p class="research-summary">
-          A static source-code security review of a PowerShell-based Windows activation workflow initiated by <code>irm https://get.activated.win | iex</code>, including analysis of the launcher behavior and the associated <code>MAS_AIO.cmd</code> script. The research examines licensing-related system modifications, DLL replacement mechanisms, scheduled tasks, registry and service changes, and network behavior.
-        </p>
-
-        <!-- Methodological Disclaimer -->
-        <div class="research-disclaimer">
-          <strong style="color:var(--text-main);">Scope &amp; Methodology:</strong> This project is based strictly on static source-code analysis. The analyzed script was not executed as part of this research. Findings describe observed code behavior and potential risks; they do not establish that the script is malicious or guarantee that it is benign.
+        <div class="research-scope-box">
+          <strong>Scope &amp; Methodology:</strong> This research is based entirely on static source-code analysis using Abstract Syntax Tree (AST) inspection and manual code review. The analyzed scripts were <em>not executed</em> as part of this research. Findings describe observed code behavior and potential risks identified through static analysis alone. This is not a dynamic malware analysis report.
         </div>
 
-        <!-- Five Investigation Matrices -->
-        <div style="margin-bottom: 1.5rem;">
-          <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text-main); margin-bottom:1rem;">
-            Five Primary Investigation Dimensions:
-          </h4>
-          <div class="research-matrices-grid">
-            <div class="matrix-box">
-              <span class="matrix-box-num">DIMENSION 01</span>
-              <div class="matrix-box-title">Licensing Hooks &amp; Activation</div>
-              <div class="matrix-box-desc">
-                Examines HWID ticket generation, Ohook system hooks, KMS38 activation methods, and Online KMS server interactions.
-              </div>
-            </div>
-            <div class="matrix-box">
-              <span class="matrix-box-num">DIMENSION 02</span>
-              <div class="matrix-box-title">DLL Replacement Mechanics</div>
-              <div class="matrix-box-desc">
-                Analyzes targeted replacement and interception of Windows licensing libraries (such as <code>sppc.dll</code>) and file integrity checks.
-              </div>
-            </div>
-            <div class="matrix-box">
-              <span class="matrix-box-num">DIMENSION 03</span>
-              <div class="matrix-box-title">Scheduled Tasks &amp; Persistence</div>
-              <div class="matrix-box-desc">
-                Investigates Task Scheduler persistence routines, renewal scripts, and automated execution hooks left across the operating system.
-              </div>
-            </div>
-            <div class="matrix-box">
-              <span class="matrix-box-num">DIMENSION 04</span>
-              <div class="matrix-box-title">Registry &amp; Service Alterations</div>
-              <div class="matrix-box-desc">
-                Documents changes made to Windows licensing registry hives, Software Protection Platform service states, and permission sets.
-              </div>
-            </div>
-            <div class="matrix-box">
-              <span class="matrix-box-num">DIMENSION 05</span>
-              <div class="matrix-box-title">Remote Download Vector</div>
-              <div class="matrix-box-desc">
-                Evaluates security implications of the pipe-to-shell download pattern (<code>irm ... | iex</code>) without authenticated cryptographic validation.
-              </div>
-            </div>
+        <div class="research-body">
+          <div class="research-col">
+            <h4>Research Question</h4>
+            <p>What system-level operations, persistence mechanisms, and security risks can be identified through static analysis of the PowerShell-initiated workflow at <code>irm https://get.activated.win | iex</code> and the associated <code>MAS_AIO.cmd</code> script?</p>
+            <h4>Method</h4>
+            <p>Abstract Syntax Tree (AST) parsing and manual review of 10,000+ lines of PowerShell and batch script. No code was executed. Findings are limited to observable code structure, string literals, and control flow.</p>
+          </div>
+          <div class="research-col">
+            <h4>Key Dimensions Examined</h4>
+            <ul>
+              <li><strong>Licensing Hooks:</strong> HWID ticket generation, KMS38 registry manipulation, Ohook DLL replacement</li>
+              <li><strong>DLL Replacement:</strong> Targeted substitution of Windows licensing libraries (<code>sppc.dll</code>)</li>
+              <li><strong>Scheduled Task Persistence:</strong> Task Scheduler renewal routines and execution hooks</li>
+              <li><strong>Registry &amp; Service Changes:</strong> Software Protection Platform service state modifications</li>
+              <li><strong>Remote Download Vector:</strong> Security implications of the pipe-to-shell pattern without cryptographic validation</li>
+            </ul>
           </div>
         </div>
 
-        <div class="project-tags" style="margin-bottom: 1.75rem;">
-          <span class="tag-badge">PowerShell</span>
-          <span class="tag-badge">Windows Security</span>
-          <span class="tag-badge">Static Code Analysis</span>
-          <span class="tag-badge">Software Integrity</span>
-          <span class="tag-badge">Defensive Security</span>
-          <span class="tag-badge">AST Inspection</span>
-        </div>
-
-        <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
-          <a href="https://github.com/hckr-zahid/Activate-Windows-Free" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:0.6rem 1.2rem; font-size:0.9rem;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            <span>View Research Repo</span>
-          </a>
-          <a href="https://github.com/hckr-zahid/Activate-Windows-Free/blob/main/Research/report/MAS_AIO_CMD_Static_Security_Research_Report.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding:0.6rem 1.2rem; font-size:0.9rem;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            <span>Read PDF Report</span>
-          </a>
-          <a href="https://github.com/hckr-zahid/Activate-Windows-Free/blob/main/Research/report/MAS_AIO_CMD_Static_Security_Research_Report.docx" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding:0.6rem 1.2rem; font-size:0.9rem;">
-            <span>DOCX Report</span>
-          </a>
+        <div class="research-tags">
+          <span class="tech-pill-sm">PowerShell</span>
+          <span class="tech-pill-sm">AST Parsing</span>
+          <span class="tech-pill-sm">Batch Script Analysis</span>
+          <span class="tech-pill-sm">Static Analysis</span>
+          <span class="tech-pill-sm">Windows Security</span>
+          <span class="tech-pill-sm">Software Integrity</span>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- =========================================================================
-       VERIFIED INDUSTRY CERTIFICATIONS
-       ========================================================================= -->
-  <section class="section" id="certifications">
+  <!-- ═══════════════════════════════════════════════════
+       INFRASTRUCTURE LABS
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="labs">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">24 Credentials &amp; Certifications</span>
-        <h2 class="section-title">Verified Industry Certifications</h2>
-        <p class="section-subtitle">
-          Professional certifications and university specializations issued by (ISC)&sup2;, CISCO / NAVTTC, Google, IBM, Johns Hopkins University, Fortinet, and DeepLearning.AI validating cybersecurity operations, threat hunting, network defense, and cloud security.
-        </p>
+        <span class="section-eyebrow">Infrastructure Labs</span>
+        <h2 class="section-title">Enterprise Active Directory &amp; VMware Lab</h2>
+        <p class="section-desc">A private VMware-based security lab providing hands-on experience in Windows Server administration, Active Directory configuration, and network troubleshooting. This is a personal home lab, not production enterprise infrastructure.</p>
       </div>
 
-      <!-- Certificate Category Filter Bar -->
-      <div class="filter-bar" id="certFilterBar" style="margin-bottom:2rem;">
-        <button class="filter-btn active" data-cert-filter="all">All (24)</button>
-        <button class="filter-btn" data-cert-filter="industry">Industry &amp; ISC2</button>
+      <!-- Lab topology -->
+      <div class="lab-topology">
+        <div class="topology-diagram">
+<pre class="topology-pre">
+VMware Workstation Pro — Host-Only Virtual Switch
+═══════════════════════════════════════════════
+VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
+───────────────────────────────────────────────
+  DC01 (WWW)              WIN10-01
+  Windows Server 2019     Windows 10 Enterprise
+  10.1.1.10               DHCP (10.1.1.x)
+  AD DS · DNS · SMB       Domain-joined
+  Forest: zroots.local    User: ali.khan
+
+  Kali Linux              BlackArch · Android
+  Security testing        Isolated pentest VMs
+  10.1.1.x                10.1.1.x
+</pre>
+        </div>
+        <div class="topology-table-wrap">
+          <table class="topo-table">
+            <thead>
+              <tr><th>Node</th><th>Role</th><th>IP</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>DC01</code></td><td>Domain Controller, DNS, File Server</td><td><code>10.1.1.10</code></td><td><span class="status-confirmed">Deployed</span></td></tr>
+              <tr><td><code>WIN10-01</code></td><td>Domain Member Workstation</td><td><code>DHCP</code></td><td><span class="status-confirmed">Joined</span></td></tr>
+              <tr><td><code>zroots.local</code></td><td>AD Forest Root Namespace</td><td>—</td><td><span class="status-confirmed">FL 2016</span></td></tr>
+              <tr><td>Kali / BlackArch</td><td>Security Testing VMs</td><td><code>10.1.1.x</code></td><td><span class="status-secondary">Provisioned</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Lab 01 phases -->
+      <div class="lab-section">
+        <div class="lab-header">
+          <span class="lab-badge">LAB 01</span>
+          <h3>AD DS &amp; VMware Enterprise Lab — 6 Implementation Phases</h3>
+        </div>
+        <div class="phases-grid">
+          <div class="phase-card">
+            <div class="phase-num">Phase 01</div>
+            <h4>Isolated Virtual Switching</h4>
+            <p>Configured custom host-only switch (VMnet10) bound to 10.1.1.0/24, isolating the testbed from physical networks.</p>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Phase 02</div>
+            <h4>Static IP &amp; Network Diagnostics</h4>
+            <p>Provisioned DC01, resolved ARP address collision on 10.1.1.1, and statically bound 10.1.1.10/24 with loopback DNS resolver (127.0.0.1).</p>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Phase 03</div>
+            <h4>AD DS Forest Root Promotion</h4>
+            <p>Promoted DC01 to forest root domain controller for <code>zroots.local</code> (Windows Server 2016 functional level) with Global Catalog, authoritative DNS, and DSRM password protection.</p>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Phase 04</div>
+            <h4>OU Hierarchy &amp; Tiered RBAC</h4>
+            <p>Structured OU taxonomy separating computers, servers, and users. Engineered security groups: Administrators, IT-HelpDesk, Staff, Students, Management — enforcing least privilege.</p>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Phase 05</div>
+            <h4>NTFS Hardening &amp; SMB Shares</h4>
+            <p>Created <code>C:\CompanyData</code> share structure, severed inherited ACEs, established explicit Modify/Read ACLs per department, and restricted SMB share permissions.</p>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Phase 06</div>
+            <h4>Domain Join &amp; Kerberos Validation</h4>
+            <p>Joined WIN10-01 to <code>zroots.local</code>, verified DC locator via <code>nltest /dsgetdc</code>, and confirmed effective Kerberos token group SIDs via <code>whoami /groups</code>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lab 02: GPO -->
+      <div class="lab-section">
+        <div class="lab-header">
+          <span class="lab-badge">LAB 02</span>
+          <h3>Group Policy Management &amp; Verification</h3>
+        </div>
+        <div class="gpo-grid">
+          <div class="gpo-step">
+            <div class="gpo-step-num">A</div>
+            <div>
+              <h4>GPO Creation</h4>
+              <p>New GPO created in GPMC and placed in the Group Policy Objects container. At this stage, the GPO exists but is not linked to any OU and has not applied to any machine.</p>
+            </div>
+          </div>
+          <div class="gpo-step">
+            <div class="gpo-step-num">B</div>
+            <div>
+              <h4>GPO Linking</h4>
+              <p>GPO linked to the target Organizational Unit. Linking establishes scope; settings are applied when the client refreshes Group Policy (at logon or via <code>gpupdate /force</code>).</p>
+            </div>
+          </div>
+          <div class="gpo-step">
+            <div class="gpo-step-num">C</div>
+            <div>
+              <h4>Verification on WIN10-01</h4>
+              <p><code>gpupdate /force</code> triggered on the domain-joined client. Policy application confirmed via <code>gpresult /r</code> (elevated). Running without elevation returns Access Denied for computer-scope results — this is expected Windows behavior, not a configuration error.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evidence Gallery -->
+      <div class="lab-gallery-section">
+        <div class="gallery-header">
+          <h3>29-Step Evidence Gallery</h3>
+          <p>Click any screenshot to inspect at full resolution.</p>
+        </div>
+        <div class="filter-bar" id="labFilterBar">
+          <button class="filter-btn active" data-filter="all">All (29)</button>
+          <button class="filter-btn" data-filter="vmware">VMware</button>
+          <button class="filter-btn" data-filter="server">Server &amp; IP</button>
+          <button class="filter-btn" data-filter="ad">AD DS &amp; DNS</button>
+          <button class="filter-btn" data-filter="users">Users &amp; Groups</button>
+          <button class="filter-btn" data-filter="fileshare">NTFS &amp; Shares</button>
+          <button class="filter-btn" data-filter="client">Client &amp; Kerberos</button>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+        <div class="lab-repo-cta">
+          <a href="https://github.com/hckr-zahid/Active-Directory-VMware-Enterprise-Lab" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View Lab Repository on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       CERTIFICATIONS
+       ═══════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Verified Credentials</span>
+        <h2 class="section-title">Certifications &amp; Specializations</h2>
+        <p class="section-desc">Industry certifications and university specializations. Certificate images and PDFs are available for inspection.</p>
+      </div>
+
+      <div class="filter-bar" id="certFilterBar">
+        <button class="filter-btn active" data-cert-filter="all">All</button>
+        <button class="filter-btn" data-cert-filter="industry">Industry &amp; (ISC)²</button>
         <button class="filter-btn" data-cert-filter="soc">SOC &amp; Blue Team</button>
-        <button class="filter-btn" data-cert-filter="offensive">Offensive Security</button>
+        <button class="filter-btn" data-cert-filter="offensive">Ethical Hacking</button>
         <button class="filter-btn" data-cert-filter="cloud">Cloud &amp; Network</button>
         <button class="filter-btn" data-cert-filter="engineering">Engineering &amp; ML</button>
-        <button class="filter-btn" data-cert-filter="compendium">Compendium</button>
       </div>
 
-      <!-- Cert Cards Grid with PDF and High-Res View -->
-      <div class="cert-gallery-grid" id="certGalleryGrid">
-        <!-- Rendered by portfolio.js -->
-      </div>
+      <div class="cert-grid" id="certGalleryGrid"></div>
 
-      <div style="text-align: center; margin-top: 2.5rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-        <a href="assets/img/certificates/All-Certificates-Compendium.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          Download All Certificates Compendium PDF
+      <div class="cert-actions-bar">
+        <a href="assets/img/certificates/All-Certificates-Compendium.png" target="_blank" rel="noopener" class="btn btn-secondary">
+          View Certificates Compendium
         </a>
-        <a href="assets/img/certificates/Cisco-Ethical-Hacker.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-          Cisco Ethical Hacker Certificate PDF
+        <a href="assets/img/certificates/Cisco-Ethical-Hacker.pdf" target="_blank" rel="noopener" class="btn btn-outline">
+          Cisco CEH Certificate
         </a>
       </div>
     </div>
   </section>
 
-  <!-- =========================================================================
-       TECHNICAL SKILLS TAXONOMY & EDUCATION
-       ========================================================================= -->
-  <section class="section section-alt" id="skills">
-    <div id="education"></div>
+  <!-- ═══════════════════════════════════════════════════
+       EDUCATION & SKILLS
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Education &amp; Skills</span>
+        <h2 class="section-title">Academic Background &amp; Technical Skills</h2>
+      </div>
+
+      <div class="edu-skills-layout">
+
+        <!-- Education -->
+        <div class="edu-col">
+          <h3 class="subsection-title">Education</h3>
+
+          <div class="edu-entry">
+            <div class="edu-degree">Bachelor of Science in Computer Science (BS CS)</div>
+            <div class="edu-school">University of Peshawar, Pakistan</div>
+            <div class="edu-meta">Class of 2025 · First Division · 4-Year Undergraduate</div>
+            <p class="edu-courses">Core coursework: Computer Networks, Operating Systems, Cryptography &amp; Network Security, Database Systems, Computer Architecture, Data Structures, OOP, Software Engineering.</p>
+          </div>
+
+          <div class="edu-entry">
+            <div class="edu-degree">Intermediate — Pre-Medical</div>
+            <div class="edu-school">Board of Intermediate and Secondary Education (BISE), Peshawar</div>
+            <div class="edu-meta">2020 · First Division</div>
+          </div>
+
+          <div class="edu-entry">
+            <div class="edu-degree">Matriculation — Science</div>
+            <div class="edu-school">Board of Intermediate and Secondary Education (BISE), Malakand</div>
+            <div class="edu-meta">2018 · First Division</div>
+          </div>
+
+          <div class="edu-entry">
+            <div class="edu-degree">OOP in C++ Specialization</div>
+            <div class="edu-school">University of London (via Coursera)</div>
+            <div class="edu-meta">Completed</div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="skills-col">
+          <h3 class="subsection-title">Technical Skills</h3>
+          <p class="skills-qualifier">Skills are listed as studied and practised through projects, labs, and certification coursework. Proficiency levels are not claimed beyond what the documented project work demonstrates.</p>
+
+          <div class="skill-group">
+            <div class="skill-group-label">SOC &amp; SIEM</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Splunk</span><span class="skill-tag">IBM QRadar</span>
+              <span class="skill-tag">Google Chronicle</span><span class="skill-tag">Wazuh</span>
+              <span class="skill-tag">Kibana</span><span class="skill-tag">Alert Tuning</span>
+              <span class="skill-tag">Threat Hunting</span><span class="skill-tag">IOC Extraction</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Threat Detection &amp; Detection Engineering</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Suricata</span><span class="skill-tag">YARA</span>
+              <span class="skill-tag">Snort</span><span class="skill-tag">Zeek</span>
+              <span class="skill-tag">MITRE ATT&amp;CK</span><span class="skill-tag">Threat Intelligence</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Incident Response &amp; DFIR</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Volatility</span><span class="skill-tag">Autopsy</span>
+              <span class="skill-tag">NIST SP 800-61</span><span class="skill-tag">MFT Parsing</span>
+              <span class="skill-tag">Timeline Reconstruction</span><span class="skill-tag">IR Reporting</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Malware Analysis</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Static Analysis</span><span class="skill-tag">Dynamic Analysis</span>
+              <span class="skill-tag">LightGBM ML</span><span class="skill-tag">EMBER Dataset</span>
+              <span class="skill-tag">Sandbox Analysis</span><span class="skill-tag">PowerShell AST</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Network &amp; Vulnerability</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Wireshark</span><span class="skill-tag">Nmap</span>
+              <span class="skill-tag">OpenVAS</span><span class="skill-tag">Nessus</span>
+              <span class="skill-tag">Fortinet NGFW</span><span class="skill-tag">CVSS v3</span>
+              <span class="skill-tag">CIS Benchmarks</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Programming &amp; Automation</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python (PyQt5, Pandas, scikit-learn)</span>
+              <span class="skill-tag">Bash</span><span class="skill-tag">PowerShell</span>
+              <span class="skill-tag">C++ (OOP)</span><span class="skill-tag">SQL / SQLite</span>
+              <span class="skill-tag">Regex</span><span class="skill-tag">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Systems &amp; Environments</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Windows Server 2019 (AD DS)</span>
+              <span class="skill-tag">Windows 10/11 Enterprise</span>
+              <span class="skill-tag">Kali Linux</span><span class="skill-tag">Ubuntu</span>
+              <span class="skill-tag">Arch / BlackArch</span><span class="skill-tag">Red Hat / Parrot OS</span>
+              <span class="skill-tag">VMware Workstation Pro</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Cloud &amp; Platforms</div>
+            <div class="skill-tags">
+              <span class="skill-tag">GCP Security</span><span class="skill-tag">AWS IAM</span>
+              <span class="skill-tag">Git / GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       CONTACT
+       ═══════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="contact">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag">Technical Competencies</span>
-        <h2 class="section-title">Skills Taxonomy &amp; Academic Background</h2>
-        <p class="section-subtitle">
-          An organized overview of security platforms, technologies, and concepts encountered through coursework, labs, and academic study. Proficiency levels vary; lab-verified experience is documented in the Infrastructure Labs section.
-        </p>
+        <span class="section-eyebrow">Get in Touch</span>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-desc">Open to SOC Analyst, Threat Detection, Incident Response, and junior cybersecurity roles. Available for remote-first teams.</p>
       </div>
-
-      <div class="skills-taxonomy-grid">
-        <div class="taxonomy-card">
-          <div class="taxonomy-header">
-            <div class="taxonomy-icon">🛡️</div>
-            <h3>Security Tools &amp; Platforms</h3>
+      <div class="contact-grid">
+        <a href="mailto:hckr.badguy@gmail.com" class="contact-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">hckr.badguy@gmail.com</div>
           </div>
-          <div class="taxonomy-tags">
-            <span class="taxonomy-tag">Wireshark</span>
-            <span class="taxonomy-tag">Suricata</span>
-            <span class="taxonomy-tag">Zeek</span>
-            <span class="taxonomy-tag">Nmap</span>
-            <span class="taxonomy-tag">OpenVAS</span>
-            <span class="taxonomy-tag">Nessus</span>
-            <span class="taxonomy-tag">Fortinet NGFW</span>
-            <span class="taxonomy-tag">Volatility</span>
-            <span class="taxonomy-tag">Autopsy</span>
-            <span class="taxonomy-tag">Splunk</span>
-            <span class="taxonomy-tag">IBM QRadar</span>
-            <span class="taxonomy-tag">Google Chronicle</span>
-            <span class="taxonomy-tag">Kibana</span>
-            <span class="taxonomy-tag">YARA</span>
-            <span class="taxonomy-tag">Wazuh</span>
-            <span class="taxonomy-tag">Snort</span>
-          </div>
-        </div>
-
-        <div class="taxonomy-card">
-          <div class="taxonomy-header">
-            <div class="taxonomy-icon">🌐</div>
-            <h3>Cybersecurity Domains</h3>
-          </div>
-          <div class="taxonomy-tags">
-            <span class="taxonomy-tag">Threat Intelligence</span>
-            <span class="taxonomy-tag">Static Malware Analysis</span>
-            <span class="taxonomy-tag">Dynamic Malware Analysis</span>
-            <span class="taxonomy-tag">Incident Response (NIST)</span>
-            <span class="taxonomy-tag">Network Defense &amp; Firewalls</span>
-            <span class="taxonomy-tag">Digital Forensics (DFIR)</span>
-            <span class="taxonomy-tag">Vulnerability Assessment</span>
-            <span class="taxonomy-tag">CIS Hardening</span>
-            <span class="taxonomy-tag">Cloud Security (GCP / AWS)</span>
-            <span class="taxonomy-tag">Active Directory &amp; RBAC</span>
-          </div>
-        </div>
-
-        <div class="taxonomy-card">
-          <div class="taxonomy-header">
-            <div class="taxonomy-icon">💻</div>
-            <h3>Programming &amp; Scripting</h3>
-          </div>
-          <div class="taxonomy-tags">
-            <span class="taxonomy-tag">Python (PyQt5, Pandas, Scikit-Learn)</span>
-            <span class="taxonomy-tag">Bash Shell Scripting</span>
-            <span class="taxonomy-tag">PowerShell Automation</span>
-            <span class="taxonomy-tag">C++ (Object-Oriented)</span>
-            <span class="taxonomy-tag">SQL &amp; SQLite</span>
-            <span class="taxonomy-tag">Regular Expressions (Regex)</span>
-            <span class="taxonomy-tag">JSON / REST APIs</span>
-          </div>
-        </div>
-
-        <div class="taxonomy-card">
-          <div class="taxonomy-header">
-            <div class="taxonomy-icon">🖥️</div>
-            <h3>Systems &amp; Environments</h3>
-          </div>
-          <div class="taxonomy-tags">
-            <span class="taxonomy-tag">Windows Server 2019 / 2022</span>
-            <span class="taxonomy-tag">Windows 10 / 11 Enterprise</span>
-            <span class="taxonomy-tag">Kali Linux</span>
-            <span class="taxonomy-tag">Ubuntu Server / Debian</span>
-            <span class="taxonomy-tag">Arch / BlackArch Linux</span>
-            <span class="taxonomy-tag">RedHat Enterprise Linux</span>
-            <span class="taxonomy-tag">Parrot Security OS</span>
-            <span class="taxonomy-tag">VMware Workstation Pro</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Education & Strengths Row -->
-      <div style="margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-        <div class="taxonomy-card">
-          <div class="taxonomy-header">
-            <div class="taxonomy-icon">🎓</div>
-            <h3>Education</h3>
-          </div>
-          <h4 style="font-size:1.15rem; color:var(--text-main); margin-bottom:0.25rem;">Bachelor of Science in Computer Science (BS CS)</h4>
-          <div style="color:var(--accent-cyan); font-weight:600; font-size:0.9rem; margin-bottom:0.75rem;">University of Peshawar, Pakistan &bull; Class of 2025</div>
-          <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6;">
-            Comprehensive academic coursework in Operating Systems, Computer Networks, Data Communications, Database Systems, Computer Architecture, Cryptography, and Software Engineering.
-          </p>
-        </div>
-
-        <div class="taxonomy-card">
-          <div class="taxonomy-header">
-            <div class="taxonomy-icon">⚡</div>
-            <h3>Key Strengths</h3>
-          </div>
-          <ul style="list-style:none;">
-            <li style="margin-bottom:0.6rem; color:var(--text-muted); font-size:0.88rem;">
-              <strong style="color:var(--text-main);">Analytical Problem Solving:</strong> Skilled in identifying attack vectors and executing containment through data-driven forensic telemetry.
-            </li>
-            <li style="margin-bottom:0.6rem; color:var(--text-muted); font-size:0.88rem;">
-              <strong style="color:var(--text-main);">Technical Documentation:</strong> Proven ability to draft comprehensive incident response, threat intelligence, and root-cause analysis reports.
-            </li>
-            <li style="color:var(--text-muted); font-size:0.88rem;">
-              <strong style="color:var(--text-main);">Remote Collaboration:</strong> Self-starter experienced with agile methodologies, asynchronous communication, Git version control, and remote-first collaboration.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       CONTACT SECTION
-       ========================================================================= -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag">Let's Connect</span>
-        <h2 class="section-title">Get in Touch</h2>
-        <p class="section-subtitle">
-          Available for internships, junior roles, and collaborative technical projects in systems administration, network defense, and cybersecurity.
-        </p>
-      </div>
-
-      <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 2rem;">
-        <a href="mailto:hckr.badguy@gmail.com" class="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          Email: hckr.badguy@gmail.com
         </a>
-        <a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          LinkedIn: linkedin.com/in/hckr-zahid
+        <a href="mailto:xahidullah@yahoo.com" class="contact-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <div class="contact-label">Email (Alt)</div>
+            <div class="contact-value">xahidullah@yahoo.com</div>
+          </div>
         </a>
-        <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          GitHub: github.com/hckr-zahid
+        <a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener" class="contact-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">linkedin.com/in/hckr-zahid</div>
+          </div>
+        </a>
+        <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener" class="contact-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">github.com/hckr-zahid</div>
+          </div>
+        </a>
+        <a href="tel:+923084888192" class="contact-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">+92 308 4888192</div>
+          </div>
+        </a>
+        <a href="Zahid Ullah Cybersecurity.pdf" download class="contact-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <div>
+            <div class="contact-label">Curriculum Vitae</div>
+            <div class="contact-value">Download CV (PDF)</div>
+          </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- =========================================================================
+  <!-- ═══════════════════════════════════════════════════
        FOOTER
-       ========================================================================= -->
+       ═══════════════════════════════════════════════════ -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-top">
+      <div class="footer-inner">
         <div class="footer-brand">
-          <h3>
-            <span class="brand-badge">HCKR</span>
-            Zahid Ullah
-          </h3>
-          <p>
-            BS Computer Science (University of Peshawar, Class of 2025) &bull; (ISC)&sup2; CC Certified &bull; Active Directory &amp; VMware Labs &bull; CyberGun Thesis Author &bull; PowerShell Research.
-          </p>
+          <div class="footer-name">Zahid Ullah</div>
+          <div class="footer-role">Cybersecurity Analyst · Ethical Hacker · SOC &amp; Threat Intelligence</div>
+          <div class="footer-sub">B.Sc. Computer Science · University of Peshawar · Class of 2025</div>
         </div>
-        <div class="footer-col">
-          <h4>Portfolio Sections</h4>
-          <ul>
-            <li><a href="#about">About &amp; Core Pillars</a></li>
-            <li><a href="#projects">Projects &amp; CyberGun</a></li>
-            <li><a href="#research">Research &amp; Analysis</a></li>
-            <li><a href="#adlab">Active Directory &amp; VMware Lab</a></li>
-            <li><a href="#certifications">Verified Certifications</a></li>
-            <li><a href="#skills">Skills Taxonomy &amp; Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <ul>
-            <li><a href="https://github.com/hckr-zahid" target="_blank" rel="noopener">GitHub (@hckr-zahid)</a></li>
-            <li><a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener">LinkedIn (@hckr-zahid)</a></li>
-            <li><a href="mailto:hckr.badguy@gmail.com">hckr.badguy@gmail.com</a></li>
-            <li><a href="tel:+923084888192">+92 308 4888192</a></li>
-          </ul>
+        <div class="footer-nav">
+          <div class="footer-col">
+            <div class="footer-col-title">Sections</div>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#research">Security Research</a></li>
+              <li><a href="#labs">Infrastructure Labs</a></li>
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#education">Education &amp; Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Repositories</div>
+            <ul>
+              <li><a href="https://github.com/hckr-zahid/CyberGun" target="_blank" rel="noopener">CyberGun</a></li>
+              <li><a href="https://github.com/hckr-zahid/Active-Directory-VMware-Enterprise-Lab" target="_blank" rel="noopener">AD Lab</a></li>
+              <li><a href="https://github.com/hckr-zahid/Activate-Windows-Free" target="_blank" rel="noopener">PS Research</a></li>
+              <li><a href="https://github.com/hckr-zahid" target="_blank" rel="noopener">All Repos</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <div>&copy; 2026 Zahid Ullah (<code>hckr-zahid</code>). All Rights Reserved.</div>
-        <div>Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> | Pure Static HTML, CSS &amp; JavaScript</div>
+        <span>&copy; 2025 Zahid Ullah (<code>hckr-zahid</code>). All rights reserved.</span>
+        <span>Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></span>
       </div>
     </div>
   </footer>
 
-  <!-- =========================================================================
-       LIGHTBOX MODAL (HIGH-RES INSPECTOR)
-       ========================================================================= -->
-  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
-    <div class="lightbox-container">
-      <div class="lightbox-header">
-        <div class="lightbox-title-wrap">
-          <span class="lightbox-badge" id="lightboxBadge">Category</span>
-          <h3 class="lightbox-title" id="lightboxTitle">Screenshot Title</h3>
+  <!-- ═══════════════════════════════════════════════════
+       LIGHTBOX MODAL
+       ═══════════════════════════════════════════════════ -->
+  <div class="lightbox" id="lightboxModal" role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+    <div class="lightbox-box">
+      <div class="lb-header">
+        <div class="lb-header-left">
+          <span class="lb-badge" id="lbBadge"></span>
+          <h3 class="lb-title" id="lbTitle"></h3>
         </div>
-        <div class="lightbox-actions">
-          <a id="lightboxRawLink" href="#" target="_blank" rel="noopener" class="lightbox-btn" title="Open Original File">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            <span>Raw File</span>
+        <div class="lb-header-right">
+          <a id="lbRawLink" href="#" target="_blank" rel="noopener" class="lb-action-btn" title="Open original file">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Raw
           </a>
-          <button class="lightbox-btn lightbox-close-btn" onclick="closeLightbox()" title="Close (Esc)">
-            &times;
-          </button>
+          <button class="lb-action-btn lb-close" onclick="closeLightbox()" aria-label="Close (Escape)">&times;</button>
         </div>
       </div>
-
-      <div class="lightbox-body">
-        <button class="lightbox-nav-btn lightbox-nav-prev" onclick="prevLightbox()" aria-label="Previous (Left Arrow)">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        </button>
-        <img id="lightboxImage" src="" alt="Full Preview" class="lightbox-image">
-        <button class="lightbox-nav-btn lightbox-nav-next" onclick="nextLightbox()" aria-label="Next (Right Arrow)">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </button>
+      <div class="lb-body">
+        <button class="lb-nav lb-prev" onclick="prevLightbox()" aria-label="Previous">&#8592;</button>
+        <img class="lb-image" id="lbImage" src="" alt="">
+        <button class="lb-nav lb-next" onclick="nextLightbox()" aria-label="Next">&#8594;</button>
       </div>
-
-      <div class="lightbox-caption-bar">
-        <p class="lightbox-desc" id="lightboxDesc">Technical description.</p>
-        <div class="lightbox-meta">
-          <div id="lightboxTags">Tags</div>
-          <div id="lightboxStep">Asset 1 of 28</div>
+      <div class="lb-caption">
+        <p class="lb-desc" id="lbDesc"></p>
+        <div class="lb-meta">
+          <div class="lb-tags" id="lbTags"></div>
+          <div class="lb-counter" id="lbCounter"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Scripts -->
   <script src="assets/js/portfolio.js"></script>
 </body>
 </html>
