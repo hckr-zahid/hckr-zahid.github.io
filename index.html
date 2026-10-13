@@ -105,9 +105,10 @@
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <span>+92 308 4888192</span>
               </div>
-              <div class="meta-row">
+              <div class="meta-row meta-row-clickable" onclick="openEmailModal()" title="Click to email or copy address" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openEmailModal()">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 <span>hckr.zahid@proton.me</span>
+                <span class="meta-copy-hint">click to email</span>
               </div>
               <div class="meta-row">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -121,9 +122,9 @@
               <a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener" class="profile-link-btn" title="LinkedIn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
               </a>
-              <a href="mailto:hckr.zahid@proton.me" class="profile-link-btn" title="Email">
+              <button onclick="openEmailModal()" class="profile-link-btn" title="Email: hckr.zahid@proton.me" aria-label="Send email to Zahid Ullah">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -709,45 +710,138 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
         <h2 class="section-title">Contact</h2>
         <p class="section-desc">Open to SOC Analyst, Threat Detection, Incident Response, and junior cybersecurity roles. Available for remote-first teams.</p>
       </div>
-      <div class="contact-grid">
-        <a href="mailto:hckr.zahid@proton.me" class="contact-card">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <div>
-            <div class="contact-label">Email</div>
-            <div class="contact-value">hckr.zahid@proton.me</div>
+      <div class="contact-layout">
+
+        <!-- Left col: contact info cards -->
+        <div class="contact-cards-col">
+
+          <!-- Email -->
+          <div class="contact-card" onclick="openEmailModal()" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openEmailModal()" title="Click to email or copy address" style="cursor:pointer;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div class="contact-card-content">
+              <div class="contact-label">Secure Email</div>
+              <div class="contact-value">hckr.zahid@proton.me</div>
+            </div>
+            <div class="contact-card-actions">
+              <span class="contact-pill-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Open
+              </span>
+            </div>
           </div>
-        </a>
-        <a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener" class="contact-card">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          <div>
-            <div class="contact-label">LinkedIn</div>
-            <div class="contact-value">linkedin.com/in/hckr-zahid</div>
+
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener" class="contact-card">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <div class="contact-card-content">
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value">linkedin.com/in/hckr-zahid</div>
+            </div>
+            <div class="contact-card-actions">
+              <span class="contact-pill-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                View
+              </span>
+            </div>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener" class="contact-card">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <div class="contact-card-content">
+              <div class="contact-label">GitHub</div>
+              <div class="contact-value">github.com/hckr-zahid</div>
+            </div>
+            <div class="contact-card-actions">
+              <span class="contact-pill-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Visit
+              </span>
+            </div>
+          </a>
+
+          <!-- Phone -->
+          <a href="tel:+923084888192" class="contact-card">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div class="contact-card-content">
+              <div class="contact-label">Phone</div>
+              <div class="contact-value">+92 308 4888192</div>
+            </div>
+          </a>
+
+          <!-- Download CV -->
+          <a href="Zahid Ullah Cybersecurity.pdf" download class="contact-card">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <div class="contact-card-content">
+              <div class="contact-label">Curriculum Vitae</div>
+              <div class="contact-value">Download CV (PDF)</div>
+            </div>
+            <div class="contact-card-actions">
+              <span class="contact-pill-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/></svg>
+                PDF
+              </span>
+            </div>
+          </a>
+
+        </div><!-- /contact-cards-col -->
+
+        <!-- Right col: direct message composer -->
+        <div class="contact-form-card">
+          <div class="form-header">
+            <h3 class="form-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Send a Message
+            </h3>
+            <p class="form-desc">Compose your message below and choose how to send it — directly via Proton Mail, Gmail webmail, or your default email client.</p>
           </div>
-        </a>
-        <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener" class="contact-card">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          <div>
-            <div class="contact-label">GitHub</div>
-            <div class="contact-value">github.com/hckr-zahid</div>
-          </div>
-        </a>
-        <a href="tel:+923084888192" class="contact-card">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <div>
-            <div class="contact-label">Phone</div>
-            <div class="contact-value">+92 308 4888192</div>
-          </div>
-        </a>
-        <a href="Zahid Ullah Cybersecurity.pdf" download class="contact-card">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <div>
-            <div class="contact-label">Curriculum Vitae</div>
-            <div class="contact-value">Download CV (PDF)</div>
-          </div>
-        </a>
-      </div>
+          <form class="contact-form" id="contactMessageForm" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="msg-name">Your Name</label>
+                <input class="form-input" type="text" id="msg-name" placeholder="Jane Smith" autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="msg-email">Your Email</label>
+                <input class="form-input" type="email" id="msg-email" placeholder="jane@example.com" autocomplete="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="msg-subject">Subject</label>
+              <input class="form-input" type="text" id="msg-subject" placeholder="SOC Analyst Opportunity / Project Inquiry">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="msg-body">Message</label>
+              <textarea class="form-textarea" id="msg-body" rows="4" placeholder="Hi Zahid, I'd like to discuss..."></textarea>
+            </div>
+            <div>
+              <p class="form-dispatch-label">Send via:</p>
+              <div class="form-dispatch-buttons">
+                <button type="button" class="btn-dispatch btn-dispatch-proton" onclick="dispatchEmail('proton')" title="Open in Proton Mail">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Proton Mail
+                </button>
+                <button type="button" class="btn-dispatch btn-dispatch-gmail" onclick="dispatchEmail('gmail')" title="Compose in Gmail">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Gmail
+                </button>
+                <button type="button" class="btn-dispatch btn-dispatch-client" onclick="dispatchEmail('client')" title="Use default email client">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  Default Client
+                </button>
+                <button type="button" class="btn-dispatch btn-dispatch-copy" onclick="dispatchEmail('copy')" title="Copy message to clipboard">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  Copy message to clipboard
+                </button>
+              </div>
+            </div>
+          </form>
+        </div><!-- /contact-form-card -->
+
+      </div><!-- /contact-layout -->
     </div>
   </section>
+
 
   <!-- ═══════════════════════════════════════════════════
        FOOTER
@@ -824,6 +918,188 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════════════
+       EMAIL MODAL
+       ═══════════════════════════════════════════════════ -->
+  <div class="email-modal" id="emailModal" role="dialog" aria-modal="true" aria-labelledby="emailModalTitle">
+    <div class="email-modal-box">
+      <div class="email-modal-header">
+        <div>
+          <h3 class="email-modal-title" id="emailModalTitle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email Zahid Ullah
+          </h3>
+          <p class="email-modal-subtitle">Choose how you'd like to reach out.</p>
+        </div>
+        <button class="email-modal-close" onclick="closeEmailModal()" aria-label="Close">&times;</button>
+      </div>
+
+      <!-- Address display + copy -->
+      <div class="email-address-card">
+        <span class="email-address-text">hckr.zahid@proton.me</span>
+        <button class="btn-copy-address" id="copyAddressBtn" onclick="copyEmailAddress()">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy
+        </button>
+      </div>
+
+      <!-- Quick open links -->
+      <div>
+        <p class="email-modal-quick-title">Open directly in:</p>
+        <div class="form-dispatch-buttons" style="margin-top:0.5rem;">
+          <a href="https://mail.proton.me/u/0/inbox#compose?to=hckr.zahid%40proton.me" target="_blank" rel="noopener" class="btn-dispatch btn-dispatch-proton">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Proton Mail
+          </a>
+          <a id="gmailQuickLink" href="#" target="_blank" rel="noopener" class="btn-dispatch btn-dispatch-gmail">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Gmail
+          </a>
+          <a href="mailto:hckr.zahid@proton.me" class="btn-dispatch btn-dispatch-client">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Default Client
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toastMessage">Copied to clipboard!</span>
+  </div>
+
   <script src="assets/js/portfolio.js"></script>
+  <script>
+    /* ── Email Modal ─────────────────────────────────────── */
+    const EMAIL = 'hckr.zahid@proton.me';
+
+    function openEmailModal() {
+      const modal = document.getElementById('emailModal');
+      if (!modal) return;
+      // Pre-fill Gmail link (no subject/body needed for quick modal)
+      const gmailLink = document.getElementById('gmailQuickLink');
+      if (gmailLink) {
+        gmailLink.href = `https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(EMAIL)}`;
+      }
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      // Reset copy button
+      const copyBtn = document.getElementById('copyAddressBtn');
+      if (copyBtn) { copyBtn.textContent = 'Copy'; copyBtn.className = 'btn-copy-address'; }
+    }
+
+    function closeEmailModal() {
+      const modal = document.getElementById('emailModal');
+      if (!modal) return;
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close on backdrop click
+    document.getElementById('emailModal')?.addEventListener('click', function(e) {
+      if (e.target === this) closeEmailModal();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeEmailModal();
+    });
+
+    function copyEmailAddress() {
+      navigator.clipboard.writeText(EMAIL).then(() => {
+        const btn = document.getElementById('copyAddressBtn');
+        if (btn) {
+          btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied!`;
+          btn.classList.add('copied');
+          setTimeout(() => {
+            btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy`;
+            btn.classList.remove('copied');
+          }, 2500);
+        }
+        showToast('Email address copied to clipboard!');
+      }).catch(() => {
+        // Fallback: select text
+        const el = document.createElement('textarea');
+        el.value = EMAIL;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        showToast('Email address copied!');
+      });
+    }
+
+    /* ── Form Dispatch (contact section composer) ─────────── */
+    function dispatchEmail(method) {
+      const name    = (document.getElementById('msg-name')?.value  || '').trim();
+      const from    = (document.getElementById('msg-email')?.value || '').trim();
+      const subject = (document.getElementById('msg-subject')?.value || '').trim() || 'Portfolio Inquiry';
+      const body    = (document.getElementById('msg-body')?.value  || '').trim();
+
+      const fullBody = [
+        body,
+        '',
+        from ? `— ${name} (${from})` : (name ? `— ${name}` : '')
+      ].filter(l => l !== undefined).join('\n').trim();
+
+      const encodedTo      = encodeURIComponent(EMAIL);
+      const encodedSubject = encodeURIComponent(subject);
+      const encodedBody    = encodeURIComponent(fullBody);
+
+      if (method === 'proton') {
+        window.open(
+          `https://mail.proton.me/u/0/inbox#compose?to=${encodedTo}&subject=${encodedSubject}&body=${encodedBody}`,
+          '_blank', 'noopener'
+        );
+      } else if (method === 'gmail') {
+        window.open(
+          `https://mail.google.com/mail/?view=cm&to=${encodedTo}&su=${encodedSubject}&body=${encodedBody}`,
+          '_blank', 'noopener'
+        );
+      } else if (method === 'client') {
+        window.location.href = `mailto:${EMAIL}?subject=${encodedSubject}&body=${encodedBody}`;
+      } else if (method === 'copy') {
+        const text = `To: ${EMAIL}\nSubject: ${subject}\n\n${fullBody}`;
+        navigator.clipboard.writeText(text).then(() => {
+          showToast('Message copied to clipboard — paste it into your email client.');
+        }).catch(() => {
+          const el = document.createElement('textarea');
+          el.value = text;
+          document.body.appendChild(el);
+          el.select();
+          document.execCommand('copy');
+          document.body.removeChild(el);
+          showToast('Message copied to clipboard!');
+        });
+        return;
+      }
+
+      // Confirm dispatch for all send methods
+      if (method !== 'copy') {
+        showToast(`Opening ${method === 'proton' ? 'Proton Mail' : method === 'gmail' ? 'Gmail' : 'your email client'}…`);
+      }
+    }
+
+    /* ── Toast helper ─────────────────────────────────────── */
+    function showToast(msg, duration = 3200) {
+      const toast = document.getElementById('toastNotification');
+      const msgEl = document.getElementById('toastMessage');
+      if (!toast || !msgEl) return;
+      msgEl.textContent = msg;
+      toast.classList.add('active');
+      clearTimeout(toast._timer);
+      toast._timer = setTimeout(() => toast.classList.remove('active'), duration);
+    }
+
+    // Expose globally
+    window.openEmailModal  = openEmailModal;
+    window.closeEmailModal = closeEmailModal;
+    window.copyEmailAddress = copyEmailAddress;
+    window.dispatchEmail   = dispatchEmail;
+    window.showToast       = showToast;
+  </script>
 </body>
 </html>
+
