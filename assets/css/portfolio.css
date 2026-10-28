@@ -401,13 +401,21 @@ img {
   margin-bottom: 1.5rem;
 }
 
-.hero-badges {
+.hero-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
+.hero-badges {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center;    /* Centers items vertically relative to each other */
+  flex-wrap: wrap;        /* Allows badges to wrap onto a new line on smaller screens */
+  gap: 10px;              /* Adds clean spacing between badges */
+  text-align: center;
+}
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
