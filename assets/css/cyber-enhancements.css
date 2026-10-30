@@ -1,0 +1,254 @@
+/* ==========================================================================
+   CYBERSECURITY HUD & INTERACTIVE TELEMETRY STYLES
+   ========================================================================== */
+
+/* Top HUD Banner */
+.cyber-hud-banner {
+  background: rgba(11, 15, 25, 0.95);
+  border-bottom: 1px solid rgba(2, 132, 199, 0.25);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: #94a3b8;
+  padding: 6px 0;
+  position: relative;
+  z-index: 101;
+  backdrop-filter: blur(10px);
+}
+
+.hud-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hud-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hud-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hud-label {
+  color: #64748b;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.5px;
+}
+
+.hud-val {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* Pulsing radar dot */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-ring 2s infinite;
+  display: inline-block;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Particle Matrix Canvas */
+#cyberMatrixCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+}
+
+[data-theme="light"] #cyberMatrixCanvas {
+  opacity: 0.12;
+}
+
+/* Interactive SOC Terminal Simulator in Hero */
+.interactive-terminal-card {
+  margin-top: 2rem;
+  background: #070b14;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(2, 132, 199, 0.15);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.terminal-header {
+  background: #0f172a;
+  padding: 8px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1e293b;
+}
+
+.terminal-title {
+  color: #94a3b8;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.term-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.term-dot-red { background: #ef4444; }
+.term-dot-yellow { background: #f59e0b; }
+.term-dot-green { background: #10b981; }
+
+.terminal-body {
+  padding: 14px;
+  max-height: 260px;
+  overflow-y: auto;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+.terminal-body::-webkit-scrollbar {
+  width: 6px;
+}
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+.term-line {
+  margin-bottom: 4px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.term-prompt {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.term-success {
+  color: #34d399;
+}
+
+.term-alert {
+  color: #f87171;
+}
+
+.term-warning {
+  color: #fbbf24;
+}
+
+.term-info {
+  color: #94a3b8;
+}
+
+.terminal-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #0a0f1d;
+  border-top: 1px solid #1e293b;
+}
+
+.term-cmd-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #38bdf8;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.term-hints {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 6px 14px 10px 14px;
+  background: #0a0f1d;
+}
+
+.term-hint-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.term-hint-btn:hover {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #38bdf8;
+}
+
+/* Card Glow & Motion Polish */
+.project-card, .project-spotlight, .lab-gallery-card, .cert-card, .hero-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25), 0 0 20px rgba(2, 132, 199, 0.2);
+  border-color: rgba(56, 189, 248, 0.5) !important;
+}
+
+.project-spotlight:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(2, 132, 199, 0.25);
+  border-color: rgba(56, 189, 248, 0.45) !important;
+}
+
+/* Pulse animation for live status badge */
+.badge-live-pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #10b981;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
