@@ -18,9 +18,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/portfolio.css">
+  <link rel="stylesheet" href="assets/css/cyber-enhancements.css">
 </head>
 <body>
+  <!-- Canvas Background for Network Nodes Animation -->
+  <canvas id="cyberMatrixCanvas"></canvas>
 
+  <!-- Cyber Telemetry Top HUD Bar -->
   <!-- ═══════════════════════════════════════════════════
        NAVIGATION
        ═══════════════════════════════════════════════════ -->
@@ -29,7 +33,7 @@
       <a href="#about" class="nav-brand">
         <span class="brand-name">Zahid Ullah</span>
         <span class="brand-sep">|</span>
-        <span class="brand-role">SecEngr</span>
+        <span class="brand-role">Engineer</span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about"          class="nav-link">About</a></li>
@@ -53,9 +57,9 @@
     </div>
   </nav>
 
-<!-- ═══════════════════════════════════════════════════
-                    HERO / ABOUT
-═══════════════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════════════
+       HERO / ABOUT
+       ═══════════════════════════════════════════════════ -->
   <header class="hero" id="about">
     <div class="container">
       <div class="hero-layout">
@@ -76,14 +80,16 @@
                 forensics and incident response (DFIR). Experienced in developing machine learning based
                 malware detection solutions, implementing network intrusion detection systems (NIDS),
                 and conducting security investigations across endpoint, memory, disk, and network
-                artifacts. Skilled in SIEM monitoring, threat hunting, vulnerability assessment,
-                indicators of compromise (IOC) analysis, and Python-based security automation.
+                artifacts. <br>Skilled in SIEM monitoring, threat hunting, vulnerability assessment,
+                indicators of compromise (IOC) analysis, and Python-based security automation.<br>
                 Applies <strong>MITRE ATT&CK</strong> and <strong>NIST SP 800-61</strong> methodologies
                 to strengthen threat investigation and incident response capabilities. Holds a
                 <strong>B.S. in Computer Science</strong>, with industry certifications including
                 <strong>EC-Council CHFI and ISC² Certified in Cybersecurity (CC)</strong>, complemented
                 by professional training from Google and IBM.
               </p>
+         
+
 
           <div class="hero-cta">
             <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -91,12 +97,12 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               GitHub
             </a>
-            <a href="Zahid Ullah Cybersecurity.pdf" download class="btn btn-outline">View CV</a>
+            <a href="assets/docs/Zahid-Ullah-Cybersecurity-CV.pdf" download="Zahid-Ullah-Cybersecurity-CV.pdf" class="btn btn-outline">Download CV</a>
             <a href="#contact" class="btn btn-outline">Contact</a>
           </div>
         </div>
 
-        <!-- Right: Card -->
+ <!-- Right: Card -->
         <div class="hero-card">
           <div class="profile-photo-wrap">
             <img src="assets/img/profile/zahid-ullah.jpg" alt="Zahid Ullah" class="profile-photo">
@@ -169,6 +175,7 @@
           <span class="expertise-desc">Python · PyQt5 · Bash · PowerShell · VirusTotal API</span>
         </div>
       </div>
+
     </div>
   </header>
 
@@ -178,30 +185,26 @@
   <section class="section" id="projects">
     <div class="container">
       <div class="section-header">
-        <span class="section-eyebrow">Projects</span>
-        <h2 class="section-title">Security Projects &amp; Solutions</h2>
-        <p class="section-desc">Academic, Capstone, and Independent projects each project is labeled.</p>
+        <span class="section-eyebrow">Selected Projects</span>
+        <h2 class="section-title">Technical Projects &amp; Systems</h2>
+        <p class="section-desc">Academic, capstone, and personal projects. Each project is labeled with its classification — simulated environments are clearly identified.</p>
       </div>
 
-            <!-- ── Project 1: CyberGun ── -->
+      <!-- ── Project 1: CyberGun ── -->
       <article class="project-spotlight" id="cybergun">
         <div class="spotlight-header">
           <div>
-            <div class="project-label">Academic Thesis &amp; Technical Monograph · B.Sc. Capstone · Windows Endpoint Security</div>
-            <h3 class="spotlight-title">CyberGun: Autonomous Tri-Engine Endpoint Protection &amp; Threat Intelligence Suite</h3>
-            <p class="spotlight-tagline">
-              An autonomous incident triage suite featuring a 6-layer fast-bail static scanner, zero-dependency continuous dynamic heuristics, and driverless network packet inspection with automated threat response.
-            </p>
+            <div class="project-label">Academic Thesis · Personal Project</div>
+            <h3 class="spotlight-title">CyberGun — Static &amp; Dynamic Threat Detection System</h3>
+            <p class="spotlight-tagline">Modular malware-detection framework combining static signatures with ML-driven behavioral detection</p>
           </div>
           <div class="spotlight-tech">
-            <span class="tech-pill">Python 3.10</span>
+            <span class="tech-pill">Python 3</span>
             <span class="tech-pill">PyQt5</span>
-            <span class="tech-pill">SQLite3</span>
             <span class="tech-pill">LightGBM</span>
             <span class="tech-pill">YARA</span>
-            <span class="tech-pill">Scapy</span>
+            <span class="tech-pill">SQLite</span>
             <span class="tech-pill">EMBER Dataset</span>
-            <span class="tech-pill">MITRE ATT&amp;CK</span>
           </div>
         </div>
 
@@ -211,18 +214,13 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             Source Code
           </a>
-          <a href="assets/docs/thesis/CyberGun_Complete_Technical_Book.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Technical Book (PDF)
-          </a>
           <a href="assets/docs/thesis/CyberGun Final Thesis.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             Download Thesis
           </a>
         </div>
 
-        
-<div class="spotlight-body">
+        <div class="spotlight-body">
 
   <!-- ENGINE ARCHITECTURE -->
   <section class="spotlight-col">
@@ -429,233 +427,149 @@
     </div>
   </section>
 
-
-
-
-
-
 </div>
-<!-- CyberGun Screenshot Gallery -->
-<table width="100%" cellspacing="10" cellpadding="0">
-  <tr>
-    <td width="25%" valign="top" align="center">
-      <img src="assets/img/projects/cybergun-dashboard.png"
-           alt="CyberGun Live Dashboard"
-           width="100%">
-      <p>01 · Live Dashboard &amp; Telemetry</p>
-    </td>
 
-    <td width="25%" valign="top" align="center">
-      <img src="assets/img/projects/cybergun-system-status.png"
-           alt="CyberGun System Status"
-           width="100%">
-      <p>02 · System Status (299 Processes)</p>
-    </td>
-
-    <td width="25%" valign="top" align="center">
-      <img src="assets/img/projects/cybergun-threat-logs.png"
-           alt="CyberGun Hash, YARA and ML Scan Engine"
-           width="100%">
-      <p>03 · Hash + YARA + ML Scan Engine</p>
-    </td>
-
-    <td width="25%" valign="top" align="center">
-      <img src="assets/img/projects/cybergun-quarantine.png"
-           alt="CyberGun Quarantine Zone"
-           width="100%">
-      <p>04 · Quarantine Zone</p>
-    </td>
-  </tr>
-</table>
+        <!-- CyberGun Screenshots -->
+        <div class="screenshot-strip">
+          <div class="screenshot-item" onclick="openLightbox(0)">
+            <img src="assets/img/projects/cybergun-dashboard.png" alt="CyberGun threat dashboard showing live process monitor and telemetry" loading="lazy">
+            <div class="screenshot-caption">01 · Live Dashboard &amp; Telemetry</div>
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(1)">
+            <img src="assets/img/projects/cybergun-system-status.png" alt="CyberGun system status showing 299 running processes, disk I/O, and network metrics" loading="lazy">
+            <div class="screenshot-caption">02 · System Status (299 Processes)</div>
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(2)">
+            <img src="assets/img/projects/cybergun-threat-logs.png" alt="CyberGun scan engine running hash index, YARA, and ML detection across 169 files" loading="lazy">
+            <div class="screenshot-caption">03 · Hash + YARA + ML Scan Engine</div>
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(3)">
+            <img src="assets/img/projects/cybergun-quarantine.png" alt="CyberGun quarantine zone showing isolated files with SHA-256 hashes and paths" loading="lazy">
+            <div class="screenshot-caption">04 · Encrypted Quarantine Zone</div>
+          </div>
+        </div>
       </article>
 
+      <!-- ── Projects Grid ── -->
+      <div class="projects-grid">
 
-<!-- ── Projects Grid ── -->
-<div class="projects-grid">
+        <!-- Project 2: NIDS -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <div class="project-label-sm">Detection Engineering · NIDS Lab</div>
+            <h3>Network Intrusion Detection &amp; Monitoring</h3>
+          </div>
+          <div class="project-meta-table">
+            <div class="meta-row-2"><span>Tools</span><span>Python 3 · Scapy · IsolationForest · Suricata · Zeek</span></div>
+            <div class="meta-row-2"><span>Architecture</span><span>Hybrid signature &amp; ML anomaly detection engine</span></div>
+            <div class="meta-row-2"><span>Objective</span><span>Detect port scans, SYN floods, DNS amplification &amp; C2 beacons</span></div>
+          </div>
+          <p>Architected a hybrid NIDS combining deterministic YAML rules with unsupervised Isolation Forest ML anomaly scoring. Features Scapy-powered packet dissection, bi-directional 5-tuple flow reconstruction, protocol deep inspection, sliding-window alert deduplication, and an HTML5 analytics dashboard.</p>
+          <div class="project-links-bar" style="margin: 0.8rem 0;">
+            <a href="https://github.com/hckr-zahid/NIDS-Lab" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
+          </div>
+          <div class="tech-row">
+            <span class="tech-pill-sm">Python 3</span><span class="tech-pill-sm">Scapy</span>
+            <span class="tech-pill-sm">Isolation Forest</span><span class="tech-pill-sm">Suricata</span>
+            <span class="tech-pill-sm">Zeek</span><span class="tech-pill-sm">PCAP Analysis</span>
+          </div>
+        </article>
 
-  <!-- Project 2: NIDS -->
-  <article class="project-card">
-    <div class="project-card-top">
-      <div class="project-label-sm">SOC Lab · Simulated Environment</div>
-      <h3>Network Intrusion Detection &amp; Monitoring</h3>
-    </div>
+        <!-- Project 3: IBM Capstone DFIR -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <div class="project-label-sm">DFIR Lab · Forensic Analysis</div>
+            <h3>Digital Forensics &amp; Incident Response Lab</h3>
+          </div>
+          <div class="project-meta-table">
+            <div class="meta-row-2"><span>Tools</span><span>Python 3 · Volatility · YARA · Sigma · Suricata · OpenSearch</span></div>
+            <div class="meta-row-2"><span>Framework</span><span>NIST SP 800-61 Rev. 2 &amp; MITRE ATT&amp;CK</span></div>
+            <div class="meta-row-2"><span>Scenarios</span><span>Ransomware, Web Shell, Lateral Movement Investigation</span></div>
+          </div>
+          <p>Forensic triage, memory analysis, and artifact parsing framework. Built custom CLI parsers for Windows Prefetch, Evtx logs, MFT records, and Volatility memory dumps. Includes detection rule crosswalks, simulated forensic evidence files, and automated incident response runbooks.</p>
+          <div class="project-links-bar" style="margin: 0.8rem 0;">
+            <a href="https://github.com/hckr-zahid/DFIR-Lab" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
+          </div>
+          <div class="tech-row">
+            <span class="tech-pill-sm">Volatility</span><span class="tech-pill-sm">Autopsy</span>
+            <span class="tech-pill-sm">YARA</span><span class="tech-pill-sm">Sigma Rules</span>
+            <span class="tech-pill-sm">NIST IR</span><span class="tech-pill-sm">Memory Forensics</span>
+          </div>
+        </article>
 
-    <div class="project-meta-table">
-      <div class="meta-row-2">
-        <span>Technology</span>
-        <span>Suricata · Zeek · Elasticsearch · Kibana</span>
-      </div>
-      <div class="meta-row-2">
-        <span>Environment</span>
-        <span>Isolated virtualized network lab</span>
-      </div>
-      <div class="meta-row-2">
-        <span>Detection Scope</span>
-        <span>Port scanning · DoS indicators · Suspected data exfiltration</span>
-      </div>
-    </div>
+        <!-- Project 4: Python Automation -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <div class="project-label-sm">SecOps Automation · SOAR Framework</div>
+            <h3>SecAuto: Security Orchestration &amp; Response</h3>
+          </div>
+          <div class="project-meta-table">
+            <div class="meta-row-2"><span>Tools</span><span>Python 3 · FastAPI · Directed Acyclic Graph (DAG) · Threat Intel APIs</span></div>
+            <div class="meta-row-2"><span>Capability</span><span>Automated incident triage, threat enrichment &amp; host containment</span></div>
+          </div>
+          <p>Declarative SOAR framework executing YAML-based DAG playbooks for automated threat intelligence enrichment (VirusTotal, AbuseIPDB, Shodan), suspicious email/phishing header analysis, network scanning, firewall/host containment, and webhook notifications.</p>
+          <div class="project-links-bar" style="margin: 0.8rem 0;">
+            <a href="https://github.com/hckr-zahid/SecAuto" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
+          </div>
+          <div class="tech-row">
+            <span class="tech-pill-sm">Python 3</span><span class="tech-pill-sm">SOAR Engine</span>
+            <span class="tech-pill-sm">FastAPI</span><span class="tech-pill-sm">VirusTotal</span>
+            <span class="tech-pill-sm">AbuseIPDB</span><span class="tech-pill-sm">Playbook DAG</span>
+          </div>
+        </article>
 
-    <p>
-      Configured Suricata and Zeek monitoring sensors to inspect network
-      traffic within an isolated virtual lab. Developed and tuned TCP/UDP
-      detection rules, centralized network telemetry in Elasticsearch,
-      and configured Kibana dashboards for traffic analysis, alert
-      investigation, and packet-capture correlation.
-    </p>
+        <!-- Project 5: Vuln Assessment -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <div class="project-label-sm">Compliance &amp; Remediation · Hardening</div>
+            <h3>Vuln-Hardening: OS &amp; Container Security Engine</h3>
+          </div>
+          <div class="project-meta-table">
+            <div class="meta-row-2"><span>Tools</span><span>Python 3 · Nmap · OpenVAS · CIS Benchmarks · NIST 800-53</span></div>
+            <div class="meta-row-2"><span>Scope</span><span>Linux (Ubuntu/RHEL), Windows Server, Docker &amp; K8s</span></div>
+          </div>
+          <p>Multi-platform vulnerability remediation and security baseline hardening framework. Automates scanning, CVSS v3 score calculation, declarative rule remediation with atomic rollback guarantees, and compliance audit reporting across CIS, NIST 800-53, and PCI-DSS.</p>
+          <div class="project-links-bar" style="margin: 0.8rem 0;">
+            <a href="https://github.com/hckr-zahid/Vuln-Hardening" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
+          </div>
+          <div class="tech-row">
+            <span class="tech-pill-sm">Nmap NSE</span><span class="tech-pill-sm">OpenVAS</span>
+            <span class="tech-pill-sm">CVSS v3</span><span class="tech-pill-sm">CIS Benchmarks</span>
+            <span class="tech-pill-sm">NIST 800-53</span><span class="tech-pill-sm">Rollback Engine</span>
+          </div>
+        </article>
+        <!-- Project 6: C++ -->
+        <article class="project-card">
+          <div class="project-card-top">
+            <div class="project-label-sm">University of London OOP Specialization</div>
+            <h3>C++ Object-Oriented Crypto Trading Simulation</h3>
+          </div>
+          <div class="project-meta-table">
+            <div class="meta-row-2"><span>Language</span><span>C++</span></div>
+            <div class="meta-row-2"><span>Classification</span><span>Academic specialization project</span></div>
+          </div>
+          <p>Console-based algorithmic trading simulation applying encapsulation, polymorphism, and inheritance. Class hierarchy manages OrderBooks, Wallets, Matching Engines, and CSV trade histories. Demonstrates file stream I/O, STL usage, and clean separation of business logic from data structures.</p>
+          <div class="tech-row">
+            <span class="tech-pill-sm">C++</span><span class="tech-pill-sm">OOP</span>
+            <span class="tech-pill-sm">STL</span><span class="tech-pill-sm">File I/O</span>
+          </div>
+        </article>
 
-    <div class="project-limitation">
-      <strong>Environment:</strong>
-      Simulated laboratory deployment. Detection coverage and rule
-      effectiveness are limited to the configured rules and test scenarios.
-    </div>
-
-    <div class="tech-row">
-      <span class="tech-pill-sm">Suricata</span>
-      <span class="tech-pill-sm">Zeek</span>
-      <span class="tech-pill-sm">Elasticsearch</span>
-      <span class="tech-pill-sm">Kibana</span>
-      <span class="tech-pill-sm">PCAP Analysis</span>
-    </div>
-  </article>
-
-  <!-- Project 3: DFIR Capstone -->
-  <article class="project-card">
-    <div class="project-card-top">
-      <div class="project-label-sm">IBM Capstone · Academic Simulation</div>
-      <h3>Ransomware Incident Response &amp; Digital Forensics</h3>
-    </div>
-
-    <div class="project-meta-table">
-      <div class="meta-row-2">
-        <span>Technology</span>
-        <span>Volatility · Autopsy</span>
-      </div>
-      <div class="meta-row-2">
-        <span>Classification</span>
-        <span>Academic capstone · Simulated ransomware incident</span>
-      </div>
-      <div class="meta-row-2">
-        <span>Methodology</span>
-        <span>NIST SP 800-61 incident response lifecycle</span>
-      </div>
-    </div>
-
-    <p>
-      Investigated a simulated ransomware incident using established
-      digital forensic and incident response procedures. Examined memory
-      artifacts with Volatility to investigate suspicious processes and
-      potential code injection. Used Autopsy to analyze filesystem
-      artifacts, Master File Table (MFT) records, registry evidence,
-      and event logs to reconstruct the incident timeline, identify
-      indicators of compromise (IOCs), and document containment and
-      recovery recommendations.
-    </p>
-
-    <div class="tech-row">
-      <span class="tech-pill-sm">Volatility</span>
-      <span class="tech-pill-sm">Autopsy</span>
-      <span class="tech-pill-sm">NIST SP 800-61</span>
-      <span class="tech-pill-sm">Memory Forensics</span>
-      <span class="tech-pill-sm">MFT Analysis</span>
-    </div>
-  </article>
-
-  <!-- Project 4: Security Automation -->
-  <article class="project-card">
-    <div class="project-card-top">
-      <div class="project-label-sm">Personal Project · Security Automation</div>
-      <h3>Python Security Automation Toolkit</h3>
-    </div>
-
-    <div class="project-meta-table">
-      <div class="meta-row-2">
-        <span>Technology</span>
-        <span>Python 3 · Regex · VirusTotal API · AbuseIPDB API</span>
-      </div>
-      <div class="meta-row-2">
-        <span>Objective</span>
-        <span>Automated log analysis and Tier-1 security triage</span>
-      </div>
-      <div class="meta-row-2">
-        <span>Core Functions</span>
-        <span>IOC extraction · Reputation checks · Log parsing</span>
-      </div>
-    </div>
-
-    <p>
-      Developed modular Python utilities to parse system and
-      authentication logs, extract IP addresses, suspicious domains,
-      and file hashes, and enrich indicators using VirusTotal and
-      AbuseIPDB REST APIs. Implemented regular-expression-based
-      extraction and command-line argument handling with argparse
-      to support repeatable, structured security triage workflows.
-    </p>
-
-    <div class="project-limitation">
-      <strong>Availability:</strong>
-      A public source-code repository is not currently linked.
-      Implementation details and source code can be provided upon request.
-    </div>
-
-    <div class="tech-row">
-      <span class="tech-pill-sm">Python 3</span>
-      <span class="tech-pill-sm">Regex</span>
-      <span class="tech-pill-sm">VirusTotal API</span>
-      <span class="tech-pill-sm">AbuseIPDB API</span>
-      <span class="tech-pill-sm">argparse</span>
-    </div>
-  </article>
-
-  <!-- Project 5: Vulnerability Assessment -->
-  <article class="project-card">
-    <div class="project-card-top">
-      <div class="project-label-sm">Study Project · Authorized Lab</div>
-      <h3>Vulnerability Assessment &amp; System Hardening</h3>
-    </div>
-
-    <div class="project-meta-table">
-      <div class="meta-row-2">
-        <span>Technology</span>
-        <span>Nmap · OpenVAS · CVSS v3 · CIS Benchmarks</span>
-      </div>
-      <div class="meta-row-2">
-        <span>Environment</span>
-        <span>Simulated Linux and Windows systems</span>
-      </div>
-      <div class="meta-row-2">
-        <span>Assessment Scope</span>
-        <span>Service enumeration · Vulnerability prioritization · Configuration hardening</span>
       </div>
     </div>
-
-    <p>
-      Performed authenticated and unauthenticated vulnerability
-      assessments against simulated Linux and Windows systems using
-      Nmap and OpenVAS. Evaluated findings using CVSS v3 severity
-      criteria, reviewed exposed services and configuration weaknesses,
-      and applied security hardening measures, including SSH access
-      restrictions, firewall rules, removal or remediation of insecure
-      services, and CIS Benchmark-based configuration checks.
-    </p>
-
-    <div class="project-limitation">
-      <strong>Scope:</strong>
-      Assessments and remediation activities were conducted within an
-      authorized simulated environment.
-    </div>
-
-    <div class="tech-row">
-      <span class="tech-pill-sm">Nmap NSE</span>
-      <span class="tech-pill-sm">OpenVAS</span>
-      <span class="tech-pill-sm">CVSS v3</span>
-      <span class="tech-pill-sm">CIS Benchmarks</span>
-      <span class="tech-pill-sm">SSH Hardening</span>
-      <span class="tech-pill-sm">IPTables</span>
-    </div>
-  </article>
-
-</div>
-
+  </section>
 
   <!-- ═══════════════════════════════════════════════════
        SECURITY RESEARCH
@@ -722,7 +636,7 @@
       <div class="section-header">
         <span class="section-eyebrow">Infrastructure Labs</span>
         <h2 class="section-title">Enterprise Active Directory &amp; VMware Lab</h2>
-        <p class="section-desc">A private VMware-based security lab providing hands-on experience in Windows Server administration, Active Directory configuration, and network troubleshooting. This is a personal home lab, not production enterprise infrastructure.</p>
+        <p class="section-desc">A private VMware-based enterprise lab built on VMware Workstation Pro, spanning six structured labs covering Windows Server 2022, Active Directory DS, DNS/DHCP, Group Policy, NTFS permissions, and domain-joined client management. All labs are documented in the <a href="https://github.com/hckr-zahid/Active-Directory-Labs" target="_blank" rel="noopener">Active-Directory-Labs</a> repository.</p>
       </div>
 
       <!-- Lab topology -->
@@ -830,6 +744,182 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
         </div>
       </div>
 
+      <!-- LAB 03 -->
+      <div class="lab-section">
+        <div class="lab-header">
+          <span class="lab-badge">LAB 03</span>
+          <h3>Organizational Unit (OU) Management</h3>
+        </div>
+        <div class="phases-grid">
+          <div class="phase-card">
+            <div class="phase-num">A</div>
+            <div>
+              <h4>OU Hierarchy Design</h4>
+              <p>Designed and created a structured OU hierarchy within <code>zroots.local</code> — Computers, Servers, User Accounts, Service Accounts, and Groups — reflecting enterprise naming conventions and delegation boundaries.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">B</div>
+            <div>
+              <h4>Accidental Deletion Protection</h4>
+              <p>Enabled <code>ProtectedFromAccidentalDeletion</code> on all production OUs via PowerShell. This prevents inadvertent deletion of critical AD containers and mirrors production hardening practices.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">C</div>
+            <div>
+              <h4>Computer Account Placement</h4>
+              <p>Moved DC01 and WIN10-01 computer objects from the default <code>Computers</code> container into their correct OU containers, establishing a clean, manageable AD object structure.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">D</div>
+            <div>
+              <h4>GPO Inheritance Verification</h4>
+              <p>Confirmed policy inheritance flows correctly from domain root → parent OU → child OU. Verified that GPO scope and inheritance settings enforce the intended security posture at each level.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lab-links">
+          <a href="https://github.com/hckr-zahid/Active-Directory-Labs/tree/main/Lab-03-Organizational%20Unit%20Management" target="_blank" rel="noopener" class="lab-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View Lab 03 on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- LAB 04 -->
+      <div class="lab-section">
+        <div class="lab-header">
+          <span class="lab-badge">LAB 04</span>
+          <h3>User &amp; Group Management in Active Directory</h3>
+        </div>
+        <div class="phases-grid">
+          <div class="phase-card">
+            <div class="phase-num">A</div>
+            <div>
+              <h4>User Account Inventory</h4>
+              <p>Used <code>Get-ADUser -Filter *</code> with extended properties (Enabled, Department, Title, MemberOf) to enumerate all domain accounts and produce a structured user inventory for auditing.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">B</div>
+            <div>
+              <h4>Security Group Membership</h4>
+              <p>Added domain users to appropriate security groups and verified membership with <code>Get-ADGroupMember</code>. Applied the principle of least-privilege by matching group scope to user roles.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">C</div>
+            <div>
+              <h4>Account Lifecycle Management</h4>
+              <p>Modified user attributes (department, title, manager), disabled and re-enabled <code>test.user</code> via PowerShell, and verified account state changes in Active Directory Users &amp; Computers.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">D</div>
+            <div>
+              <h4>Password Policy &amp; Reset</h4>
+              <p>Inspected the default domain password policy with <code>Get-ADDefaultDomainPasswordPolicy</code>, evaluated complexity requirements, and performed a controlled password reset for a test account.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lab-links">
+          <a href="https://github.com/hckr-zahid/Active-Directory-Labs/tree/main/Lab-04-User-Group-Management%20in%20Active%20Directory" target="_blank" rel="noopener" class="lab-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View Lab 04 on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- LAB 05 -->
+      <div class="lab-section">
+        <div class="lab-header">
+          <span class="lab-badge">LAB 05</span>
+          <h3>DNS &amp; DHCP Configuration</h3>
+        </div>
+        <div class="phases-grid">
+          <div class="phase-card">
+            <div class="phase-num">A</div>
+            <div>
+              <h4>AD-Integrated Reverse Lookup Zone</h4>
+              <p>Created an AD-integrated reverse lookup zone for subnet <code>10.1.1.0/24</code> and registered PTR records for DC01 (<code>10.1.1.10</code>) and WIN10-01 (<code>10.1.1.20</code>), enabling verified reverse DNS resolution.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">B</div>
+            <div>
+              <h4>DHCP Server Authorization</h4>
+              <p>Authorized the DHCP Server role in Active Directory using the DHCP MMC console, preventing rogue DHCP servers. Verified authorization status in AD Users &amp; Computers under the <code>NetServices</code> container.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">C</div>
+            <div>
+              <h4>DHCP Scope Creation</h4>
+              <p>Configured a DHCP scope spanning <code>10.1.1.100–10.1.1.200</code> with appropriate subnet mask and lease duration. Activated scope and verified settings via <code>Get-DhcpServerv4Scope</code>.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">D</div>
+            <div>
+              <h4>Dynamic Lease Testing</h4>
+              <p>Kali Linux VM obtained a DHCP lease from the configured scope. Lease confirmed with <code>Get-DhcpServerv4Lease</code>. Kali was subsequently restored to a static IP to preserve lab stability.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lab-links">
+          <a href="https://github.com/hckr-zahid/Active-Directory-Labs/tree/main/Lab-05-DNS-DHCP-Configuration" target="_blank" rel="noopener" class="lab-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View Lab 05 on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- LAB 06 -->
+      <div class="lab-section">
+        <div class="lab-header">
+          <span class="lab-badge">LAB 06</span>
+          <h3>File Server &amp; NTFS Permissions</h3>
+        </div>
+        <div class="phases-grid">
+          <div class="phase-card">
+            <div class="phase-num">A</div>
+            <div>
+              <h4>SMB Share Creation</h4>
+              <p>Created the <code>Lab06Data</code> SMB share on DC01, configured share-level permissions, and validated network accessibility from a domain-joined Windows 10 client via UNC path.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">B</div>
+            <div>
+              <h4>NTFS ACL Configuration</h4>
+              <p>Applied explicit NTFS Access Control Entries: IT-Admins (Full Control), Staff (Modify), Students (Read &amp; Execute). Inheritance disabled on the share root to enforce granular, role-specific access.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">C</div>
+            <div>
+              <h4>Access Control Validation</h4>
+              <p>Validated three role-based access scenarios from WIN10-01: IT-Admin full write, Staff create/modify, Students read-only. Confirmed permission boundaries behave as intended across all roles.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">D</div>
+            <div>
+              <h4>Security Hardening</h4>
+              <p>Removed the <code>Everyone</code> group from share permissions and enforced the principle of least privilege. Documented the resulting ACL as the hardened baseline for the file server.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lab-links">
+          <a href="https://github.com/hckr-zahid/Active-Directory-Labs/tree/main/Lab-06-File-Server-Permissions-Report" target="_blank" rel="noopener" class="lab-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View Lab 06 on GitHub
+          </a>
+        </div>
+      </div>
+
       <!-- Evidence Gallery -->
       <div class="lab-gallery-section">
         <div class="gallery-header">
@@ -847,7 +937,7 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
         </div>
         <div class="gallery-grid" id="galleryGrid"></div>
         <div class="lab-repo-cta">
-          <a href="https://github.com/hckr-zahid/Active-Directory-VMware-Enterprise-Lab" target="_blank" rel="noopener" class="btn btn-primary">
+          <a href="https://github.com/hckr-zahid/Active-Directory-Labs" target="_blank" rel="noopener" class="btn btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             View Lab Repository on GitHub
           </a>
@@ -1019,135 +1109,41 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
         <h2 class="section-title">Contact</h2>
         <p class="section-desc">Open to SOC Analyst, Threat Detection, Incident Response, and junior cybersecurity roles. Available for remote-first teams.</p>
       </div>
-      <div class="contact-layout">
-
-        <!-- Left col: contact info cards -->
-        <div class="contact-cards-col">
-
-          <!-- Email -->
-          <div class="contact-card" onclick="openEmailModal()" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openEmailModal()" title="Click to email or copy address" style="cursor:pointer;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <div class="contact-card-content">
-              <div class="contact-label">Secure Email</div>
-              <div class="contact-value">cyber.zahid@proton.me</div>
-            </div>
-            <div class="contact-card-actions">
-              <span class="contact-pill-btn">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Open
-              </span>
-            </div>
-          </div>
-
-          <!-- LinkedIn -->
-          <a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener" class="contact-card">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            <div class="contact-card-content">
-              <div class="contact-label">LinkedIn</div>
-              <div class="contact-value">linkedin.com/in/hckr-zahid</div>
-            </div>
-            <div class="contact-card-actions">
-              <span class="contact-pill-btn">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                View
-              </span>
-            </div>
-          </a>
-
-          <!-- GitHub -->
-          <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener" class="contact-card">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            <div class="contact-card-content">
-              <div class="contact-label">GitHub</div>
-              <div class="contact-value">github.com/hckr-zahid</div>
-            </div>
-            <div class="contact-card-actions">
-              <span class="contact-pill-btn">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Visit
-              </span>
-            </div>
-          </a>
-
-          <!-- Phone -->
-          <a href="tel:+923084888192" class="contact-card">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <div class="contact-card-content">
-              <div class="contact-label">Phone</div>
-              <div class="contact-value">+92 308 4888192</div>
-            </div>
-          </a>
-
-          <!-- Download CV -->
-          <a href="Zahid Ullah Cybersecurity.pdf" download class="contact-card">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <div class="contact-card-content">
-              <div class="contact-label">Curriculum Vitae</div>
-              <div class="contact-value">Download CV (PDF)</div>
-            </div>
-            <div class="contact-card-actions">
-              <span class="contact-pill-btn">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/></svg>
-                PDF
-              </span>
-            </div>
-          </a>
-
-        </div><!-- /contact-cards-col -->
-
-        <!-- Right col: direct message composer -->
+      <div class="contact-simple-container">
         <div class="contact-form-card">
-          <div class="form-header">
-            <h3 class="form-title">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div class="form-header text-center">
+            <h3 class="form-title" style="justify-content: center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               Send a Message
             </h3>
-            <p class="form-desc">Compose your message below and choose how to send it — directly via Proton Mail, Gmail webmail, or your default email client.</p>
+            <p class="form-desc">Have an opportunity or inquiry? Send a direct message below.</p>
           </div>
-          <form class="contact-form" id="contactMessageForm" onsubmit="return false;">
+          <form class="contact-form" id="contactMessageForm" onsubmit="handleSimpleContactSubmit(event)">
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="msg-name">Your Name</label>
-                <input class="form-input" type="text" id="msg-name" placeholder="Jane Smith" autocomplete="name">
+                <input class="form-input" type="text" id="msg-name" placeholder="e.g. Alex Mercer" required autocomplete="name">
               </div>
               <div class="form-group">
                 <label class="form-label" for="msg-email">Your Email</label>
-                <input class="form-input" type="email" id="msg-email" placeholder="jane@example.com" autocomplete="email">
+                <input class="form-input" type="email" id="msg-email" placeholder="e.g. alex@example.com" required autocomplete="email">
               </div>
             </div>
             <div class="form-group">
               <label class="form-label" for="msg-subject">Subject</label>
-              <input class="form-input" type="text" id="msg-subject" placeholder="SOC Analyst Opportunity / Project Inquiry">
+              <input class="form-input" type="text" id="msg-subject" placeholder="e.g. Cybersecurity Role / Project Inquiry" required>
             </div>
             <div class="form-group">
               <label class="form-label" for="msg-body">Message</label>
-              <textarea class="form-textarea" id="msg-body" rows="4" placeholder="Hi Zahid, I'd like to discuss..."></textarea>
+              <textarea class="form-textarea" id="msg-body" rows="5" placeholder="Write your message here..." required></textarea>
             </div>
-            <div>
-              <p class="form-dispatch-label">Send via:</p>
-              <div class="form-dispatch-buttons">
-                <button type="button" class="btn-dispatch btn-dispatch-proton" onclick="dispatchEmail('proton')" title="Open in Proton Mail">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  Proton Mail
-                </button>
-                <button type="button" class="btn-dispatch btn-dispatch-gmail" onclick="dispatchEmail('gmail')" title="Compose in Gmail">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  Gmail
-                </button>
-                <button type="button" class="btn-dispatch btn-dispatch-client" onclick="dispatchEmail('client')" title="Use default email client">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                  Default Client
-                </button>
-                <button type="button" class="btn-dispatch btn-dispatch-copy" onclick="dispatchEmail('copy')" title="Copy message to clipboard">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  Copy message to clipboard
-                </button>
-              </div>
-            </div>
+            <button type="submit" class="btn btn-primary contact-submit-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
           </form>
-        </div><!-- /contact-form-card -->
-
-      </div><!-- /contact-layout -->
+        </div>
+      </div><!-- /contact-simple-container -->
     </div>
   </section>
 
@@ -1156,41 +1152,148 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
        FOOTER
        ═══════════════════════════════════════════════════ -->
   <footer class="footer">
+    <div class="footer-glow-bar"></div>
     <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <div class="footer-name">Zahid Ullah</div>
-          <div class="footer-role">Cybersecurity Engineer · Ethical Hacker · SOC &amp; Threat Intelligence</div>
-          <div class="footer-sub">B.Sc. Computer Science · University of Peshawar · Class of 2025</div>
+      
+      <!-- Top Strip with Live Sensor Pill and Quick Back-to-Top -->
+      <div class="footer-top-strip">
+        <div class="footer-status-pill">
+          <span class="pulse-dot"></span>
+          <span>SYSTEM SENSORS ACTIVE &bull; THREAT LEVEL: NORMAL</span>
         </div>
-        <div class="footer-nav">
-          <div class="footer-col">
-            <div class="footer-col-title">Sections</div>
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#research">Security Research</a></li>
-              <li><a href="#labs">Infrastructure Labs</a></li>
-              <li><a href="#certifications">Certifications</a></li>
-              <li><a href="#education">Education &amp; Skills</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+        <a href="#about" class="footer-back-top-btn" title="Scroll back to top">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+          Return to Top
+        </a>
+      </div>
+
+      <!-- 4-Column Advanced Grid -->
+      <div class="footer-grid-advanced">
+
+        <!-- Column 1: Identity & Credentials -->
+        <div class="footer-brand-box">
+          <span class="footer-brand-badge">[ SEC-OPS // SYSTEM ROOT ]</span>
+          <h3 class="footer-brand-name">Zahid Ullah</h3>
+          <p class="footer-brand-role">Cybersecurity Engineer &bull; Threat Researcher &bull; DFIR Analyst</p>
+          <p class="footer-brand-desc">
+            B.Sc. Computer Science (University of Peshawar, Class of 2025). Certified in CHFI, CC, and CEH. Specialized in SIEM operations, machine-learning malware detection, memory forensics, and security automation.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener" class="footer-social-icon" title="GitHub Profile" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/hckr-zahid" target="_blank" rel="noopener" class="footer-social-icon" title="LinkedIn Profile" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:cyber.zahid@proton.me" class="footer-social-icon" title="Direct Email" aria-label="Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="assets/docs/Zahid-Ullah-Cybersecurity-CV.pdf" download="Zahid-Ullah-Cybersecurity-CV.pdf" class="footer-social-icon" title="Download CV" aria-label="Download CV">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
           </div>
-          <div class="footer-col">
-            <div class="footer-col-title">Repositories</div>
-            <ul>
-              <li><a href="https://github.com/hckr-zahid/CyberGun" target="_blank" rel="noopener">CyberGun</a></li>
-              <li><a href="https://github.com/hckr-zahid/Active-Directory-VMware-Enterprise-Lab" target="_blank" rel="noopener">AD Lab</a></li>
-              <li><a href="https://github.com/hckr-zahid/Activate-Windows-Free" target="_blank" rel="noopener">PS Research</a></li>
-              <li><a href="https://github.com/hckr-zahid" target="_blank" rel="noopener">All Repos</a></li>
-            </ul>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div>
+          <div class="footer-heading">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="#about">&rarr; About &amp; Bio</a></li>
+            <li><a href="#projects">&rarr; Selected Projects</a></li>
+            <li><a href="#research">&rarr; Threat Research</a></li>
+            <li><a href="#labs">&rarr; Infrastructure Labs</a></li>
+            <li><a href="#certifications">&rarr; Certifications</a></li>
+            <li><a href="#education">&rarr; Education &amp; Skills</a></li>
+            <li><a href="#contact">&rarr; Contact &amp; PGP</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: System Repositories -->
+        <div>
+          <div class="footer-heading">Repositories</div>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <a href="https://github.com/hckr-zahid/CyberGun" target="_blank" rel="noopener" class="footer-repo-link">
+              <span>CyberGun</span>
+              <span class="footer-tech-pill">EDR / ML</span>
+            </a>
+            <a href="https://github.com/hckr-zahid/NIDS-Lab" target="_blank" rel="noopener" class="footer-repo-link">
+              <span>NIDS-Lab</span>
+              <span class="footer-tech-pill">Suricata</span>
+            </a>
+            <a href="https://github.com/hckr-zahid/DFIR-Lab" target="_blank" rel="noopener" class="footer-repo-link">
+              <span>DFIR-Lab</span>
+              <span class="footer-tech-pill">Forensics</span>
+            </a>
+            <a href="https://github.com/hckr-zahid/SecAuto" target="_blank" rel="noopener" class="footer-repo-link">
+              <span>SecAuto</span>
+              <span class="footer-tech-pill">SOAR</span>
+            </a>
+            <a href="https://github.com/hckr-zahid/Vuln-Hardening" target="_blank" rel="noopener" class="footer-repo-link">
+              <span>Vuln-Hardening</span>
+              <span class="footer-tech-pill">CIS</span>
+            </a>
+            <a href="https://github.com/hckr-zahid/Active-Directory-Labs" target="_blank" rel="noopener" class="footer-repo-link">
+              <span>AD Labs</span>
+              <span class="footer-tech-pill">VMware</span>
+            </a>
+            <a href="https://github.com/hckr-zahid" target="_blank" rel="noopener" class="footer-repo-link" style="color: #38bdf8; font-weight: 600; margin-top: 4px;">
+              <span>All 7 Repositories</span>
+              <span>&rarr;</span>
+            </a>
           </div>
+        </div>
+
+        <!-- Column 4: Telemetry Specs Matrix Card -->
+        <div>
+          <div class="footer-heading">Telemetry Spec</div>
+          <div class="footer-specs-card">
+            <div class="footer-spec-header">
+              <span>MATRIX // NODE-01</span>
+              <span class="active-green">&bull; SYNCHRONIZED</span>
+            </div>
+            <div class="footer-spec-row">
+              <span class="footer-spec-label">DOMAIN FOREST:</span>
+              <span class="footer-spec-val">zroots.local</span>
+            </div>
+            <div class="footer-spec-row">
+              <span class="footer-spec-label">PRIMARY DC:</span>
+              <span class="footer-spec-val">DC01 (10.1.1.10)</span>
+            </div>
+            <div class="footer-spec-row">
+              <span class="footer-spec-label">FRAMEWORKS:</span>
+              <span class="footer-spec-val">MITRE ATT&amp;CK</span>
+            </div>
+            <div class="footer-spec-row">
+              <span class="footer-spec-label">INCIDENT RUNBOOK:</span>
+              <span class="footer-spec-val">NIST SP 800-61</span>
+            </div>
+            <div class="footer-spec-row">
+              <span class="footer-spec-label">CODE STACK:</span>
+              <span class="footer-spec-val">Python &bull; C++ &bull; PS</span>
+            </div>
+            <div class="footer-spec-row">
+              <span class="footer-spec-label">STATUS:</span>
+              <span class="footer-spec-val active-green">100% OPERATIONAL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="footer-bottom-advanced">
+        <div>
+          &copy; 2026 Zahid Ullah (<code>hckr-zahid</code>). All rights reserved.
+        </div>
+        <div class="footer-bottom-badge">
+          <span class="pulse-dot" style="width: 6px; height: 6px;"></span>
+          <span>Zero Trackers &bull; Client-Side Privacy</span>
+        </div>
+        <div>
+          Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2025 Zahid Ullah (<code>hckr-zahid</code>). All rights reserved.</span>
-        <span>Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></span>
-      </div>
+
     </div>
   </footer>
 
@@ -1245,7 +1348,7 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
 
       <!-- Address display + copy -->
       <div class="email-address-card">
-        <span class="email-address-text">cyber.zahid@proton.me</span>
+        <span class="email-address-text">hckr.zahid@proton.me</span>
         <button class="btn-copy-address" id="copyAddressBtn" onclick="copyEmailAddress()">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
           Copy
@@ -1256,7 +1359,7 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
       <div>
         <p class="email-modal-quick-title">Open directly in:</p>
         <div class="form-dispatch-buttons" style="margin-top:0.5rem;">
-          <a href="https://mail.proton.me/u/0/inbox#compose?to=cyber.zahid%40proton.me" target="_blank" rel="noopener" class="btn-dispatch btn-dispatch-proton">
+          <a href="https://mail.proton.me/u/0/inbox#compose?to=hckr.zahid%40proton.me" target="_blank" rel="noopener" class="btn-dispatch btn-dispatch-proton">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             Proton Mail
           </a>
@@ -1264,7 +1367,7 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             Gmail
           </a>
-          <a href="mailto:cyber.zahid@proton.me" class="btn-dispatch btn-dispatch-client">
+          <a href="mailto:hckr.zahid@proton.me" class="btn-dispatch btn-dispatch-client">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 2 15 22 11 13 2 9 22 2"/></svg>
             Default Client
           </a>
@@ -1280,9 +1383,10 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
   </div>
 
   <script src="assets/js/portfolio.js"></script>
+  <script src="assets/js/cyber-enhancements.js"></script>
   <script>
     /* ── Email Modal ─────────────────────────────────────── */
-    const EMAIL = 'cyber.zahid@proton.me';
+    const EMAIL = 'hckr.zahid@proton.me';
 
     function openEmailModal() {
       const modal = document.getElementById('emailModal');
@@ -1339,6 +1443,34 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
         showToast('Email address copied!');
       });
     }
+
+    /* ── Simple Contact Form Handler ───────────────────────────── */
+    function handleSimpleContactSubmit(e) {
+      if (e) e.preventDefault();
+      const name    = (document.getElementById('msg-name')?.value  || '').trim();
+      const from    = (document.getElementById('msg-email')?.value || '').trim();
+      const subject = (document.getElementById('msg-subject')?.value || '').trim() || 'Portfolio Inquiry';
+      const body    = (document.getElementById('msg-body')?.value  || '').trim();
+
+      if (!body) {
+        showToast('Please enter a message before sending.');
+        return;
+      }
+
+      const fullBody = [
+        body,
+        '',
+        from ? `— ${name} (${from})` : (name ? `— ${name}` : '')
+      ].filter(l => l !== undefined).join('\n').trim();
+
+      const encodedSubject = encodeURIComponent(subject);
+      const encodedBody    = encodeURIComponent(fullBody);
+
+      showToast('Opening your email client to send message...');
+      window.location.href = `mailto:${EMAIL}?subject=${encodedSubject}&body=${encodedBody}`;
+    }
+
+    window.handleSimpleContactSubmit = handleSimpleContactSubmit;
 
     /* ── Form Dispatch (contact section composer) ─────────── */
     function dispatchEmail(method) {
@@ -1411,3 +1543,4 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
   </script>
 </body>
 </html>
+
