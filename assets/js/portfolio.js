@@ -799,37 +799,42 @@ function initMobileNav() {
   const navLinks = document.querySelector('.nav-links');
   
   if (toggleBtn && navLinks) {
-    toggleBtn.addEventListener('click', () => {
-      const isVisible = navLinks.classList.contains('mobile-open');
-      if (isVisible) {
-        navLinks.classList.remove('mobile-open');
-        navLinks.style.display = 'none';
-        toggleBtn.setAttribute('aria-expanded', 'false');
-      } else {
-        navLinks.classList.add('mobile-open');
-        navLinks.style.display = 'flex';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '100%';
-        navLinks.style.left = '0';
-        navLinks.style.right = '0';
-        navLinks.style.background = 'var(--bg-secondary)';
-        navLinks.style.padding = '1.25rem 1.5rem';
-        navLinks.style.borderBottom = '1px solid var(--border-color)';
-        navLinks.style.gap = '0.75rem';
-        toggleBtn.setAttribute('aria-expanded', 'true');
-      }
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navLinks.classList.toggle('mobile-open');
+      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      navLinks.style.display = '';
     });
 
     // Close mobile menu when a nav link is clicked
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        if (window.innerWidth <= 880) {
+        if (window.innerWidth <= 1024) {
           navLinks.classList.remove('mobile-open');
-          navLinks.style.display = 'none';
+          navLinks.style.display = '';
           toggleBtn.setAttribute('aria-expanded', 'false');
         }
       });
+    });
+
+    // Close mobile menu on click outside
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+        if (navLinks.classList.contains('mobile-open')) {
+          navLinks.classList.remove('mobile-open');
+          navLinks.style.display = '';
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+
+    // Reset styles on window resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024) {
+        navLinks.classList.remove('mobile-open');
+        navLinks.style.display = '';
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
