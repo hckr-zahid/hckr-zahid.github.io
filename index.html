@@ -25,32 +25,6 @@
   <canvas id="cyberMatrixCanvas"></canvas>
 
   <!-- Cyber Telemetry Top HUD Bar -->
-  <div class="cyber-hud-banner">
-    <div class="container hud-inner">
-      <div class="hud-group">
-        <div class="hud-item">
-          <span class="pulse-dot"></span>
-          <span class="hud-label">DEFCON / STATUS:</span>
-          <span class="hud-val">ACTIVE DEFENSE (NORMAL)</span>
-        </div>
-        <div class="hud-item">
-          <span class="hud-label">TELEMETRY:</span>
-          <span class="hud-val" id="hudLatency">21 ms</span>
-        </div>
-      </div>
-      <div class="hud-group">
-        <div class="hud-item">
-          <span class="hud-label">PRIMARY NODE:</span>
-          <span class="hud-val">DC01.zroots.local (10.1.1.10)</span>
-        </div>
-        <div class="hud-item">
-          <span class="hud-label">SOC CLOCK:</span>
-          <span class="hud-val" id="hudLiveClock">UTC SYNCHRONIZED</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ═══════════════════════════════════════════════════
        NAVIGATION
        ═══════════════════════════════════════════════════ -->
@@ -202,40 +176,6 @@
         </div>
       </div>
 
-      <!-- Live Interactive SOC Terminal Simulator -->
-      <div class="interactive-terminal-card">
-        <div class="terminal-header">
-          <div class="terminal-title">
-            <span class="term-prompt">SEC-OPS // CLI INTERACTIVE CONSOLE</span>
-            <span class="badge-live-pulse"><span class="pulse-dot"></span> LIVE SENSOR ACTIVE</span>
-          </div>
-          <div class="terminal-controls">
-            <span class="term-dot term-dot-red"></span>
-            <span class="term-dot term-dot-yellow"></span>
-            <span class="term-dot term-dot-green"></span>
-          </div>
-        </div>
-        <div class="terminal-body" id="terminalOutput">
-          <div class="term-line term-info">[*] Connected to Zahid Ullah Cybersecurity Operations Laboratory [zroots.local]</div>
-          <div class="term-line term-info">[*] Telemetry feeds verified: CyberGun EDR, NIDS-Lab Sensor, SecAuto SOAR daemon.</div>
-          <div class="term-line term-success">[+] Type a command below or click a quick action to query active nodes.</div>
-        </div>
-        <div class="term-hints">
-          <button class="term-hint-btn" data-cmd="help">help</button>
-          <button class="term-hint-btn" data-cmd="status">status</button>
-          <button class="term-hint-btn" data-cmd="projects">projects</button>
-          <button class="term-hint-btn" data-cmd="nids">nids</button>
-          <button class="term-hint-btn" data-cmd="dfir">dfir</button>
-          <button class="term-hint-btn" data-cmd="soar">soar</button>
-          <button class="term-hint-btn" data-cmd="vuln">vuln</button>
-          <button class="term-hint-btn" data-cmd="certs">certs</button>
-          <button class="term-hint-btn" data-cmd="clear">clear</button>
-        </div>
-        <form class="terminal-input-row" id="termCommandForm">
-          <span class="term-prompt">secops@zahid-lab:~$</span>
-          <input type="text" class="term-cmd-input" id="termCommandInput" placeholder="Type command here (e.g. status, projects, nids)..." autocomplete="off" spellcheck="false">
-        </form>
-      </div>
     </div>
   </header>
 
@@ -696,7 +636,7 @@
       <div class="section-header">
         <span class="section-eyebrow">Infrastructure Labs</span>
         <h2 class="section-title">Enterprise Active Directory &amp; VMware Lab</h2>
-        <p class="section-desc">A private VMware-based security lab providing hands-on experience in Windows Server administration, Active Directory configuration, and network troubleshooting. This is a personal home lab, not production enterprise infrastructure.</p>
+        <p class="section-desc">A private VMware-based enterprise lab built on VMware Workstation Pro, spanning six structured labs covering Windows Server 2022, Active Directory DS, DNS/DHCP, Group Policy, NTFS permissions, and domain-joined client management. All labs are documented in the <a href="https://github.com/hckr-zahid/Active-Directory-Labs" target="_blank" rel="noopener">Active-Directory-Labs</a> repository.</p>
       </div>
 
       <!-- Lab topology -->
@@ -804,6 +744,182 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
         </div>
       </div>
 
+      <!-- LAB 03 -->
+      <div class="lab-section">
+        <div class="lab-header">
+          <span class="lab-badge">LAB 03</span>
+          <h3>Organizational Unit (OU) Management</h3>
+        </div>
+        <div class="phases-grid">
+          <div class="phase-card">
+            <div class="phase-num">A</div>
+            <div>
+              <h4>OU Hierarchy Design</h4>
+              <p>Designed and created a structured OU hierarchy within <code>zroots.local</code> — Computers, Servers, User Accounts, Service Accounts, and Groups — reflecting enterprise naming conventions and delegation boundaries.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">B</div>
+            <div>
+              <h4>Accidental Deletion Protection</h4>
+              <p>Enabled <code>ProtectedFromAccidentalDeletion</code> on all production OUs via PowerShell. This prevents inadvertent deletion of critical AD containers and mirrors production hardening practices.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">C</div>
+            <div>
+              <h4>Computer Account Placement</h4>
+              <p>Moved DC01 and WIN10-01 computer objects from the default <code>Computers</code> container into their correct OU containers, establishing a clean, manageable AD object structure.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">D</div>
+            <div>
+              <h4>GPO Inheritance Verification</h4>
+              <p>Confirmed policy inheritance flows correctly from domain root → parent OU → child OU. Verified that GPO scope and inheritance settings enforce the intended security posture at each level.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lab-links">
+          <a href="https://github.com/hckr-zahid/Active-Directory-Labs/tree/main/Lab-03-Organizational%20Unit%20Management" target="_blank" rel="noopener" class="lab-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View Lab 03 on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- LAB 04 -->
+      <div class="lab-section">
+        <div class="lab-header">
+          <span class="lab-badge">LAB 04</span>
+          <h3>User &amp; Group Management in Active Directory</h3>
+        </div>
+        <div class="phases-grid">
+          <div class="phase-card">
+            <div class="phase-num">A</div>
+            <div>
+              <h4>User Account Inventory</h4>
+              <p>Used <code>Get-ADUser -Filter *</code> with extended properties (Enabled, Department, Title, MemberOf) to enumerate all domain accounts and produce a structured user inventory for auditing.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">B</div>
+            <div>
+              <h4>Security Group Membership</h4>
+              <p>Added domain users to appropriate security groups and verified membership with <code>Get-ADGroupMember</code>. Applied the principle of least-privilege by matching group scope to user roles.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">C</div>
+            <div>
+              <h4>Account Lifecycle Management</h4>
+              <p>Modified user attributes (department, title, manager), disabled and re-enabled <code>test.user</code> via PowerShell, and verified account state changes in Active Directory Users &amp; Computers.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">D</div>
+            <div>
+              <h4>Password Policy &amp; Reset</h4>
+              <p>Inspected the default domain password policy with <code>Get-ADDefaultDomainPasswordPolicy</code>, evaluated complexity requirements, and performed a controlled password reset for a test account.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lab-links">
+          <a href="https://github.com/hckr-zahid/Active-Directory-Labs/tree/main/Lab-04-User-Group-Management%20in%20Active%20Directory" target="_blank" rel="noopener" class="lab-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View Lab 04 on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- LAB 05 -->
+      <div class="lab-section">
+        <div class="lab-header">
+          <span class="lab-badge">LAB 05</span>
+          <h3>DNS &amp; DHCP Configuration</h3>
+        </div>
+        <div class="phases-grid">
+          <div class="phase-card">
+            <div class="phase-num">A</div>
+            <div>
+              <h4>AD-Integrated Reverse Lookup Zone</h4>
+              <p>Created an AD-integrated reverse lookup zone for subnet <code>10.1.1.0/24</code> and registered PTR records for DC01 (<code>10.1.1.10</code>) and WIN10-01 (<code>10.1.1.20</code>), enabling verified reverse DNS resolution.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">B</div>
+            <div>
+              <h4>DHCP Server Authorization</h4>
+              <p>Authorized the DHCP Server role in Active Directory using the DHCP MMC console, preventing rogue DHCP servers. Verified authorization status in AD Users &amp; Computers under the <code>NetServices</code> container.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">C</div>
+            <div>
+              <h4>DHCP Scope Creation</h4>
+              <p>Configured a DHCP scope spanning <code>10.1.1.100–10.1.1.200</code> with appropriate subnet mask and lease duration. Activated scope and verified settings via <code>Get-DhcpServerv4Scope</code>.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">D</div>
+            <div>
+              <h4>Dynamic Lease Testing</h4>
+              <p>Kali Linux VM obtained a DHCP lease from the configured scope. Lease confirmed with <code>Get-DhcpServerv4Lease</code>. Kali was subsequently restored to a static IP to preserve lab stability.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lab-links">
+          <a href="https://github.com/hckr-zahid/Active-Directory-Labs/tree/main/Lab-05-DNS-DHCP-Configuration" target="_blank" rel="noopener" class="lab-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View Lab 05 on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- LAB 06 -->
+      <div class="lab-section">
+        <div class="lab-header">
+          <span class="lab-badge">LAB 06</span>
+          <h3>File Server &amp; NTFS Permissions</h3>
+        </div>
+        <div class="phases-grid">
+          <div class="phase-card">
+            <div class="phase-num">A</div>
+            <div>
+              <h4>SMB Share Creation</h4>
+              <p>Created the <code>Lab06Data</code> SMB share on DC01, configured share-level permissions, and validated network accessibility from a domain-joined Windows 10 client via UNC path.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">B</div>
+            <div>
+              <h4>NTFS ACL Configuration</h4>
+              <p>Applied explicit NTFS Access Control Entries: IT-Admins (Full Control), Staff (Modify), Students (Read &amp; Execute). Inheritance disabled on the share root to enforce granular, role-specific access.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">C</div>
+            <div>
+              <h4>Access Control Validation</h4>
+              <p>Validated three role-based access scenarios from WIN10-01: IT-Admin full write, Staff create/modify, Students read-only. Confirmed permission boundaries behave as intended across all roles.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">D</div>
+            <div>
+              <h4>Security Hardening</h4>
+              <p>Removed the <code>Everyone</code> group from share permissions and enforced the principle of least privilege. Documented the resulting ACL as the hardened baseline for the file server.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lab-links">
+          <a href="https://github.com/hckr-zahid/Active-Directory-Labs/tree/main/Lab-06-File-Server-Permissions-Report" target="_blank" rel="noopener" class="lab-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View Lab 06 on GitHub
+          </a>
+        </div>
+      </div>
+
       <!-- Evidence Gallery -->
       <div class="lab-gallery-section">
         <div class="gallery-header">
@@ -821,7 +937,7 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
         </div>
         <div class="gallery-grid" id="galleryGrid"></div>
         <div class="lab-repo-cta">
-          <a href="https://github.com/hckr-zahid/Active-Directory-VMware-Enterprise-Lab" target="_blank" rel="noopener" class="btn btn-primary">
+          <a href="https://github.com/hckr-zahid/Active-Directory-Labs" target="_blank" rel="noopener" class="btn btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             View Lab Repository on GitHub
           </a>
@@ -1166,7 +1282,7 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Zahid Ullah (<code>hckr-zahid</code>). All rights reserved.</span>
+        <span>&copy; 2026 Zahid Ullah (<code>hckr-zahid</code>). All rights reserved.</span>
         <span>Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></span>
       </div>
     </div>
