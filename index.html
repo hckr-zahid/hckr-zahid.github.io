@@ -281,30 +281,213 @@
         </div>
 
         <div class="spotlight-body">
-          <div class="spotlight-col">
-            <h4>Architecture &amp; Modules</h4>
-            <p>Designed a multi-engine detection pipeline coordinated by a central <code>DynamicEngine</code>. Four modular sensors run concurrently:</p>
-            <ul>
-              <li><strong>Behavioral Engine</strong> — process execution tree analysis</li>
-              <li><strong>System Activity Engine</strong> — disk I/O and CPU spike monitoring</li>
-              <li><strong>USB Monitor</strong> — peripheral insertion event tracking</li>
-              <li><strong>Sandbox Simulation Engine</strong> — controlled dynamic execution</li>
-            </ul>
-          </div>
-          <div class="spotlight-col">
-            <h4>Detection Layer</h4>
-            <p>Static detection combines:</p>
-            <ul>
-              <li>3,160,113-entry SQLite threat hash index for rapid file matching</li>
-              <li>Custom YARA heuristics and byte-signature pattern matching</li>
-              <li>LightGBM classifier trained on EMBER and CIC benchmark datasets for PDF and PE structural anomalies (<code>pdf_model.lgbm</code>)</li>
-            </ul>
-          </div>
-          <div class="spotlight-col">
-            <h4>Interface &amp; Containment</h4>
-            <p>Asynchronous PyQt5 dashboard with a custom <code>SignalBus</code> pattern provides tabbed views: Dashboard, System Status, Threat Logs, Behavior Feed, Network Feed, and Quarantine. Detected threats are moved to an encrypted Quarantine Zone with SHA-256 hashes, original paths, and timestamped audit logs.</p>
-          </div>
+
+  <!-- ENGINE ARCHITECTURE -->
+  <section class="spotlight-col">
+    <div class="spotlight-heading">
+      <span class="spotlight-index">01</span>
+      <div>
+        <h4>Engine Architecture</h4>
+        <p>Modular Execution &amp; System Monitoring</p>
+      </div>
+    </div>
+
+    <p class="spotlight-intro">
+      A modular security architecture orchestrated by
+      <code>EngineLauncher</code> and a decoupled Qt
+      <code>SignalBus</code>, coordinating concurrent asynchronous
+      execution across four security components.
+    </p>
+
+    <div class="capability-list">
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>Static Analysis Engine</strong>
+          <span class="tech-tag">6-Layer Pipeline</span>
         </div>
+        <p>Multi-stage file inspection with early termination upon critical detection.</p>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>Dynamic Analysis Engine</strong>
+          <span class="tech-tag">Behavioral</span>
+        </div>
+        <p>Dependency-free process-masquerading heuristics and canary-based honeypot mechanisms.</p>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>Network Monitoring Engine</strong>
+          <span class="tech-tag">Raw Sockets</span>
+        </div>
+        <p>Driverless network traffic inspection with automated Windows Firewall isolation.</p>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>Peripheral Security Guard</strong>
+          <span class="tech-tag">USB Monitoring</span>
+        </div>
+        <p>Real-time detection of USB mass-storage device attachment events.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETECTION AND INTELLIGENCE -->
+  <section class="spotlight-col">
+    <div class="spotlight-heading">
+      <span class="spotlight-index">02</span>
+      <div>
+        <h4>Detection &amp; Intelligence</h4>
+        <p>Signature Analysis, Machine Learning &amp; Threat Data</p>
+      </div>
+    </div>
+
+    <p class="spotlight-intro">
+      A multi-layered detection pipeline combining malware signatures,
+      indexed hash intelligence, machine-learning classifiers, and
+      DNS-based threat analysis.
+    </p>
+
+    <div class="metric-grid">
+      <div class="metric-card">
+        <span class="metric-value">3.16M+</span>
+        <span class="metric-label">Malware Hash Records</span>
+        <span class="metric-detail">MD5 / SHA-256 · SQLite B-tree</span>
+      </div>
+
+      <div class="metric-card">
+        <span class="metric-value">443</span>
+        <span class="metric-label">Compiled YARA Rules</span>
+        <span class="metric-detail">Approximately 0.06-second compilation</span>
+      </div>
+
+      <div class="metric-card">
+        <span class="metric-value">2,381</span>
+        <span class="metric-label">EMBER PE Features</span>
+        <span class="metric-detail">LightGBM · thrember</span>
+      </div>
+
+      <div class="metric-card">
+        <span class="metric-value">55</span>
+        <span class="metric-label">Memory Forensic Features</span>
+        <span class="metric-detail">CIC-MalMem dataset</span>
+      </div>
+    </div>
+
+    <div class="capability-list">
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>Multi-Format ML Classification</strong>
+          <span class="tech-tag">LightGBM</span>
+        </div>
+        <p>Classification models targeting PE, ELF, PDF, APK, and .NET file formats.</p>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>Signature Intelligence</strong>
+          <span class="tech-tag">82 Signatures</span>
+        </div>
+        <p>In-memory YARA rule compilation supplemented by byte-signature matching.</p>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>DNS Threat Analysis</strong>
+          <span class="tech-tag">Entropy / DGA</span>
+        </div>
+        <p>Shannon entropy threshold of H ≥ 3.8 for identifying potentially algorithmically generated domains.</p>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>Threat Data Persistence</strong>
+          <span class="tech-tag">SQLite WAL</span>
+        </div>
+        <p>Write-Ahead Logging for improved database concurrency and persistent threat intelligence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERFACE AND RESPONSE -->
+  <section class="spotlight-col">
+    <div class="spotlight-heading">
+      <span class="spotlight-index">03</span>
+      <div>
+        <h4>Forensics &amp; Incident Response</h4>
+        <p>Security Operations, Investigation &amp; Threat Containment</p>
+      </div>
+    </div>
+
+    <p class="spotlight-intro">
+      A PyQt5 security interface integrating system telemetry,
+      forensic inspection, threat containment, and MITRE ATT&amp;CK
+      technique mapping.
+    </p>
+
+    <div class="metric-grid">
+      <div class="metric-card">
+        <span class="metric-value">08</span>
+        <span class="metric-label">Operational Views</span>
+        <span class="metric-detail">Unified security dashboard</span>
+      </div>
+
+      <div class="metric-card">
+        <span class="metric-value">SHA-256</span>
+        <span class="metric-label">Integrity Auditing</span>
+        <span class="metric-detail">Quarantine audit records</span>
+      </div>
+    </div>
+
+    <div class="capability-list">
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>Security Operations Dashboard</strong>
+          <span class="tech-tag">PyQt5</span>
+        </div>
+        <p>Eight views for system status, threat logs, behavioral events, network telemetry, quarantine, configuration, and ATT&amp;CK analysis.</p>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>MITRE ATT&amp;CK Mapping</strong>
+          <span class="tech-tag">Threat Context</span>
+        </div>
+        <p>Dynamic behavioral mapping across Execution, Defense Evasion, Persistence, and Command and Control (C2).</p>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>Executable Forensics</strong>
+          <span class="tech-tag">PE Analysis</span>
+        </div>
+        <p>Interactive PE inspection, import/export table parsing, and executable anomaly analysis.</p>
+      </div>
+
+      <div class="capability-item">
+        <div class="capability-top">
+          <strong>Threat Quarantine</strong>
+          <span class="tech-tag">Containment</span>
+        </div>
+        <p>Isolated threat storage, SHA-256 audit logging, and whitelist-based feedback mechanisms.</p>
+      </div>
+    </div>
+
+    <div class="dashboard-views">
+      <span>Dashboard</span>
+      <span>System Status</span>
+      <span>Threat Logs</span>
+      <span>Behavior Feed</span>
+      <span>Network Feed</span>
+      <span>Quarantine</span>
+      <span>Configuration</span>
+      <span>ATT&amp;CK Matrix</span>
+    </div>
+  </section>
+
+</div>
 
         <!-- CyberGun Screenshots -->
         <div class="screenshot-strip">
