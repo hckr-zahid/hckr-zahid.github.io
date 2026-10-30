@@ -773,3 +773,44 @@
   font-family: var(--font-mono);
   font-size: 0.72rem;
 }
+
+/* ==========================================================================
+   SIMPLE CENTERED CONTACT FORM
+   ========================================================================== */
+.contact-simple-container {
+  max-width: 640px;
+  margin: 2rem auto 0;
+}
+
+.contact-simple-container .contact-form-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-simple-container .contact-form-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0ea5e9, transparent);
+}
+
+.contact-submit-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
