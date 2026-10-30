@@ -93,7 +93,7 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               GitHub
             </a>
-            <a href="Zahid Ullah Cybersecurity.pdf" download class="btn btn-outline">Download CV</a>
+            <a href="assets/docs/Zahid-Ullah-Cybersecurity-CV.pdf" download="Zahid-Ullah-Cybersecurity-CV.pdf" class="btn btn-outline">Download CV</a>
             <a href="#contact" class="btn btn-outline">Contact</a>
           </div>
         </div>
@@ -268,83 +268,100 @@
         <!-- Project 2: NIDS -->
         <article class="project-card">
           <div class="project-card-top">
-            <div class="project-label-sm">Simulated Environment · SOC Lab</div>
+            <div class="project-label-sm">Detection Engineering · NIDS Lab</div>
             <h3>Network Intrusion Detection &amp; Monitoring</h3>
           </div>
           <div class="project-meta-table">
-            <div class="meta-row-2"><span>Tools</span><span>Suricata · Zeek · Kibana · Elasticsearch</span></div>
-            <div class="meta-row-2"><span>Environment</span><span>Isolated virtualized network lab</span></div>
-            <div class="meta-row-2"><span>Objective</span><span>Detect port scans, DoS activity, and data exfiltration attempts</span></div>
+            <div class="meta-row-2"><span>Tools</span><span>Python 3 · Scapy · IsolationForest · Suricata · Zeek</span></div>
+            <div class="meta-row-2"><span>Architecture</span><span>Hybrid signature &amp; ML anomaly detection engine</span></div>
+            <div class="meta-row-2"><span>Objective</span><span>Detect port scans, SYN floods, DNS amplification &amp; C2 beacons</span></div>
           </div>
-          <p>Deployed Suricata and Zeek sensor nodes capturing promiscuous network traffic. Tuned custom detection rules targeting malicious TCP/UDP signatures. Integrated network telemetry into Elasticsearch and built Kibana dashboards for traffic analysis and alert review.</p>
-          <div class="project-limitation">
-            <strong>Scope note:</strong> Conducted in a simulated environment. Rule effectiveness metrics reflect the specific test dataset used.
+          <p>Architected a hybrid NIDS combining deterministic YAML rules with unsupervised Isolation Forest ML anomaly scoring. Features Scapy-powered packet dissection, bi-directional 5-tuple flow reconstruction, protocol deep inspection, sliding-window alert deduplication, and an HTML5 analytics dashboard.</p>
+          <div class="project-links-bar" style="margin: 0.8rem 0;">
+            <a href="https://github.com/hckr-zahid/NIDS-Lab" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
           </div>
           <div class="tech-row">
-            <span class="tech-pill-sm">Suricata</span><span class="tech-pill-sm">Zeek</span>
-            <span class="tech-pill-sm">Kibana</span><span class="tech-pill-sm">Elasticsearch</span>
-            <span class="tech-pill-sm">PCAP Analysis</span>
+            <span class="tech-pill-sm">Python 3</span><span class="tech-pill-sm">Scapy</span>
+            <span class="tech-pill-sm">Isolation Forest</span><span class="tech-pill-sm">Suricata</span>
+            <span class="tech-pill-sm">Zeek</span><span class="tech-pill-sm">PCAP Analysis</span>
           </div>
         </article>
 
         <!-- Project 3: IBM Capstone DFIR -->
         <article class="project-card">
           <div class="project-card-top">
-            <div class="project-label-sm">IBM Capstone · Simulated Incident</div>
-            <h3>Ransomware Incident Response &amp; Digital Forensics</h3>
+            <div class="project-label-sm">DFIR Lab · Forensic Analysis</div>
+            <h3>Digital Forensics &amp; Incident Response Lab</h3>
           </div>
           <div class="project-meta-table">
-            <div class="meta-row-2"><span>Tools</span><span>Volatility · Autopsy · NIST SP 800-61</span></div>
-            <div class="meta-row-2"><span>Classification</span><span>Academic capstone — simulated ransomware scenario</span></div>
-            <div class="meta-row-2"><span>Framework</span><span>NIST Incident Response lifecycle (Preparation → Recovery)</span></div>
+            <div class="meta-row-2"><span>Tools</span><span>Python 3 · Volatility · YARA · Sigma · Suricata · OpenSearch</span></div>
+            <div class="meta-row-2"><span>Framework</span><span>NIST SP 800-61 Rev. 2 &amp; MITRE ATT&amp;CK</span></div>
+            <div class="meta-row-2"><span>Scenarios</span><span>Ransomware, Web Shell, Lateral Movement Investigation</span></div>
           </div>
-          <p>Investigated a simulated ransomware breach following the NIST SP 800-61 framework. Analyzed volatile RAM dumps in Volatility to identify injected DLLs and rogue process structures. Recovered MFT records, registry persistence keys, and event logs using Autopsy to reconstruct the intrusion timeline and document IOCs and remediation actions.</p>
+          <p>Forensic triage, memory analysis, and artifact parsing framework. Built custom CLI parsers for Windows Prefetch, Evtx logs, MFT records, and Volatility memory dumps. Includes detection rule crosswalks, simulated forensic evidence files, and automated incident response runbooks.</p>
+          <div class="project-links-bar" style="margin: 0.8rem 0;">
+            <a href="https://github.com/hckr-zahid/DFIR-Lab" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
+          </div>
           <div class="tech-row">
             <span class="tech-pill-sm">Volatility</span><span class="tech-pill-sm">Autopsy</span>
+            <span class="tech-pill-sm">YARA</span><span class="tech-pill-sm">Sigma Rules</span>
             <span class="tech-pill-sm">NIST IR</span><span class="tech-pill-sm">Memory Forensics</span>
-            <span class="tech-pill-sm">MFT Analysis</span>
           </div>
         </article>
 
         <!-- Project 4: Python Automation -->
         <article class="project-card">
           <div class="project-card-top">
-            <div class="project-label-sm">Google Cybersecurity Project · Personal</div>
-            <h3>Python Security Automation Toolkit</h3>
+            <div class="project-label-sm">SecOps Automation · SOAR Framework</div>
+            <h3>SecAuto: Security Orchestration &amp; Response</h3>
           </div>
           <div class="project-meta-table">
-            <div class="meta-row-2"><span>Tools</span><span>Python 3 · Regex · VirusTotal API · AbuseIPDB API</span></div>
-            <div class="meta-row-2"><span>Objective</span><span>Automate SOC Tier-1 triage tasks</span></div>
+            <div class="meta-row-2"><span>Tools</span><span>Python 3 · FastAPI · Directed Acyclic Graph (DAG) · Threat Intel APIs</span></div>
+            <div class="meta-row-2"><span>Capability</span><span>Automated incident triage, threat enrichment &amp; host containment</span></div>
           </div>
-          <p>Automated parsing of syslog and authentication files using optimized regular expressions to extract IP addresses, suspicious domains, and cryptographic hashes. Built asynchronous REST API connectors querying VirusTotal and AbuseIPDB to score reputation metrics. Packaged as modular CLI utilities with argparse flags for repeatable triage.</p>
-          <div class="project-limitation">
-            <strong>Note:</strong> No dedicated public repository currently linked for this project. Source available on request.
+          <p>Declarative SOAR framework executing YAML-based DAG playbooks for automated threat intelligence enrichment (VirusTotal, AbuseIPDB, Shodan), suspicious email/phishing header analysis, network scanning, firewall/host containment, and webhook notifications.</p>
+          <div class="project-links-bar" style="margin: 0.8rem 0;">
+            <a href="https://github.com/hckr-zahid/SecAuto" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
           </div>
           <div class="tech-row">
-            <span class="tech-pill-sm">Python 3</span><span class="tech-pill-sm">Regex</span>
-            <span class="tech-pill-sm">VirusTotal</span><span class="tech-pill-sm">AbuseIPDB</span>
-            <span class="tech-pill-sm">argparse CLI</span>
+            <span class="tech-pill-sm">Python 3</span><span class="tech-pill-sm">SOAR Engine</span>
+            <span class="tech-pill-sm">FastAPI</span><span class="tech-pill-sm">VirusTotal</span>
+            <span class="tech-pill-sm">AbuseIPDB</span><span class="tech-pill-sm">Playbook DAG</span>
           </div>
         </article>
 
         <!-- Project 5: Vuln Assessment -->
         <article class="project-card">
           <div class="project-card-top">
-            <div class="project-label-sm">Simulated Environment · Study Project</div>
-            <h3>Vulnerability Assessment &amp; System Hardening</h3>
+            <div class="project-label-sm">Compliance &amp; Remediation · Hardening</div>
+            <h3>Vuln-Hardening: OS &amp; Container Security Engine</h3>
           </div>
           <div class="project-meta-table">
-            <div class="meta-row-2"><span>Tools</span><span>Nmap · OpenVAS · CIS Benchmarks · CVSS v3</span></div>
-            <div class="meta-row-2"><span>Scope</span><span>Simulated Linux servers — authorized test environment</span></div>
+            <div class="meta-row-2"><span>Tools</span><span>Python 3 · Nmap · OpenVAS · CIS Benchmarks · NIST 800-53</span></div>
+            <div class="meta-row-2"><span>Scope</span><span>Linux (Ubuntu/RHEL), Windows Server, Docker &amp; K8s</span></div>
           </div>
-          <p>Conducted authenticated and unauthenticated network scans across simulated Linux and Windows servers. Prioritized findings based on CVSS v3 exploitability metrics. Applied hardening: SSH key-only policies, restrictive IPTables rules, deprecated vulnerable services, and CIS Benchmark compliance verification.</p>
+          <p>Multi-platform vulnerability remediation and security baseline hardening framework. Automates scanning, CVSS v3 score calculation, declarative rule remediation with atomic rollback guarantees, and compliance audit reporting across CIS, NIST 800-53, and PCI-DSS.</p>
+          <div class="project-links-bar" style="margin: 0.8rem 0;">
+            <a href="https://github.com/hckr-zahid/Vuln-Hardening" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
+          </div>
           <div class="tech-row">
             <span class="tech-pill-sm">Nmap NSE</span><span class="tech-pill-sm">OpenVAS</span>
             <span class="tech-pill-sm">CVSS v3</span><span class="tech-pill-sm">CIS Benchmarks</span>
-            <span class="tech-pill-sm">IPTables</span>
+            <span class="tech-pill-sm">NIST 800-53</span><span class="tech-pill-sm">Rollback Engine</span>
           </div>
         </article>
-
         <!-- Project 6: C++ -->
         <article class="project-card">
           <div class="project-card-top">
@@ -788,7 +805,7 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
           </a>
 
           <!-- Download CV -->
-          <a href="Zahid Ullah Cybersecurity.pdf" download class="contact-card">
+          <a href="assets/docs/Zahid-Ullah-Cybersecurity-CV.pdf" download="Zahid-Ullah-Cybersecurity-CV.pdf" class="contact-card">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <div class="contact-card-content">
               <div class="contact-label">Curriculum Vitae</div>
@@ -889,9 +906,13 @@ VMnet10 (MyLabNet)  ·  Subnet: 10.1.1.0/24
             <div class="footer-col-title">Repositories</div>
             <ul>
               <li><a href="https://github.com/hckr-zahid/CyberGun" target="_blank" rel="noopener">CyberGun</a></li>
+              <li><a href="https://github.com/hckr-zahid/Vuln-Hardening" target="_blank" rel="noopener">Vuln-Hardening</a></li>
+              <li><a href="https://github.com/hckr-zahid/DFIR-Lab" target="_blank" rel="noopener">DFIR-Lab</a></li>
+              <li><a href="https://github.com/hckr-zahid/SecAuto" target="_blank" rel="noopener">SecAuto</a></li>
+              <li><a href="https://github.com/hckr-zahid/NIDS-Lab" target="_blank" rel="noopener">NIDS-Lab</a></li>
               <li><a href="https://github.com/hckr-zahid/Active-Directory-VMware-Enterprise-Lab" target="_blank" rel="noopener">AD Lab</a></li>
               <li><a href="https://github.com/hckr-zahid/Activate-Windows-Free" target="_blank" rel="noopener">PS Research</a></li>
-              <li><a href="https://github.com/hckr-zahid" target="_blank" rel="noopener">All Repos</a></li>
+              <li><a href="https://github.com/hckr-zahid" target="_blank" rel="noopener">All Repos &rarr;</a></li>
             </ul>
           </div>
         </div>
